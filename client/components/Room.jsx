@@ -2,11 +2,15 @@ import React from 'react'
 import Chat from './Chat.jsx'
 import Game from './Game.jsx'
 import io from 'socket.io-client'
-let socket = io()
+var socket = io()
 
 export default class Room extends React.Component {
   constructor() {
     super()
+  }
+
+  componentDidMount() {
+    socket.emit('addUser', prompt("Type your username: "))
   }
 
   render() {
@@ -18,7 +22,7 @@ export default class Room extends React.Component {
 
         <Game />
 
-        <Chat />
+        <Chat socket={socket} />
 
       </div>
 
