@@ -10,13 +10,13 @@ export default class Chat extends React.Component {
 
     return (
 
-      <div>
+      <div id='chatWindow'>
 
         <ul id='messages'></ul>
         
-        <form action=''>
+        <form action='' id='chatForm'>
           <input id='m' autoComplete='off' />
-          <button> Send </button>
+          <button id='formButton'> Send </button>
         </form>
 
       </div>

@@ -22415,6 +22415,10 @@ var _Chat = __webpack_require__(185);
 
 var _Chat2 = _interopRequireDefault(_Chat);
 
+var _Game = __webpack_require__(186);
+
+var _Game2 = _interopRequireDefault(_Game);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -22441,8 +22445,9 @@ var App = function (_React$Component) {
         _react2.default.createElement(
           'h1',
           null,
-          'Hello World'
+          'BoomBoom Cats'
         ),
+        _react2.default.createElement(_Game2.default, null),
         _react2.default.createElement(_Chat2.default, null)
       );
     }
@@ -22493,15 +22498,15 @@ var Chat = function (_React$Component) {
 
       return _react2.default.createElement(
         'div',
-        null,
+        { id: 'chatWindow' },
         _react2.default.createElement('ul', { id: 'messages' }),
         _react2.default.createElement(
           'form',
-          { action: '' },
+          { action: '', id: 'chatForm' },
           _react2.default.createElement('input', { id: 'm', autoComplete: 'off' }),
           _react2.default.createElement(
             'button',
-            null,
+            { id: 'formButton' },
             ' Send '
           )
         )
@@ -22513,6 +22518,60 @@ var Chat = function (_React$Component) {
 }(_react2.default.Component);
 
 exports.default = Chat;
+
+/***/ }),
+/* 186 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _react = __webpack_require__(32);
+
+var _react2 = _interopRequireDefault(_react);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var Game = function (_React$Component) {
+  _inherits(Game, _React$Component);
+
+  function Game() {
+    _classCallCheck(this, Game);
+
+    return _possibleConstructorReturn(this, (Game.__proto__ || Object.getPrototypeOf(Game)).call(this));
+  }
+
+  _createClass(Game, [{
+    key: 'render',
+    value: function render() {
+      return _react2.default.createElement(
+        'div',
+        null,
+        _react2.default.createElement(
+          'h3',
+          null,
+          'This is the game window'
+        )
+      );
+    }
+  }]);
+
+  return Game;
+}(_react2.default.Component);
+
+exports.default = Game;
 
 /***/ })
 /******/ ]);

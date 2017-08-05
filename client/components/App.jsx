@@ -1,5 +1,6 @@
 import React from 'react'
 import Chat from './Chat.jsx'
+import Game from './Game.jsx'
 
 export default class App extends React.Component {
   constructor() {
@@ -10,9 +11,13 @@ export default class App extends React.Component {
     return (
 
       <div>
-        <h1>Hello World</h1>
+        
+        <h1>BoomBoom Cats</h1>
+
+        <Game />
 
         <Chat />
+
       </div>
 
     )
