@@ -16,6 +16,8 @@ app.use(parser.urlencoded({extended: true}))
 app.use(parser.json())
 app.use(express.static(path.join(__dirname, '../static')))
 
+var users = {}
+
 io.on('connection', function(socket) {
   console.log('a user connected!!!')
 
@@ -25,12 +27,19 @@ io.on('connection', function(socket) {
     io.emit('game start')
   }
 
+  socket.on('addUser', function(name) {
+    users[socket.id] = name
+    console.log(users)
+  })
+
   socket.on('chat message', function(msg) {
     io.emit('chat message', msg)
   })
 
   socket.on('disconnect', function() {
     console.log('a user disconnected....')
+    delete users[socket.id]
+    console.log(users)
   })
 })
 
