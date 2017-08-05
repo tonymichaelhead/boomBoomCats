@@ -1,7 +1,6 @@
 import React from 'react'
-import Room from './Room.jsx'
 
-export default class App extends React.Component {
+export default class Game extends React.Component {
   constructor() {
     super()
   }
@@ -10,6 +9,8 @@ export default class App extends React.Component {
     return (
 
       <div>
+
+        <h3>This is the game window</h3>
 
       </div>
 

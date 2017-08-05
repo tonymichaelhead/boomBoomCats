@@ -1,4 +1,4 @@
-var ChatClient = {}
+//var ChatClient = {}
 let socket = io()
 
 $(function() {
@@ -8,7 +8,7 @@ $(function() {
     return false
   })
 
-  socket.on('chat message' ,function(msg) {
+  socket.on('chat message', function(msg) {
     $('#messages').append(($('<li>').text(msg)))
   })
 })
