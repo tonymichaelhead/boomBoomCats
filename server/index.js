@@ -1,12 +1,16 @@
 const express = require('express')
 const path = require('path')
 const parser = require('body-parser')
+const MongoClient = require('mongodb').MongoClient;
+const assert = require('assert');
 
 const app = express()
 const PORT = process.env.PORT || 3000
 
 const server = require('http').Server(app)
 const io = require('socket.io')(server)
+let db // mongo
+const dbURL = require('../env/config.js');
 
 app.use(parser.urlencoded({extended: true}))
 app.use(parser.json())
@@ -24,6 +28,11 @@ io.on('connection', function(socket) {
   })
 })
 
-server.listen(PORT, function() {
-  console.log('now serving app on port ', PORT)
-})
+MongoClient.connect(dbURL, (err, database) => {
+  assert.equal(null, err);
+  db = database;
+  server.listen(PORT, function() {
+    console.log('now serving app on port ', PORT)
+  });
+});
+
