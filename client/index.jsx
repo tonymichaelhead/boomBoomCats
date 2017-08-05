@@ -5,6 +5,6 @@ import RouteIndex from './components/RouteIndex.jsx'
 
 
 ReactDOM.render(
-    <RouteIndex />, 
+  <RouteIndex />, 
   document.getElementById('app')
 )
