@@ -1,13 +1,13 @@
 const MongoClient = require('mongodb').MongoClient;
 const assert = require('assert');
-const dbURL = require('../../env/config.js');
-const cards = require('./cards.json');
+const path = require('path');
 
-// MongoClient.connect(dbURL, (err, database) => {
-//   cards = database.collection('cards');
-//   for(let i = 0; i < 4; i++) {
-//     cards.insertMany(cards)
+const dbURL = require(path.join(__dirname, '../env/config.js'));
+const cardTypes = require('./cards.json');
 
-//   }
-// })
+MongoClient.connect(dbURL, (err, database) => {
+  cards = database.collection('cards');
+  cards.insertMany(cardTypes);
+  database.close();
+})
 
