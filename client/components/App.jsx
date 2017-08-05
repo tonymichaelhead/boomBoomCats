@@ -1,4 +1,5 @@
 import React from 'react'
+import Chat from './Chat.jsx'
 
 export default class App extends React.Component {
   constructor() {
@@ -10,6 +11,8 @@ export default class App extends React.Component {
 
       <div>
         <h1>Hello World</h1>
+
+        <Chat />
       </div>
 
     )
