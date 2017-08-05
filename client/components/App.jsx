@@ -1,7 +1,7 @@
 import React from 'react'
 import Room from './Room.jsx'
 import {
-  BrowserRouter as Router,
+  HashRouter as Router,
   Route,
   Link
 } from 'react-router-dom'
