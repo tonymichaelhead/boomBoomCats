@@ -1,4 +1,4 @@
-//var ChatClient = {}
+var Client = {}
 let socket = io()
 
 $(function() {
@@ -10,5 +10,9 @@ $(function() {
 
   socket.on('chat message', function(msg) {
     $('#messages').append(($('<li>').text(msg)))
+  })
+
+  socket.on('game start', function() {
+    $('#poop').text('THE GAME HAS BEGUN')
   })
 })
