@@ -1,4 +1,4 @@
-var ChatClient = {}
+//var ChatClient = {}
 let socket = io()
 
 $(function() {
