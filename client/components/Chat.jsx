@@ -1,4 +1,6 @@
 import React from 'react'
+import io from 'socket.io-client'
+let socket = io()
 
 export default class Chat extends React.Component {
 
@@ -11,12 +13,12 @@ export default class Chat extends React.Component {
   }
 
   componentDidMount() {
-    let socket = io()
+    var socket = io()
     socket.on('chat message', function(msg) {
       this.setState({
         messages: [...this.state.messages, msg]
       })
-    })
+    }.bind(this))
   }
 
   handleSubmit(e) {
