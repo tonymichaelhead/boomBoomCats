@@ -6,8 +6,6 @@ import { BrowserRouter } from 'react-router-dom'
 
 
 ReactDOM.render(
-  <BrowserRouter>
-    <RouteIndex />
-  </BrowserRouter>, 
+    <RouteIndex />, 
   document.getElementById('app')
 )
