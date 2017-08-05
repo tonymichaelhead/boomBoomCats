@@ -18,6 +18,10 @@ app.use(express.static(path.join(__dirname, '../static')))
 
 io.on('connection', function(socket) {
   console.log('a user connected!!!')
+  let srvSockets = io.sockets.sockets
+  if (Object.keys(srvSockets).length === 4) {
+    io.emit('game start')
+  }
 
   // Detect the number of players before starting game
   let srvSockets = io.sockets.sockets
