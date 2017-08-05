@@ -1,11 +1,11 @@
 import React from 'react'
 import {
-  BrowserRouter as Router,
+  HashRouter as Router,
   Route,
   Link
 } from 'react-router-dom'
 import App from './App.jsx'
-import Room from './room.jsx'
+import Room from './Room.jsx'
 
 export default class RouteIndex extends React.Component {
   constructor() {
