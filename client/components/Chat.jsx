@@ -12,9 +12,9 @@ export default class Chat extends React.Component {
   }
 
   componentDidMount() {
-    this.props.socket.on('chat message', function(msg) {
+    this.props.socket.on('chat message', function(msg, user) {
       this.setState({
-        messages: [...this.state.messages, msg]
+        messages: [...this.state.messages, user + ": " + msg]
       })
     }.bind(this))
   }
