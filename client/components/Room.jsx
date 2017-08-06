@@ -20,7 +20,7 @@ export default class Room extends React.Component {
 
         <h1>BoomBoom Cats</h1>
 
-        <Game />
+        <Game socket={socket}/>
 
         <Chat socket={socket} />
 
