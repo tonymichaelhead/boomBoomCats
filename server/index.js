@@ -4,7 +4,6 @@ const parser = require('body-parser')
 const MongoClient = require('mongodb').MongoClient;
 const assert = require('assert');
 
-const router = require('../routes/routes')
 const app = express()
 const PORT = process.env.PORT || 3000
 

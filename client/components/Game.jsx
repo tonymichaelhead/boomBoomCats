@@ -28,6 +28,44 @@ export default class Game extends React.Component {
 
   }
 
+  drawACard() {
+  }
+
+
+  endTurn() {
+  }
+
+
+  skipATurn() {
+  }
+
+
+  attackNextPlayer() {
+  }
+
+
+  shuffleDeck() {
+    let unshuffledDeck = this.state.deck.slice()
+    let shuffledDeck = []
+
+    while (unshuffledDeck.length > 0) {
+      let min = 0
+      let max = unshuffledDeck.length - 1
+      let randomIndex = Math.floor(Math.random() * (max - min + 1)) + min
+      shuffledDeck.push(unshuffledDeck[randomIndex])
+      unshuffledDeck.splice(randomIndex, 1)
+    }
+
+    this.setState({ deck: shuffledDeck })
+  }
+
+
+  seeTheFuture() {
+    let firstThreeCards = this.state.deck.slice(0,3)
+    return firstThreeCards
+  }
+
+
   render() {
     return (
 
