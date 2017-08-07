@@ -22,18 +22,19 @@ var users = {}
 io.on('connection', function(socket) {
   console.log('a user connected!!!')
 
-  // Detect the number of players before starting game
-  let srvSockets = io.sockets.sockets
-  if (Object.keys(srvSockets).length === 4) {
-    console.log(`game initalized! players are ${Object.keys(srvSockets)}`)
-    createGameState( (gameState) => {
-      io.emit('game start', gameState, users[socket.id])
-    } )
-  }
-
   socket.on('addUser', function(name) {
     users[socket.id] = name
     console.log(users)
+
+    // Detect the number of players before starting game
+    let srvSockets = io.sockets.sockets
+    if (Object.keys(srvSockets).length === 4) {
+    console.log(`game initalized! players are ${Object.keys(srvSockets)}`)
+    createGameState( (gameState) => {
+      io.emit('game start', gameState, users, users[socket.id])
+    } )
+  }
+
   })
 
   socket.on('chat message', function(msg) {
