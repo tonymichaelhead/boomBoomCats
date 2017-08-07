@@ -20,6 +20,7 @@ export default class Room extends React.Component {
     return (
 
       <div>
+        I am the room
 
         <h1>BoomBoom Cats</h1>
 
