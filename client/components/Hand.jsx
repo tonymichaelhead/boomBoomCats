@@ -9,10 +9,19 @@ export default class Hand extends React.Component {
     }
   }
 
+  handleClick() {
+    if (this.props.isPlayerTurn) {
+      
+    }
+  }
 
   render() {
     return (
-      <div>
+      <div className="hand">
+         {this.props.cards.map(card => (
+           <div className="card">{card}</div>
+         )
+         )}
         Sup I am HAND component
       </div>
     )

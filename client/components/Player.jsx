@@ -1,21 +1,29 @@
 import React from 'react'
+import Game from './Game.jsx'
 import Hand from './Hand.jsx'
+
 
 export default class Player extends React.Component {
   constructor(props) {
-    super(props)
-
+    super(props);
+    
     this.state = {
-      whee: 'test'
+      hand: []
     }
+    
+  }
+  
+  componentDidMount() {
+    this.setState({hand: this.props.player.hand})
   }
 
 
   render() {
+    
     return (
       <div>
-        Sup I am PLAYER component
-        <Hand />
+        Player
+        <Hand isPlayerTurn={this.props.isPlayerTurn} cards={this.state.hand}/>
       </div>
     )
   }
