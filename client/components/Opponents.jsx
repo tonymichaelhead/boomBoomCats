@@ -7,9 +7,9 @@ const Opponents = (props) => {
       { 
         opponents.map((opp, i) => {
           return (
-            <div opponent={opponent[i]}>
+            <div opponent={opponents[i]}>
               {
-                opponent[i].hand.map( card => {
+                opponents[i].hand.map( card => {
                   return <div className="cardBack"></div>
                 })
               }
