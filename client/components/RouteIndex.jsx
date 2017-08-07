@@ -1,6 +1,6 @@
 import React from 'react'
 import {
-  HashRouter as Router,
+  BrowserRouter as Router,
   Route,
   Link
 } from 'react-router-dom'
@@ -18,7 +18,6 @@ export default class RouteIndex extends React.Component {
 
         <div>
           <Route exact path='/' component={Lobby} />
-          <Route path='/lobby' component={Lobby} />
           <Route path='/room' component={Room} />
         </div>
 

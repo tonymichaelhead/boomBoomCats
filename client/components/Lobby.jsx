@@ -14,6 +14,9 @@ class Lobby extends Component {
             meep: 'whooosh'
         }
     }
+    componentWillMount() {
+        this.auth.handleAuthentication(()=>this.setState({meep: 'morp'}));
+    }
     render() {
         return (
             <div>

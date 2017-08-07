@@ -5,7 +5,7 @@ export default class Auth {
         this.auth0 = new auth0.WebAuth({
             domain: 'michaelkdai.auth0.com',
             clientID: 'LOiAgLsU_D88WbpF6EprwfLJftmM9m45',
-            redirectUri: 'http://localhost:3000/#/lobby',
+            redirectUri: 'http://localhost:3000/',
             audience: 'https://michaelkdai.auth0.com/userinfo',
             responseType: 'token id_token',
             scope: 'openid'
@@ -20,10 +20,11 @@ export default class Auth {
         // console.log(this.auth0);
         this.auth0.authorize();
     }
-    handleAuthentication() {
+    handleAuthentication(cb) {
         this.auth0.parseHash((err, authResult) => {
         if (authResult && authResult.accessToken && authResult.idToken) {
             this.setSession(authResult);
+            cb();
             // history.replace('/home');
         } else if (err) {
             // history.replace('/home');
@@ -55,9 +56,9 @@ export default class Auth {
         // Check whether the current time is past the 
         // access token's expiry time
 
-        return localStorage.length > 0;
+        // return localStorage.length > 0;
         // console.log(localStorage)
-        // let expiresAt = JSON.parse(localStorage.getItem('expires_at'));
-        // return new Date().getTime() < expiresAt;
+        let expiresAt = JSON.parse(localStorage.getItem('expires_at'));
+        return new Date().getTime() < expiresAt;
     }
 }
