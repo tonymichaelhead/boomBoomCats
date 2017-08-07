@@ -16,6 +16,9 @@ const createGameState = require('./createGameState')
 app.use(parser.urlencoded({extended: true}))
 app.use(parser.json())
 app.use(express.static(path.join(__dirname, '../static')))
+app.get('*', function (request, response){
+  response.sendFile(path.resolve(__dirname, 'public', 'index.html'))
+})
 
 var users = {}
 
