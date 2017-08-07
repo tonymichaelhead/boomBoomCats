@@ -15,15 +15,17 @@ export default class Game extends React.Component {
   }
 
   componentDidMount() {
-    this.props.socket.on('game start', function(gameState, user) {
+    this.props.socket.on('game start', function(gameState, users, user) {
       this.setState({
         players: gameState.players,
         deck: gameState.deck,
         discard: [],
         turn: [1,2,3,4],
-        playerID: user
+        playerID: users
       })
-      console.log(`userID is ${JSON.stringify(user)}`)
+      console.log('we are in the game component')
+      console.log(`Game Component: usersID is ${JSON.stringify(users)}`)
+      console.log(`Game Component: userID is ${JSON.stringify(user)}`)
     }.bind(this))
 
   }
