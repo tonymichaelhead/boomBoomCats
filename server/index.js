@@ -11,6 +11,7 @@ const server = require('http').Server(app)
 const io = require('socket.io')(server)
 let db // mongo
 const dbURL = require('../env/config.js');
+const createGameState = require('./createGameState')
 
 app.use(parser.urlencoded({extended: true}))
 app.use(parser.json())
@@ -24,7 +25,10 @@ io.on('connection', function(socket) {
   // Detect the number of players before starting game
   let srvSockets = io.sockets.sockets
   if (Object.keys(srvSockets).length === 4) {
-    io.emit('game start')
+    console.log(`game initalized! players are ${Object.keys(srvSockets)}`)
+    createGameState( (gameState) => {
+      io.emit('game start', gameState, users[socket.id])
+    } )
   }
 
   socket.on('addUser', function(name) {
