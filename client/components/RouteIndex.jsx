@@ -4,7 +4,7 @@ import {
   Route,
   Link
 } from 'react-router-dom'
-import App from './App.jsx'
+import Lobby from './Lobby.jsx'
 import Room from './Room.jsx'
 
 export default class RouteIndex extends React.Component {
@@ -17,7 +17,8 @@ export default class RouteIndex extends React.Component {
       <Router>
 
         <div>
-          <Route exact path='/' component={App} />
+          <Route exact path='/' component={Lobby} />
+          <Route path='/lobby' component={Lobby} />
           <Route path='/room' component={Room} />
         </div>
 

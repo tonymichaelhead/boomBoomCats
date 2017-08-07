@@ -1,17 +1,15 @@
 import React from 'react'
-import Room from './Room.jsx'
-import {
-  HashRouter as Router,
-  Route,
-  Link
-} from 'react-router-dom'
-import ReactDOM from 'react-dom'
+import RouteIndex from './RouteIndex.jsx'
+//import Auth from '../Auth/Auth.js';
 
 export default class App extends React.Component {
 
   constructor(props) {
     super(props)
-
+    //trying login start 
+    //this.auth = new Auth();
+    // auth.login();
+    //trying login end
     this.state = {
       meep: 'whooosh'
     }
@@ -19,11 +17,7 @@ export default class App extends React.Component {
 
   render() {
     return(
-      <div>
-        <Link to='/room'>
-          <h1>Click here to join game</h1>
-        </Link>
-      </div>
+      <RouteIndex />
     )
   }
 }
