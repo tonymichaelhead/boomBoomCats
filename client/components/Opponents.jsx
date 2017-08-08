@@ -9,7 +9,8 @@ export default class Opponents extends React.Component {
   render() {
     const opponentsUsernames = this.props.opponentsUsernames //should be an array of id's
     const opponents = this.props.opponents
-    console.log('the opponents are...line 12 opponents', opponents)
+    console.log('these are the props of the oppenent component:', this.props)
+    console.log('the opponents are...', opponents)
 
     return (
       <div>
@@ -19,7 +20,7 @@ export default class Opponents extends React.Component {
               <div opponent={opponentsUsernames[i]} name={opponentsUsernames[i]}>
                 <h2>Player: {opponentsUsernames[i]}</h2>
                 {
-                  opp.hand.map( card => (<div className="cardBack">{card.name}-{card.description}</div> ))
+                  opp.hand.map(card => (<div className="cardBack">{card.name}-{card.description}</div> ))
                 }
               </div>
             )
