@@ -72,7 +72,7 @@ let createGameState = function(callback) {
         //if defuses left over, add to deck randomly
         if (defuse.length > 0) { 
             let min = 0
-            let max = defuse.length - 1
+            let max = gameState.deck.length - 1
           for (let i = 0; i < defuse.length; i++) {
             let randomIndex = Math.floor(Math.random() * (max - min + 1)) + min
             gameState.deck.splice(randomIndex, 0, defuse.pop())
