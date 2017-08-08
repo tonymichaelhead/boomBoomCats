@@ -1,5 +1,7 @@
 import React from 'react'
 import io from 'socket.io-client'
+import Opponents from './Opponents.jsx'
+import Player from './Player.jsx'
 
 export default class Game extends React.Component {
   constructor(props) {
@@ -23,11 +25,11 @@ export default class Game extends React.Component {
       // console.log(`socket id is ${this.props.socket.id}`)
       // console.log(`users is ${JSON.stringify(users)}`)
       this.setState({
-        allPlayersId: usersId,
-        playerId: user,
-        allPlayers: gameState.allPlayers,
-        playerIndex: usersId.findIndex( (e) => e === user),
-        deck: gameState.deck,
+        allPlayersId: usersId, // array
+        playerId: user, //string
+        allPlayers: gameState.allPlayers, // array with objects with hand
+        playerIndex: usersId.findIndex( (e) => e === user), //string
+        deck: gameState.deck, //array of card objects
         discard: [],
         turn: [0,1,2,3]
       })
@@ -95,15 +97,15 @@ export default class Game extends React.Component {
         <h3>This is the game window</h3>
         {console.log(`this.state is ${JSON.stringify(this.state)}`)}
         {console.log(`
-        opponentsUsernames are ${JSON.stringify(opponentsUsernames)}
-        opponents are ${JSON.stringify(opponents)}
-        playerIndex is ${this.state.playerIndex} and player is ${JSON.stringify(player)}
-        is it player's turn? ${isPlayerTurn}
+          opponentsUsernames are ${JSON.stringify(opponentsUsernames)}
+          playerIndex is ${this.state.playerIndex} and player is ${JSON.stringify(player)}
+          is it player's turn? ${isPlayerTurn}
         `)}
+        { this.state.allPlayers.length === 4 ? (<div><Opponents opponents={opponents} opponentsUsernames={opponentsUsernames} />
+        <Player isPlayerTurn={isPlayerTurn} player={player} /></div>) : (<div>bloop nope</div>) }
         {/* <Opponents opponents={opponents} opponentsUsernames={opponentsUsernames} />
         <Player isPlayerTurn={isPlayerTurn} player={player} /> */}
         <h1 id='poop'></h1>
-
       </div>
 
     )
