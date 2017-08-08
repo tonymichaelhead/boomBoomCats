@@ -1,13 +1,32 @@
 import React from 'react';
 
 
-const LoadingView = () => {
-  return (
-    <div>
-      <h2>Waiting on other players...</h2>
-      <img src="https://media.giphy.com/media/xT8qBt2943MLRO8zuM/giphy.gif"></img>
-    </div>
-  );
-};
+export default class LoadingView extends React.Component {
+  constructor(props) {
+    super(props)
+    this.state = {
+      opponents: []
+    }
+  }
 
-export default LoadingView;
+  componentDidUpdate(opponentsUsernames, opponents) {
+    console.log('component updated.... ', this.props.opponentsUsernames)
+    this.setState({
+      opponents: this.props.opponentsUsernames
+    })
+  }
+
+  render() {
+    return (
+      <div>
+        <h2>Waiting on other players...</h2>
+
+        {this.props.opponentsUsernames.map((opponent, i) => 
+          (<img src='./assets/grumpyCat.jpg' key={i} />)
+        )}
+        
+        <img src="https://media.giphy.com/media/xT8qBt2943MLRO8zuM/giphy.gif"></img>
+      </div>
+    )
+  }
+};

@@ -86,9 +86,10 @@ export default class Game extends React.Component {
     let opponents = tempOpponents
 
     let tempOpponentUsernames = this.state.allPlayersId.slice()
+    console.log('ALL PLAYERS ID ::: ', this.state.allPlayersId)
     tempOpponentUsernames.splice(this.state.playerIndex,1)
     let opponentsUsernames = tempOpponentUsernames
-
+    
     let player = this.state.allPlayers[this.state.playerIndex]
     let isPlayerTurn
     this.state.turn[0] === this.state.playerIndex ? isPlayerTurn = true: isPlayerTurn = false
@@ -108,7 +109,7 @@ export default class Game extends React.Component {
             player={player} 
             opponents={opponents} 
             opponentsUsernames={opponentsUsernames} /> : 
-          <LoadingView /> }
+          <LoadingView opponentsUsernames={opponentsUsernames} /> }
       </div>
 
     )
