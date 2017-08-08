@@ -19,16 +19,18 @@ class Lobby extends Component {
                 <div>
                     <div className='row'>
                         <div className='col-sm-6 col-sm-offset-3 text-center'>
-                            <h1>BoomBoom Cats</h1>
-                            <h3>Click to Enter a Game</h3>
+                            <h1 className='lobbyText' id='lobbyTitle'>BoomBoom Cats</h1>
+                            <Link to='/room'>
+                                <h3 className='lobbyText'>Click to Enter a Game</h3>
+                            </Link>
                         </div>
                     </div>
 
                     <div className='row'>
                         <div className='col-sm-6 col-sm-offset-3 text-center'>
-                            <Link to='/room'>
-                                <img id='dynaKitten' src='./assets/dynamiteKitten.jpg' />
-                            </Link>
+                            {/* <Link to='/room'>
+                                {<img id='dynaKitten' src='./assets/dynamiteKitten.jpg' />}
+                            </Link> */}
                         </div>
                     </div>
                 </div>
