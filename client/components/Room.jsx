@@ -29,7 +29,7 @@ export default class Room extends React.Component {
 
         <div className='row'>
           <div className='col-sm-8 col-sm-offset-1'>
-            <Game socket={this.state.socket}/>
+            <Game socket={this.state.socket} user={this.state.user} />
           </div>
 
           <div className='col-sm-2 col-sm-offset-1'>
