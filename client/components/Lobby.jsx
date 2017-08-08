@@ -9,24 +9,18 @@ import {
 class Lobby extends Component {
     constructor(props) {
         super(props)
-        this.auth = new Auth();
-        this.state = {
-            meep: 'whooosh'
-        }
-    }
-    componentWillMount() {
-        this.auth.handleAuthentication(()=>this.setState({meep: 'morp'}));
     }
     render() {
         return (
             <div className='container'>
-                {!this.auth.isAuthenticated() ?
-                <button onClick={this.auth.login}>Please Login to Play</button>
+                {!this.props.auth.isAuthenticated() ?
+                <button onClick={this.props.auth.login}>Please Login to Play</button>
                 :
                 <div>
                     <div className='row'>
                         <div className='col-sm-6 col-sm-offset-3 text-center'>
                             <h1>BoomBoom Cats</h1>
+                            <h3>Click to Enter a Game</h3>
                         </div>
                     </div>
 
