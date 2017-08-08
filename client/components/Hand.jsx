@@ -3,10 +3,6 @@ import React from 'react'
 export default class Hand extends React.Component {
   constructor(props) {
     super(props)
-
-    this.state = {
-      whee: 'test'
-    }
   }
 
   handleClick() {
@@ -17,12 +13,15 @@ export default class Hand extends React.Component {
 
   render() {
     return (
-      <div className="hand">
+      <div className="hand row row-center">
          {this.props.cards.map(card => (
-           <div className="card">{card}</div>
+           <span className="card col-xs-2 thumbnail">
+             <div>{card.name}</div>
+             <img className="img-rounded thumbnail" src={card.image}></img>
+             <div>{card.description}</div>
+           </span>
          )
          )}
-        Sup I am HAND component
       </div>
     )
   }

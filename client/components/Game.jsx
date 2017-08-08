@@ -102,7 +102,7 @@ export default class Game extends React.Component {
           is it player's turn? ${isPlayerTurn}
         `)}
         { this.state.allPlayers.length === 4 ? (<div><Opponents opponents={opponents} opponentsUsernames={opponentsUsernames} />
-        <Player isPlayerTurn={isPlayerTurn} player={player} /></div>) : (<div>bloop nope</div>) }
+        <Player isPlayerTurn={isPlayerTurn} player={player} /></div>) : (<div><h2>Waiting on other players...</h2><img src="https://media.giphy.com/media/xT8qBt2943MLRO8zuM/giphy.gif"></img></div>) }
         {/* <Opponents opponents={opponents} opponentsUsernames={opponentsUsernames} />
         <Player isPlayerTurn={isPlayerTurn} player={player} /> */}
         <h1 id='poop'></h1>
