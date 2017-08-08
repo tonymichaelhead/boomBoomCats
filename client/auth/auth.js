@@ -4,7 +4,7 @@ export default class Auth {
     constructor() {
         this.auth0 = new auth0.WebAuth({
             domain: 'michaelkdai.auth0.com',
-            clientID: 'LOiAgLsU_D88WbpF6EprwfLJftmM9m45',
+            clientID: 'Bt93UxMPclylp6P1iwcOY6ofPQsNeSZo',
             redirectUri: 'http://localhost:3000/',
             audience: 'https://michaelkdai.auth0.com/userinfo',
             responseType: 'token id_token',

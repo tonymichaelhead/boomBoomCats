@@ -5,8 +5,8 @@ import io from 'socket.io-client'
 
 
 export default class Room extends React.Component {
-  constructor() {
-    super()
+  constructor(props) {
+    super(props)
     this.state = {
       socket: io()
     }
