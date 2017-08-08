@@ -1,6 +1,5 @@
 #dynaKitten {
   margin-top: 30px;
-  margin-right: 40px;
 }
 
 #chatWindow {
@@ -13,6 +12,7 @@
   top: 0;
   left: 0;
   /* max-height: 100%; */
+  background-color: white;
 }
 
 ul { 
@@ -27,11 +27,13 @@ ul {
 
 input {
   width: 300px;
+  font-family: 'Oswald', sans-serif;
+  letter-spacing: 0;
 }
 
 .loader {
     border: 7px solid #f3f3f3; /* Light grey */
-    border-top: 7px solid #3498db; /* Blue */
+    border-top: 7px solid rgb(51, 51, 51); /* Blue */
     border-radius: 50%;
     width: 50px;
     height: 50px;
@@ -41,4 +43,50 @@ input {
 @keyframes spin {
     0% { transform: rotate(0deg); }
     100% { transform: rotate(360deg); }
+}
+
+body {
+  font-family: 'Bangers', cursive;
+  letter-spacing: 2px;
+  /* background-color: rgb(51,51,51) */
+  background-image: url('assets/catExplosionBg.png');
+  background-size: cover;
+}
+
+h1 {
+  font-size: 70px;
+  color: #f4f4f4;
+}
+
+h2 {
+  font-size: 55px;
+  color: #f4f4f4;
+}
+
+h3 {
+  font-size: 40px;
+  color: #f4f4f4;
+}
+
+p {
+  color: #f4f4f4;
+  font-size: 20px;
+}
+
+li {
+  font-family: 'Oswald', sans-serif;
+  letter-spacing: 0;
+}
+
+#loadingScreenGif {
+  margin-top: 40px;
+}
+
+.loadedOpp {
+  margin-top: 10px;
+}
+
+#lobbyTitle {
+  font-size: 80px;
+  margin-top: 150px;
 }
