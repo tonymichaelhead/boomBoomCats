@@ -18,11 +18,17 @@ export default class App extends React.Component {
     }
   }
   componentWillMount() {
+    if(!this.auth.isAuthenticated()){
       this.auth.handleAuthentication((accessToken)=>{
         this.auth.getProfile(accessToken, (err,profile)=>{
           this.setState({user: profile.nickname});
         })
       });
+    } else {
+      this.auth.getProfile(localStorage.getItem('access_token'), (err,profile)=>{
+        this.setState({user:profile.nickname});
+      });
+    }
   }
   render() {
     return(
