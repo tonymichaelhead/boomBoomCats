@@ -43,6 +43,7 @@ export default class Game extends React.Component {
   }
 
   drawACard() {
+
   }
 
 
@@ -51,12 +52,11 @@ export default class Game extends React.Component {
 
 
   skipATurn() {
-  }
 
+  }
 
   attackNextPlayer() {
   }
-
 
   shuffleDeck() {
     let unshuffledDeck = this.state.deck.slice()
