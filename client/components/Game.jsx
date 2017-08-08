@@ -2,6 +2,8 @@ import React from 'react'
 import io from 'socket.io-client'
 import Opponents from './Opponents.jsx'
 import Player from './Player.jsx'
+import LoadingView from './LoadingView.jsx'
+import InitializedView from './InitializedView.jsx'
 
 export default class Game extends React.Component {
   constructor(props) {
@@ -101,11 +103,12 @@ export default class Game extends React.Component {
           playerIndex is ${this.state.playerIndex} and player is ${JSON.stringify(player)}
           is it player's turn? ${isPlayerTurn}
         `)}
-        { this.state.allPlayers.length === 4 ? (<div><Opponents opponents={opponents} opponentsUsernames={opponentsUsernames} />
-        <Player isPlayerTurn={isPlayerTurn} player={player} /></div>) : (<div>bloop nope</div>) }
-        {/* <Opponents opponents={opponents} opponentsUsernames={opponentsUsernames} />
-        <Player isPlayerTurn={isPlayerTurn} player={player} /> */}
-        <h1 id='poop'></h1>
+        { this.state.allPlayers.length === 4 ? 
+          <InitializedView 
+            player={player} 
+            opponents={opponents} 
+            opponentsUsernames={opponentsUsernames} /> : 
+          <LoadingView /> }
       </div>
 
     )
