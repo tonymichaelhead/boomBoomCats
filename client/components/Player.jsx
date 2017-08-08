@@ -19,9 +19,8 @@ export default class Player extends React.Component {
 
 
   render() {
-    
     return (
-      <div>
+      <div className="player row">
         Player
         <Hand isPlayerTurn={this.props.isPlayerTurn} cards={this.state.hand}/>
       </div>
