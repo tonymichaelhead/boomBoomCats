@@ -43,7 +43,7 @@ export default class Chat extends React.Component {
         </ul>
         
         <form action='' id='chatForm' onSubmit={this.handleSubmit}>
-          <input autoComplete='off' ref='message' />
+          <input autoComplete='off' ref='message' placeholder='Enter message...' />
         </form>
 
       </div>
