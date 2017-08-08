@@ -79,8 +79,6 @@ export default class Game extends React.Component {
       let randomIndex = Math.floor(Math.random() * (max - min + 1)) + min
       gameDeck.splice(randomIndex,0, drawnCard)
 
-      let allPlayersExceptCurrent = this.state.allPlayers.slice(1)
-
       this.setState({ 
         deck: gameDeck,
         allPlayers: [currentPlayerHand,...allPlayersExceptCurrent]
