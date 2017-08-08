@@ -175,6 +175,14 @@ export default class Game extends React.Component {
 
   }
 
+  printAllCardsInDeck() {
+    let deckStr = ''
+    for (let i = 0; i < this.state.deck.length; i++) {
+      deckStr += `${i}) ${this.state.deck[i].name} `
+    }
+    console.log(deckStr)
+  }
+
   render() {
     let tempOpponents = this.state.allPlayers.slice()
     tempOpponents.splice(this.state.playerIndex,1)
@@ -189,6 +197,8 @@ export default class Game extends React.Component {
     let isPlayerTurn
     this.state.turn[0] === this.state.playerIndex ? isPlayerTurn = true: isPlayerTurn = false
     
+    if (this.state.allPlayers.length === 4) { debugger }
+
     return (
 
       <div>

@@ -22,11 +22,13 @@ export default class App extends React.Component {
       this.auth.handleAuthentication((accessToken)=>{
         this.auth.getProfile(accessToken, (err,profile)=>{
           this.setState({user: profile.nickname});
+          console.log(`profile in App.jsx ${profile}`)
         })
       });
     } else {
       this.auth.getProfile(localStorage.getItem('access_token'), (err,profile)=>{
         this.setState({user:profile.nickname});
+        console.log(`profile in App.jsx ${JSON.stringify(profile)}`)
       });
     }
   }
