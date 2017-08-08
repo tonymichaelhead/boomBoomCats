@@ -13,28 +13,20 @@ class Lobby extends Component {
     render() {
         return (
             <div className='container'>
-                {!this.props.auth.isAuthenticated() ?
-                <button onClick={this.props.auth.login}>Please Login to Play</button>
-                :
-                <div>
+                 <div>
                     <div className='row'>
                         <div className='col-sm-6 col-sm-offset-3 text-center'>
                             <h1 className='lobbyText' id='lobbyTitle'>BoomBoom Cats</h1>
-                            <Link to='/room'>
-                                <h3 className='lobbyText'>Click to Enter a Game</h3>
-                            </Link>
-                        </div>
-                    </div>
-
-                    <div className='row'>
-                        <div className='col-sm-6 col-sm-offset-3 text-center'>
-                            {/* <Link to='/room'>
-                                {<img id='dynaKitten' src='./assets/dynamiteKitten.jpg' />}
-                            </Link> */}
+                            {!this.props.auth.isAuthenticated() ?
+                                <h3 className='lobbyText' onClick={this.props.auth.login}>Please Click to Login & Play</h3>
+                                :
+                                <Link to='/room'>
+                                    <h3 className='lobbyText'>Click to Enter a Game</h3>
+                                </Link>
+                            }
                         </div>
                     </div>
                 </div>
-                }
             </div>
         );
     }
