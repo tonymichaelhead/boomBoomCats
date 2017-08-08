@@ -8,14 +8,24 @@ export default class Auth {
             redirectUri: 'http://localhost:3000/',
             audience: 'https://michaelkdai.auth0.com/userinfo',
             responseType: 'token id_token',
-            scope: 'openid'
+            scope: 'openid profile'
         });
+        this.userProfile = {};
+        this.getProfile = this.getProfile.bind(this);
         this.login = this.login.bind(this);
         this.logout = this.logout.bind(this);
         this.handleAuthentication = this.handleAuthentication.bind(this);
         this.isAuthenticated = this.isAuthenticated.bind(this);
     }
 
+    getProfile(accessToken, cb) {
+        this.auth0.client.userInfo(accessToken, (err, profile) => {
+        if (profile) {
+            this.userProfile = profile;
+        }
+            cb(err, profile);
+        });
+    }
     login() {
         // console.log(this.auth0);
         this.auth0.authorize();
@@ -24,7 +34,7 @@ export default class Auth {
         this.auth0.parseHash((err, authResult) => {
         if (authResult && authResult.accessToken && authResult.idToken) {
             this.setSession(authResult);
-            cb();
+            cb(authResult.accessToken);
             // history.replace('/home');
         } else if (err) {
             // history.replace('/home');
@@ -39,6 +49,7 @@ export default class Auth {
         localStorage.setItem('access_token', authResult.accessToken);
         localStorage.setItem('id_token', authResult.idToken);
         localStorage.setItem('expires_at', expiresAt);
+        
         // navigate to the home route
         // history.replace('/home');
     }

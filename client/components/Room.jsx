@@ -8,12 +8,13 @@ export default class Room extends React.Component {
   constructor(props) {
     super(props)
     this.state = {
+      user: this.props.user,
       socket: io()
     }
   }
 
   componentDidMount() {
-    this.state.socket.emit('addUser', prompt("Type your username: "))
+    this.state.socket.emit('addUser', this.state.user)
   }
 
   render() {

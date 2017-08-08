@@ -14,11 +14,15 @@ export default class App extends React.Component {
     super(props)
     this.auth = new Auth();
     this.state = {
-      profile: ''
+      user: ''
     }
   }
   componentWillMount() {
-      this.auth.handleAuthentication(()=>this.setState({profile: 'morp'}));
+      this.auth.handleAuthentication((accessToken)=>{
+        this.auth.getProfile(accessToken, (err,profile)=>{
+          this.setState({user: profile.nickname});
+        })
+      });
   }
   render() {
     return(
@@ -26,7 +30,7 @@ export default class App extends React.Component {
 
         <div>
           <Route exact path='/' render={() =><Lobby auth={this.auth}/>} />
-          <Route path='/room' render={() => <Room/>} />
+          <Route path='/room' render={() => <Room user={this.state.user}/>} />
         </div>
 
       </Router>
