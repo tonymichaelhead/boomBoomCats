@@ -140,141 +140,142 @@
     "type":"normal"
   },  {
     "name":"shuffle",
-    "image":"http://tinyurl.com/h7n8vcy",
+    "image":"https://media.giphy.com/media/SUlQAk4YfWErS/giphy.gif",
     "description":"Shuffle the Draw Pile",
     "type":"normal"
     },
   {
     "name":"see-the-future",
-    "image":"http://tinyurl.com/jh8nxq8",
+    "image":"https://media.giphy.com/media/3oz8xMYH87VQbwqLRu/giphy.gif",
     "description":"Privately View the top three cards of the deck",
     "type":"normal"
   },
   {
     "name":"skip",
-    "image":"http://tinyurl.com/gmqkunq",
+    "image":"https://media.giphy.com/media/26BGE9mt1ZuHYzvOw/giphy.gif",
     "description":"End your turn without drawing a card",
     "type":"normal"
   },
   {
     "name":"attack",
-    "image":"http://tinyurl.com/jsrlc5j",
+    "image":"https://media.giphy.com/media/DG1kfwY9o6YIU/giphy.gif",
+    "description":"End your turn without drawing a card.  Force the next player to take two turns",
+    "type":"normal"
+  },
+    {
+    "name":"shuffle",
+    "image":"https://media.giphy.com/media/dsMFrxB2agKf6/giphy.gif",
+    "description":"Shuffle the Draw Pile",
+    "type":"normal"
+    },
+  {
+    "name":"see-the-future",
+    "image":"https://media.giphy.com/media/dy34lXgVdd6FO/giphy.gif",
+    "description":"Privately View the top three cards of the deck",
+    "type":"normal"
+  },
+  {
+    "name":"skip",
+    "image":"https://media0.giphy.com/media/10bRCSvYnFrBte/giphy.gif",
+    "description":"End your turn without drawing a card",
+    "type":"normal"
+  },
+  {
+    "name":"attack",
+    "image":"https://media.giphy.com/media/G9MeYgpouOYDe/giphy.gif",
     "description":"End your turn without drawing a card.  Force the next player to take two turns",
     "type":"normal"
   },  {
     "name":"shuffle",
-    "image":"http://tinyurl.com/h7n8vcy",
+    "image":"https://media.giphy.com/media/iU2yJX5YKI9pe/giphy.gif",
     "description":"Shuffle the Draw Pile",
     "type":"normal"
     },
   {
     "name":"see-the-future",
-    "image":"http://tinyurl.com/jh8nxq8",
+    "image":"https://media.giphy.com/media/vbNWVFTw5RdRe/giphy.gif",
     "description":"Privately View the top three cards of the deck",
     "type":"normal"
   },
   {
     "name":"skip",
-    "image":"http://tinyurl.com/gmqkunq",
+    "image":"https://media.giphy.com/media/O6zCP2m0JwduU/giphy.gif",
     "description":"End your turn without drawing a card",
     "type":"normal"
   },
   {
     "name":"attack",
-    "image":"http://tinyurl.com/jsrlc5j",
+    "image":"https://media.giphy.com/media/13xmdZjGdVabKg/giphy.gif",
     "description":"End your turn without drawing a card.  Force the next player to take two turns",
     "type":"normal"
   },  {
     "name":"shuffle",
-    "image":"http://tinyurl.com/h7n8vcy",
+    "image":"https://media.giphy.com/media/26BoElcdr7OiEHmfu/giphy.gif",
     "description":"Shuffle the Draw Pile",
     "type":"normal"
     },
   {
     "name":"see-the-future",
-    "image":"http://tinyurl.com/jh8nxq8",
+    "image":"https://media.giphy.com/media/ZGsvZX8yo1ioM/giphy.gif",
     "description":"Privately View the top three cards of the deck",
     "type":"normal"
   },
   {
     "name":"skip",
-    "image":"http://tinyurl.com/gmqkunq",
+    "image":"https://media.giphy.com/media/XAkdeyKuDq1ri/giphy.gif",
     "description":"End your turn without drawing a card",
     "type":"normal"
   },
   {
     "name":"attack",
-    "image":"http://tinyurl.com/jsrlc5j",
+    "image":"https://media.giphy.com/media/X9tSed3yhVom4/giphy.gif",
     "description":"End your turn without drawing a card.  Force the next player to take two turns",
     "type":"normal"
   },  {
     "name":"shuffle",
-    "image":"http://tinyurl.com/h7n8vcy",
+    "image":"https://media.giphy.com/media/953Nn3kYUbGxO/giphy.gif",
     "description":"Shuffle the Draw Pile",
     "type":"normal"
     },
   {
     "name":"see-the-future",
-    "image":"http://tinyurl.com/jh8nxq8",
+    "image":"https://media.giphy.com/media/qKgwRH8hyp6py/giphy.gif",
     "description":"Privately View the top three cards of the deck",
     "type":"normal"
   },
   {
     "name":"skip",
-    "image":"http://tinyurl.com/gmqkunq",
+    "image":"https://i.chzbgr.com/full/5966517248/h2CFA5351/",
     "description":"End your turn without drawing a card",
     "type":"normal"
   },
   {
     "name":"attack",
-    "image":"http://tinyurl.com/jsrlc5j",
+    "image":"https://media.giphy.com/media/We5pQjlgWrbu8/giphy.gif",
     "description":"End your turn without drawing a card.  Force the next player to take two turns",
     "type":"normal"
   },  {
     "name":"shuffle",
-    "image":"http://tinyurl.com/h7n8vcy",
+    "image":"https://media.giphy.com/media/WXjuxv5mGZXqg/giphy.gif",
     "description":"Shuffle the Draw Pile",
     "type":"normal"
     },
   {
     "name":"see-the-future",
-    "image":"http://tinyurl.com/jh8nxq8",
+    "image":"https://media.giphy.com/media/13d2jHlSlxklVe/giphy.gif",
     "description":"Privately View the top three cards of the deck",
     "type":"normal"
   },
   {
     "name":"skip",
-    "image":"http://tinyurl.com/gmqkunq",
+    "image":"https://media.giphy.com/media/wJkr1P9QewrTy/giphy.gif",
     "description":"End your turn without drawing a card",
     "type":"normal"
   },
   {
     "name":"attack",
-    "image":"http://tinyurl.com/jsrlc5j",
+    "image":"https://media.giphy.com/media/e4BoeNGwaTvYk/giphy.gif",
     "description":"End your turn without drawing a card.  Force the next player to take two turns",
     "type":"normal"
-  },  {
-    "name":"shuffle",
-    "image":"http://tinyurl.com/h7n8vcy",
-    "description":"Shuffle the Draw Pile",
-    "type":"normal"
-    },
-  {
-    "name":"see-the-future",
-    "image":"http://tinyurl.com/jh8nxq8",
-    "description":"Privately View the top three cards of the deck",
-    "type":"normal"
-  },
-  {
-    "name":"skip",
-    "image":"http://tinyurl.com/gmqkunq",
-    "description":"End your turn without drawing a card",
-    "type":"normal"
-  },
-  {
-    "name":"attack",
-    "image":"http://tinyurl.com/jsrlc5j",
-    "description":"End your turn without drawing a card.  Force the next player to take two turns",
-    "type":"normal"
-  }
+  } 
 ]
