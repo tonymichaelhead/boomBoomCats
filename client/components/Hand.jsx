@@ -1,4 +1,6 @@
 import React from 'react'
+import Card from './Card.jsx'
+
 
 export default class Hand extends React.Component {
   constructor(props) {
@@ -12,16 +14,17 @@ export default class Hand extends React.Component {
   }
 
   render() {
+    console.log('these are the props of the hand component', this.props)
+    console.log('this is the first card in the hand', this.props.cards[0])
     return (
       <div className="hand row row-center">
-         {this.props.cards.map(card => (
-           <span className="card col-xs-2 thumbnail">
-             <div>{card.name}</div>
-             <img className="img-rounded thumbnail" src={card.image}></img>
-             <div>{card.description}</div>
-           </span>
-         )
-         )}
+         { this.props.cards.map((card, i) => (
+          <Card name={card.name}
+            image={card.image} 
+            description={card.description} 
+            index={i}
+          />
+          ))}
       </div>
     )
   }
