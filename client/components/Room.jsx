@@ -20,14 +20,22 @@ export default class Room extends React.Component {
   render() {
     return (
 
-      <div>
-        I am the room
+      <div className='container'>
+        <div className='row'>
+          <div className='col-sm-6 col-sm-offset-3 text-center'>
+            <h1>BoomBoom Cats</h1>
+          </div>
+        </div>
 
-        <h1>BoomBoom Cats</h1>
+        <div className='row'>
+          <div className='col-sm-8 col-sm-offset-1'>
+            <Game socket={this.state.socket}/>
+          </div>
 
-        <Game socket={this.state.socket}/>
-
-        <Chat socket={this.state.socket} />
+          <div className='col-sm-2 col-sm-offset-1'>
+            <Chat socket={this.state.socket} />
+          </div>
+        </div>
 
       </div>
 

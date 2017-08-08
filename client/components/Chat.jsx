@@ -16,6 +16,8 @@ export default class Chat extends React.Component {
       this.setState({
         messages: [...this.state.messages, user + ": " + msg]
       })
+      let chatWindow = document.getElementById('chatWindow')
+      chatWindow.scrollTop = chatWindow.scrollHeight
     }.bind(this))
   }
 
@@ -29,25 +31,32 @@ export default class Chat extends React.Component {
   render() {
 
     return (
+      <div>
+        <div className='row'>
+          <div className='col-sm-12'>
+            <div id='chatWindow'>
 
-      <div id='chatWindow'>
+                <ul id='messages'>
 
-        <ul id='messages'>
+                  {this.state.messages.map((message, i) => 
+                    (<li>
+                      {message}  
+                    </li>)
+                  )}
 
-          {this.state.messages.map((message, i) => 
-            (<li>
-              {message}  
-            </li>)
-          )}
-
-        </ul>
+                </ul>
+              </div>
+            </div>
+          </div>
         
-        <form action='' id='chatForm' onSubmit={this.handleSubmit}>
-          <input autoComplete='off' ref='message' placeholder='Enter message...' />
-        </form>
-
+        <div className='row'>
+          <div className='col-sm-12'>
+            <form action='' id='chatForm' onSubmit={this.handleSubmit}>
+              <input autoComplete='off' ref='message' placeholder='Enter message...' />
+            </form>
+          </div>
+        </div>
       </div>
-
     )
   }
 
