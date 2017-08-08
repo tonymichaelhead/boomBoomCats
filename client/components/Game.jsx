@@ -6,26 +6,34 @@ export default class Game extends React.Component {
     super(props)
 
     this.state = {
-      players: [],
+      allPlayersId: [],
+      playerId: '',
+      allPlayers: [],
+      playerIndex: null,
       deck: [],
       discard: [],
-      turn: [],
-      playerID: null
+      turn: []
     }
   }
 
   componentDidMount() {
-    this.props.socket.on('game start', function(gameState, users, user) {
+    this.props.socket.on('game start', function(gameState, users) {
+      let usersId = Object.values(users)
+      let user = users[this.props.socket.id]
+      // console.log(`socket id is ${this.props.socket.id}`)
+      // console.log(`users is ${JSON.stringify(users)}`)
       this.setState({
-        players: gameState.players,
+        allPlayersId: usersId,
+        playerId: user,
+        allPlayers: gameState.allPlayers,
+        playerIndex: usersId.findIndex( (e) => e === user),
         deck: gameState.deck,
         discard: [],
-        turn: [1,2,3,4],
-        playerID: users
+        turn: [0,1,2,3]
       })
-      console.log('we are in the game component')
-      console.log(`Game Component: usersID is ${JSON.stringify(users)}`)
-      console.log(`Game Component: userID is ${JSON.stringify(user)}`)
+      // console.log('we are in the game component')
+      // console.log(`Game Component: usersID is ${JSON.stringify(Object.values(users))}`)
+      // console.log(`Game Component: userID is ${JSON.stringify(user)}`)
     }.bind(this))
 
   }
@@ -69,12 +77,31 @@ export default class Game extends React.Component {
 
 
   render() {
+    let tempOpponents = this.state.allPlayers.slice()
+    tempOpponents.splice(this.state.playerIndex,1)
+    let opponents = tempOpponents
+
+    let tempOpponentUsernames = this.state.allPlayersId.slice()
+    tempOpponentUsernames.splice(this.state.playerIndex,1)
+    let opponentsUsernames = tempOpponentUsernames
+
+    let player = this.state.allPlayers[this.state.playerIndex]
+    let isPlayerTurn
+    this.state.turn[0] === this.state.playerIndex ? isPlayerTurn = true: isPlayerTurn = false
+    
     return (
 
       <div>
-
         <h3>This is the game window</h3>
-        
+        {console.log(`this.state is ${JSON.stringify(this.state)}`)}
+        {console.log(`
+        opponentsUsernames are ${JSON.stringify(opponentsUsernames)}
+        opponents are ${JSON.stringify(opponents)}
+        playerIndex is ${this.state.playerIndex} and player is ${JSON.stringify(player)}
+        is it player's turn? ${isPlayerTurn}
+        `)}
+        {/* <Opponents opponents={opponents} opponentsUsernames={opponentsUsernames} />
+        <Player isPlayerTurn={isPlayerTurn} player={player} /> */}
         <h1 id='poop'></h1>
 
       </div>

@@ -34,7 +34,7 @@ io.on('connection', function(socket) {
     if (Object.keys(srvSockets).length === 4) {
     console.log(`game initalized! players are ${Object.keys(srvSockets)}`)
     createGameState( (gameState) => {
-      io.emit('game start', gameState, users, users[socket.id])
+      io.emit('game start', gameState, users)
     } )
   }
 

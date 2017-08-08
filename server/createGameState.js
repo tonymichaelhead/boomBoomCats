@@ -9,7 +9,7 @@ let createGameState = function(callback) {
     const cards = db.collection('cards')
 
     let gameState = {
-      players: [{hand: []},{hand: []},{hand: []},{hand:[]}],
+      allPlayers: [{hand: []},{hand: []},{hand: []},{hand:[]}],
       deck: [],
       discard: [],
       turn: [1, 2, 3, 4]
@@ -37,31 +37,35 @@ let createGameState = function(callback) {
       //save the normal cards to the deck
       gameState.deck = shuffledDeck.slice()
 
-      //create players starting hands, not including the initial defuse card
+      //create allPlayers starting hands, not including the initial defuse card
       for (let i = 0; i < 16; i++) {
-        gameState.players[(i%4)].hand.push( gameState.deck.pop() )
+        gameState.allPlayers[(i%4)].hand.push( gameState.deck.pop() )
       }
       
       console.log(`
-      After dealing normal cards to players, there are now ${gameState.deck.length} cards in the deck. 
-      Each players's starting hands currently has ${gameState.players[0].hand.length} cards.
+      After dealing normal cards to allPlayers, there are now ${gameState.deck.length} cards in the deck. 
+      Each allPlayers's starting hands currently has ${gameState.allPlayers[0].hand.length} cards.
       `)
 
-    }).then( () => {
+      return 'normal part done'
+
+    }).then( (pass) => {
+      console.log(pass)
+
       cards.find({type: "defuse"}).toArray().then( (defuse) => {
         console.log(`There are ${defuse.length} ${defuse[0].type} cards in the database
         `)
 
-        //distributes defuses to four playerss
+        //distributes defuses to four allPlayerss
         for (let i = 0; i < 4; i++) {
-          gameState.players[i].hand.push(defuse.pop())
+          gameState.allPlayers[i].hand.push(defuse.pop())
         }
 
-        console.log(`After dealing defuse cards to players, their starting hands now has ${gameState.players[1].hand.length} cards. 
+        console.log(`After dealing defuse cards to allPlayers, their starting hands now has ${gameState.allPlayers[1].hand.length} cards. 
         The starting hand cards are 
         `)
 
-        gameState.players.forEach((player,i) => player.hand.forEach( (card,ci) => {
+        gameState.allPlayers.forEach((player,i) => player.hand.forEach( (card,ci) => {
           console.log(`player ${i} card ${ci} ${card.name}`)
         }))
 
@@ -79,7 +83,12 @@ let createGameState = function(callback) {
         console.log(`There are now ${gameState.deck.length} cards in the deck after defusing card initialization.        
         `)
       })      
-    }).then( () => {
+
+      return 'defuse part done'
+
+    }).then( (pass) => {
+      console.log(pass)
+
       cards.find({type: "bomb"}).toArray().then( (bombs) => {
         console.log(`There are ${bombs.length} ${bombs[0].type} cards in the database
         `)
@@ -99,11 +108,19 @@ let createGameState = function(callback) {
         gameState.deck.forEach( (card,i) => {
           console.log(`card at index ${i} is ${card.name}`)
         })
+
+        console.log('now in the callback portion')
+        if (callback) {
+          callback(gameState)
+        }
+
       })
-    }).then( () => {
-      if (callback) {
-        callback(gameState)
-      }
+
+      return 'bomb part done'
+
+    }).then( (pass) => {
+      console.log(pass)
+
     })
   })
 }
