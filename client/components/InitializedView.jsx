@@ -10,9 +10,11 @@ const InitializedView = (props) => {
   return (
     <div>
       <Opponents opponents={props.opponents} opponentsUsernames={props.opponentsUsernames} />
-      <Deck deck={props.deck}/>
-      <DiscardPile discard={props.discard}/>
-      <Player isPlayerTurn={props.isPlayerTurn} player={props.player} />
+      <div className="gameTable row">
+        <Deck deck={props.deck}/>
+        <DiscardPile discard={props.discard}/>
+      </div>
+        <Player isPlayerTurn={props.isPlayerTurn} player={props.player} />
     </div>
   );
 };
