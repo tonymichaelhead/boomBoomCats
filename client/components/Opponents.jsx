@@ -1,24 +1,25 @@
 import React from 'react'
 import Game from './Game.jsx'
 
-class Opponents extends React.Component {
+export default class Opponents extends React.Component {
   constructor(props) {
     super(props);
   }
 
   render() {
-    const opponents = this.props.opponents //should be an array of id's
+    const opponentsUsernames = this.props.opponentsUsernames //should be an array of id's
+    const opponents = this.props.opponents
+    console.log('the opponents are...line 12 opponents', opponents)
+
     return (
       <div>
         { 
           opponents.map((opp, i) => {
             return (
-              <div opponent={opponents[i]} name={opponents[i].name}>
-                <h2>Player: {opponents[i].name}</h2>
+              <div opponent={opponentsUsernames[i]} name={opponentsUsernames[i]}>
+                <h2>Player: {opponentsUsernames[i]}</h2>
                 {
-                  opponents[i].hand.map( card => (
-                    <div className="cardBack"></div>
-                  ))
+                  opp.hand.map( card => (<div className="cardBack">{card.name}-{card.description}</div> ))
                 }
               </div>
             )
@@ -27,6 +28,4 @@ class Opponents extends React.Component {
       </div>
     )
   }
-};
-
-export default Opponents
+}
