@@ -4,11 +4,16 @@ import Opponents from './Opponents.jsx'
 import Player from './Player.jsx'
 import LoadingView from './LoadingView.jsx'
 import InitializedView from './InitializedView.jsx'
+import cardFunctions from '../function/cardFunctions.js'
 
 export default class Game extends React.Component {
   constructor(props) {
     super(props)
-
+    this.attackNextPlayer = cardFunctions.attackNextPlayer.bind(this);
+    this.skipATurn = cardFunctions.skipATurn.bind(this);
+    this.shuffleDeck = cardFunctions.shuffleDeck.bind(this);
+    this.seeFutureCards = cardFunctions.seeTheFuture.bind(this);
+    this.
     this.state = {
       allPlayersId: [],
       playerId: '',
@@ -116,46 +121,6 @@ export default class Game extends React.Component {
     }
     this.setState({ turns: gameTurns })
 
-  }
-
-
-  skipATurn(cardPosition) {
-    this.discardCard(cardPosition)
-    this.endTurn()
-  }
-
-  attackNextPlayer(cardPosition) { //add extra turn on first element
-    let gameTurns = this.state.turn.slice
-    let attackedPlayer = this.state.turn.slice(1,2)
-    gameTurns.splice( 1,0, attackedPlayer )
-    this.setState( { turn: gameTurns } )
-
-    this.discardCard(cardPosition)
-  }
-
-  shuffleDeck(cardPosition) {
-    let unshuffledDeck = this.state.deck.slice()
-    let shuffledDeck = []
-
-    while (unshuffledDeck.length > 0) {
-      let min = 0
-      let max = unshuffledDeck.length - 1
-      let randomIndex = Math.floor(Math.random() * (max - min + 1)) + min
-      shuffledDeck.push(unshuffledDeck[randomIndex])
-      unshuffledDeck.splice(randomIndex, 1)
-    }
-
-    this.setState({ deck: shuffledDeck })
-    this.discardCard(cardPosition)
-  }
-
-
-  seeTheFuture(cardPosition) {
-    let nextThreeCards = this.state.deck.slice(this.state.deck.length-3) //FROM THE END OF THE DECK
-    this.setState({
-      seeFutureCards: nextThreeCards
-    })
-    this.discardCard(cardPosition)
   }
 
   discardCard(cardIndex) {
