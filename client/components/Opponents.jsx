@@ -21,7 +21,7 @@ export default class Opponents extends React.Component {
               <span className="opponent col-xs-4"/*opponent={opponentsUsernames[i]} name={opponentsUsernames[i]}*/>
                 <h2>Player: {opponentsUsernames[i]}</h2>
                 {
-                  opp.hand.map(card => (<div className="cardBack col-xs-2"></div> ))
+                  opp.hand.map(card => (<div className="cardBack col-xs-2">cardback</div> ))
                 }
               </span>
             )
