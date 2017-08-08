@@ -13,7 +13,6 @@ export default class Game extends React.Component {
     this.skipATurn = cardFunctions.skipATurn.bind(this);
     this.shuffleDeck = cardFunctions.shuffleDeck.bind(this);
     this.seeFutureCards = cardFunctions.seeTheFuture.bind(this);
-    this.
     this.state = {
       allPlayersId: [],
       playerId: '',
