@@ -21,7 +21,11 @@ export default class LoadingView extends React.Component {
   render() {
     return (
       <div>
-        <h2>Waiting on other players...</h2>
+        <div className='row'>
+          <div className='col-sm-8'>
+            <h3 className='text-center'>Waiting on other players...</h3>
+          </div>
+        </div>
         {/* <div className='row'>
           <div className='col-sm-3'>
             <div className='loader'></div>
@@ -39,18 +43,23 @@ export default class LoadingView extends React.Component {
         )} */}
 
         <div className='row'>
-          <div className='col-sm-3'>
-            {this.state.opponents[0] ? this.state.opponents[0] : <div className='loader'></div>}
+          <div className='col-sm-2 col-sm-offset-1'>
+            {this.state.opponents[0] ? <p className='text-center loadedOpp'>{this.state.opponents[0]}</p> : <div className='loader'></div>}
           </div>
-          <div className='col-sm-3'>
-            {this.state.opponents[1] ? this.state.opponents[1] : <div className='loader'></div>}
+          <div className='col-sm-2'>
+            {this.state.opponents[1] ? <p className='text-center loadedOpp'>{this.state.opponents[1]}</p> : <div className='loader'></div>}
           </div>
-          <div className='col-sm-3'>
-            {this.state.opponents[2] ? this.state.opponents[2] : <div className='loader'></div>}
+          <div className='col-sm-2'>
+            {this.state.opponents[2] ? <p className='text-center loadedOpp'>{this.state.opponents[2]}</p> : <div className='loader'></div>}
           </div>
         </div>
         
-        <img src="https://media.giphy.com/media/xT8qBt2943MLRO8zuM/giphy.gif"></img>
+        <div className='row'>
+          <div className='col-sm-4'>
+            <img id='loadingScreenGif' src="https://media.giphy.com/media/xT8qBt2943MLRO8zuM/giphy.gif" />
+          </div>
+        </div>
+
       </div>
     )
   }

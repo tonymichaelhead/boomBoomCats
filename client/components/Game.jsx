@@ -167,7 +167,6 @@ export default class Game extends React.Component {
     return (
 
       <div>
-        <h3>This is the game window</h3>
         {console.log(`this.state is ${JSON.stringify(this.state)}`)}
         {console.log(`
           opponentsUsernames are ${JSON.stringify(opponentsUsernames)}
