@@ -105,6 +105,8 @@ export default class Game extends React.Component {
         `)}
         { this.state.allPlayers.length === 4 ? 
           <InitializedView 
+            deck={this.state.deck}
+            discard={this.state.discard}
             player={player} 
             opponents={opponents} 
             opponentsUsernames={opponentsUsernames} /> : 
