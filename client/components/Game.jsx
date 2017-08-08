@@ -109,7 +109,7 @@ export default class Game extends React.Component {
             player={player} 
             opponents={opponents} 
             opponentsUsernames={opponentsUsernames} /> : 
-          <LoadingView opponentsUsernames={opponentsUsernames} /> }
+          <LoadingView socket={this.props.socket} /> }
       </div>
 
     )

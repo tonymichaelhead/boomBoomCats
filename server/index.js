@@ -32,11 +32,13 @@ io.on('connection', function(socket) {
     // Detect the number of players before starting game
     let srvSockets = io.sockets.sockets
     if (Object.keys(srvSockets).length === 4) {
-    console.log(`game initalized! players are ${Object.keys(srvSockets)}`)
-    createGameState( (gameState) => {
-      io.emit('game start', gameState, users)
-    } )
-  }
+      console.log(`game initalized! players are ${Object.keys(srvSockets)}`)
+      createGameState( (gameState) => {
+        io.emit('game start', gameState, users)
+      } )
+    }
+
+    io.emit('new opponent', users)
 
   })
 
