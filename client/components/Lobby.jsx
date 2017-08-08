@@ -19,13 +19,25 @@ class Lobby extends Component {
     }
     render() {
         return (
-            <div>
+            <div className='container'>
                 {!this.auth.isAuthenticated() ?
                 <button onClick={this.auth.login}>Please Login to Play</button>
                 :
-                <Link to='/room'>
-                <h1>Click here to join game</h1>
-                </Link>
+                <div>
+                    <div className='row'>
+                        <div className='col-sm-6 col-sm-offset-3 text-center'>
+                            <h1>BoomBoom Cats</h1>
+                        </div>
+                    </div>
+
+                    <div className='row'>
+                        <div className='col-sm-6 col-sm-offset-3 text-center'>
+                            <Link to='/room'>
+                                <img id='dynaKitten' src='./assets/dynamiteKitten.jpg' />
+                            </Link>
+                        </div>
+                    </div>
+                </div>
                 }
             </div>
         );
