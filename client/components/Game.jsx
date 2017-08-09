@@ -60,8 +60,14 @@ export default class Game extends React.Component {
   }
 
   handleDeckClick() {
+<<<<<<< HEAD
     drawACard()
   }
+=======
+    drawACard();
+  }
+  
+>>>>>>> Working on handler for handleDeckClick
 
   drawACard() {
     let gameDeck = this.state.deck.slice()
@@ -170,7 +176,7 @@ export default class Game extends React.Component {
     let isPlayerTurn
     this.state.turn[0] === this.state.playerIndex ? isPlayerTurn = true: isPlayerTurn = false
     
-    if (this.state.allPlayers.length === 4) { debugger }
+    // if (this.state.allPlayers.length === 4) { debugger }
 
     return (
 
@@ -187,7 +193,8 @@ export default class Game extends React.Component {
             discard={this.state.discard}
             player={player} 
             opponents={opponents} 
-            opponentsUsernames={opponentsUsernames} /> : 
+            opponentsUsernames={opponentsUsernames} 
+            handleDeckClick={this.props.handleDeckClick}/> : 
           <LoadingView socket={this.props.socket} /> }
       </div>
 
