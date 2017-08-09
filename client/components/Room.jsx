@@ -21,11 +21,6 @@ export default class Room extends React.Component {
     return (
 
       <div className='container'>
-        <div className='row'>
-          <div className='col-sm-6 col-sm-offset-3 text-center'>
-            <h1>BoomBoom Cats</h1>
-          </div>
-        </div>
 
         <div className='row'>
           <div className='col-sm-9'>
