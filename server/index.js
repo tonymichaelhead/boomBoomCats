@@ -42,6 +42,16 @@ io.on('connection', function(socket) {
 
   })
 
+  socket.on('shuffle card', function(deck) {
+    console.log('shuffled deck! emitting to other players...')
+    io.emit('shuffle deck', deck)
+  })
+
+  socket.on('future card', function(player) {
+    console.log('user saw the future!!')
+    io.emit('saw future', player)
+  })
+
   socket.on('chat message', function(msg) {
     io.emit('chat message', msg, users[socket.id])
   })

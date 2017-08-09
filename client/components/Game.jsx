@@ -51,18 +51,39 @@ export default class Game extends React.Component {
       // console.log(`Game Component: userID is ${JSON.stringify(user)}`)
     }.bind(this))
 
+    this.props.socket.on('shuffle deck', function(deck) {
+      this.setState({
+        deck: deck
+      })
+      console.log('we shuffled the deck guys')
+    }.bind(this))
+
+    this.props.socket.on('saw future', function(player) {
+      console.log(player, ' saw the future of the deck!')
+    }.bind(this))
+
   }
 
   handleCardClick(cardName, handIndex) {
     console.log('handling card click on game level')
     if (cardName === 'attack') {
+
       this.attackNextPlayer(handIndex);
+
     } else if ( cardName === 'shuffle') {
+
       this.shuffleDeck(handIndex)
+      this.props.socket.emit('shuffle card', this.state.deck)
+
     } else if (cardName === 'skip') {
+
       this.skipATurn(handIndex)
+
     } else if (cardName === 'see-the-future') {
+
       this.seeTheFuture(handIndex)
+      this.props.socket.emit('future card', this.playerId)
+      
     }
   }
 
