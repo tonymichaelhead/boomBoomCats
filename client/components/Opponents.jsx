@@ -9,21 +9,21 @@ export default class Opponents extends React.Component {
   render() {
     const opponentsUsernames = this.props.opponentsUsernames //should be an array of id's
     const opponents = this.props.opponents
-    console.log('these are the props of the oppenent component:', this.props)
-    console.log('the opponents are...', opponents)
+    // console.log('these are the props of the oppenent component:', this.props)
+    // console.log('the opponents are...', opponents)
 
     return (
       <div className="row">
         { 
           opponents.map((opp, i) => {
-            console.log('these are the opponents usernames on the opponent component', opponentsUsernames)
+            // console.log('these are the opponents usernames on the opponent component', opponentsUsernames)
             return (
-              <span className="opponent col-xs-3"/*opponent={opponentsUsernames[i]} name={opponentsUsernames[i]}*/>
+              <span className="opponent col-xs-3" key={i}/*opponent={opponentsUsernames[i]} name={opponentsUsernames[i]}*/>
                 <h4>Player:</h4>
                 <h3 className='oppName'>{opponentsUsernames[i]}</h3>
                 <div className='row'>
                 {
-                  opp.hand.map(card => (<div className="col-xs-1"><img src={'./assets/cardBack.jpg'} className='card-back img-rounded' /></div> ))
+                  opp.hand.map((card, j) => (<div key={j} className="col-xs-1"><img src={'./assets/cardBack.jpg'} className='card-back img-rounded' /></div> ))
                 }
                 </div>
               </span>

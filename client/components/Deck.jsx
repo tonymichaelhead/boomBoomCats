@@ -9,7 +9,7 @@ class Deck extends Component {
   }
 
   shouldComponentUpdate(nextProps) {
-    console.log('these are the "nextProps"', JSON.stringify(nextProps))
+    // console.log('these are the "nextProps"', JSON.stringify(nextProps))
     if (this.state.isPlayerTurn !== nextProps.isPlayerTurn) {
       this.setState({isPlayerTurn: nextProps.isPlayerTurn})
     }

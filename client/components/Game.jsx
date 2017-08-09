@@ -182,14 +182,14 @@ export default class Game extends React.Component {
     
 
     return (
-
+        // {console.log(`this.state is ${JSON.stringify(this.state)}`)}
+        // {console.log(`
+        //   opponentsUsernames are ${JSON.stringify(opponentsUsernames)}
+        //   playerIndex is ${this.state.playerIndex} and player is ${JSON.stringify(player)}
+        //   is it player's turn? ${isPlayerTurn}
+        // `)}
       <div>
-        {console.log(`this.state is ${JSON.stringify(this.state)}`)}
-        {console.log(`
-          opponentsUsernames are ${JSON.stringify(opponentsUsernames)}
-          playerIndex is ${this.state.playerIndex} and player is ${JSON.stringify(player)}
-          is it player's turn? ${isPlayerTurn}
-        `)}
+
         { this.state.allPlayers.length === 4 ? 
           <InitializedView 
             deck={this.state.deck}
