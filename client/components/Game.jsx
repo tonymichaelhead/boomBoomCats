@@ -27,8 +27,8 @@ export default class Game extends React.Component {
 
   componentDidMount() {
     this.props.socket.on('game start', function(gameState, users) {
-      let usersId = Object.values(users)
-      let user = users[this.props.socket.id]
+      let usersId = Object.keys(users)
+      let user = this.props.socket.id
       // console.log(`socket id is ${this.props.socket.id}`)
       // console.log(`users is ${JSON.stringify(users)}`)
       this.setState({
@@ -49,14 +49,18 @@ export default class Game extends React.Component {
 
   handleCardClick(cardName, handIndex) {
     if (cardName === 'attack') {
-      this.attackNextPlayer(handIndex)
+      cardFunctions.attackNextPlayer.bind(this, handIndex)
     } else if ( cardName === 'shuffle') {
-      this.shuffleDeck(handIndex)
+      cardFunctions.shuffleDeck.bind(this, handIndex)
     } else if (cardName === 'skip') {
-      this.skipATurn(handIndex)
+      cardFunctions.skipATurn.bind(this, handIndex)
     } else if (cardName === 'see-the-future') {
-      this.seeTheFuture(handIndex)
+      cardFunctions.seeTheFuture.bind(this, handIndex)
     }
+  }
+
+  handleDeckClick() {
+    drawACard()
   }
 
   drawACard() {
@@ -68,6 +72,7 @@ export default class Game extends React.Component {
 
     if (drawnCard.type === "bomb" && !hasDefuse ) { //player has no defuse
       //EMIT BOOM
+      console.log('shucks you dead fool')
       this.endTurn('dead')
     } else if (drawCard.type === "bomb" && !!hasDefuse) {
       //this.defuseBomb()
@@ -89,6 +94,10 @@ export default class Game extends React.Component {
         deck: gameDeck,
         allPlayers: [currentPlayerHand,...allPlayersExceptCurrent]
       }) //update the deck
+
+
+
+      this.endTurn()
 
     } else {
       //update the player's hand
