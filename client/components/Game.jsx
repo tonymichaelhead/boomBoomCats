@@ -69,6 +69,14 @@ export default class Game extends React.Component {
       console.log('discard pile udpated ::: ', this.state.discard)
     }.bind(this))
 
+    this.props.socket.on('update deck', function(newDeck, newHand) {
+      this.setState({
+        deck: newDeck,
+        allPlayers: newHand
+      })
+      console.log('updated deck and hand!')
+    }.bind(this))
+
   }
 
   handleCardClick(cardName, handIndex) {
@@ -122,12 +130,13 @@ export default class Game extends React.Component {
       let randomIndex = Math.floor(Math.random() * (max - min + 1)) + min
       gameDeck.splice(randomIndex,0, drawnCard)
 
-      this.setState({ 
-        deck: gameDeck,
-        allPlayers: [currentPlayerHand,...allPlayersExceptCurrent]
-      }) //update the deck
+      // this.setState({ 
+      //   deck: gameDeck,
+      //   allPlayers: [currentPlayerHand,...allPlayersExceptCurrent]
+      // }) 
+      //update the deck
 
-
+      this.props.socket.emit('drew card', gameDeck, [currentPlayerHand, ...allPlayersExceptCurrent])
 
       this.endTurn()
 
@@ -141,10 +150,13 @@ export default class Game extends React.Component {
       currentPlayerWithUpdatedHand.hand.push(drawnCard)
 
 
-      this.setState({ 
-        deck: gameDeck,
-        allPlayers: [currentPlayerWithUpdatedHand,...allPlayersExceptCurrent]
-      }) //update the deck
+      // this.setState({ 
+      //   deck: gameDeck,
+      //   allPlayers: [currentPlayerWithUpdatedHand,...allPlayersExceptCurrent]
+      // }) //update the deck
+
+      this.props.socket.emit('drew card', gameDeck, [currentPlayerWithUpdatedHand, ...allPlayersExceptCurrent])
+
       this.endTurn()
     }
   }

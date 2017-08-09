@@ -57,6 +57,11 @@ io.on('connection', function(socket) {
     io.emit('update discard', updatedDiscard)
   })
 
+  socket.on('drew card', function(newDeck, newHand) {
+    console.log('heard drew card socket from client')
+    io.emit('update deck', newDeck, newHand)
+  })
+
   socket.on('chat message', function(msg) {
     io.emit('chat message', msg, users[socket.id])
   })
