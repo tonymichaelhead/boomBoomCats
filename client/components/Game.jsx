@@ -158,12 +158,6 @@ export default class Game extends React.Component {
       let currentPlayerWithUpdatedHand = Object.assign({}, currentPlayer)
       currentPlayerWithUpdatedHand.hand.push(drawnCard)
 
-
-      // this.setState({ 
-      //   deck: gameDeck,
-      //   allPlayers: [currentPlayerWithUpdatedHand,...allPlayersExceptCurrent]
-      // }) //update the deck
-
       console.log('THIS IS THE NEW HAND AFTER CLICKING DRAW BEFORE THE EMIT ::::: ', JSON.stringify(currentPlayerWithUpdatedHand))
       this.props.socket.emit('drew card', gameDeck, [currentPlayerWithUpdatedHand, ...allPlayersExceptCurrent])
 
