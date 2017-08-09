@@ -14,7 +14,6 @@ module.exports = {
     shuffleDeck: function (cardPosition) {
         let unshuffledDeck = this.state.deck.slice()
         let shuffledDeck = []
-
         while (unshuffledDeck.length > 0) {
             let min = 0
             let max = unshuffledDeck.length - 1
