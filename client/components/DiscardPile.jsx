@@ -9,7 +9,7 @@ const DiscardPile = (props) => {
        description: 'i am a placeholder'
     }
   return (
-    <div className="discard-pile col-xs-3 thumbnail">
+    <div className="discard-pile col-xs-4">
       <img src={lastCard.image}></img>
       <div name={lastCard.name}></div>
       <div description={lastCard.description}></div>
