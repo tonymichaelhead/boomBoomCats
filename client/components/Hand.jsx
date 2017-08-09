@@ -7,12 +7,6 @@ export default class Hand extends React.Component {
     super(props)
   }
 
-  handleClick() {
-    if (this.props.isPlayerTurn) {
-      
-    }
-  }
-
   render() {
     console.log('these are the props of the hand component', this.props)
     console.log('this is the first card in the hand', this.props.cards[0])
@@ -23,6 +17,8 @@ export default class Hand extends React.Component {
             image={card.image} 
             description={card.description} 
             index={i}
+            handleCardClick={this.props.handleCardClick}
+            isPlayerTurn={this.props.isPlayerTurn}
           />
           ))}
       </div>
