@@ -15,21 +15,14 @@ export default class Player extends React.Component {
 
   componentDidMount() {
     this.setState({hand: this.props.player.hand})
-
-    this.props.socket.on('update deck', function(newDeck, newHand) {
-      this.setState({
-        hand: this.props.player.hand
-      })
-    }.bind(this))
   }
 
-  // shouldComponentUpdate(nextProps) {
-  //   if (nextProps.player.hand.length !== this.state.hand.length) {
-  //     return true
-  //   } else {
-  //     return false
-  //   }
-  // }
+  componentWillReceiveProps(nextProps) {
+    console.log('HERE ARE THE NEXT PROPS GUYS :::::: ', nextProps)
+    this.setState({
+      hand: nextProps.player.hand
+    })
+  }
 
 
   render() {
