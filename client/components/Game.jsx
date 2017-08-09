@@ -62,9 +62,10 @@ export default class Game extends React.Component {
       console.log(player, ' saw the future of the deck!')
     }.bind(this))
 
-    this.props.socket.on('update discard', function(updatedDiscard) {
+    this.props.socket.on('update discard', function(updatedDiscard, newHand) {
       this.setState({
-        discard: updatedDiscard
+        discard: updatedDiscard,
+        allPlayers: newHand
       })
       console.log('discard pile udpated ::: ', this.state.discard)
     }.bind(this))
@@ -75,6 +76,13 @@ export default class Game extends React.Component {
         allPlayers: newHand
       })
       console.log('updated deck and hand!')
+      console.log('THIS IS THE NEW HAND FOR THE PLAYER :::: ', this.state.allPlayers[0].hand)
+    }.bind(this))
+
+    this.props.socket.on('update turn', function(newTurn) {
+      this.setState({
+        turn: newTurn
+      })
     }.bind(this))
 
   }
@@ -84,6 +92,7 @@ export default class Game extends React.Component {
     if (cardName === 'attack') {
 
       this.attackNextPlayer(handIndex);
+      this.props.socket.emit('attack card', this.state.turn)
 
     } else if ( cardName === 'shuffle') {
 
@@ -155,6 +164,7 @@ export default class Game extends React.Component {
       //   allPlayers: [currentPlayerWithUpdatedHand,...allPlayersExceptCurrent]
       // }) //update the deck
 
+      console.log('THIS IS THE NEW HAND AFTER CLICKING DRAW BEFORE THE EMIT ::::: ', JSON.stringify(currentPlayerWithUpdatedHand))
       this.props.socket.emit('drew card', gameDeck, [currentPlayerWithUpdatedHand, ...allPlayersExceptCurrent])
 
       this.endTurn()
@@ -174,7 +184,9 @@ export default class Game extends React.Component {
       let playerWhoEndedTurn = gameTurns.shift()
       gameTurns.push(playerWhoEndedTurn)
     }
-    this.setState({ turn: gameTurns })
+    // this.setState({ turn: gameTurns })
+
+    this.props.socket.emit('ended turn', gameTurns)
     console.log('this is the the game turn', gameTurns)
   }
 
@@ -189,11 +201,15 @@ export default class Game extends React.Component {
     let updatedDiscard = this.state.discard.slice()
     updatedDiscard.push(discardCard)
 
+    let allPlayersExceptCurrent = this.state.allPlayers.slice(1)
+    //let currentPlayerHand = Object.assign({}, currentPlayer)
+    //currentPlayerHand.hand.splice(hasDefuse, 1)
+
     // this.setState({
     //   discard: updatedDiscard
     // })
 
-    this.props.socket.emit('discarded', updatedDiscard)
+    this.props.socket.emit('discarded', updatedDiscard, [currentPlayer, ...allPlayersExceptCurrent])
 
   }
 
@@ -240,6 +256,7 @@ export default class Game extends React.Component {
             opponents={opponents} 
             opponentsUsernames={opponentsUsernames} 
             isPlayerTurn={isPlayerTurn}
+            socket={this.props.socket}
             handleDeckClick={this.handleDeckClick}
             handleCardClick={this.handleCardClick}/> :
           <LoadingView socket={this.props.socket} /> }

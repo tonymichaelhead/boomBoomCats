@@ -108,6 +108,14 @@ li {
   max-height: 90px;
 }
 
+.card-title {
+  margin-bottom: 10px;
+}
+
+.card-description {
+  margin-top: 10px;
+}
+
 .card-back {
   height: 100px;
   box-shadow: 10px 10px 5px #444444;
@@ -119,12 +127,12 @@ li {
 }
 
 .deck {
-  margin-top: 20px;
+  margin-top: 30px;
   height: 300px;
 }
 
 .discard-pile {
-  margin-top: 20px;
+  margin-top: 30px;
   height: 300px;
   width: 200px;
   font-size: 20px;
