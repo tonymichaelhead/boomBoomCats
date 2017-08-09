@@ -82,8 +82,8 @@ export default class Game extends React.Component {
     } else if (cardName === 'see-the-future') {
 
       this.seeTheFuture(handIndex)
-      this.props.socket.emit('future card', this.playerId)
-      
+      this.props.socket.emit('future card', this.state.playerId)
+
     }
   }
 
