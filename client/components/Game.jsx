@@ -62,6 +62,13 @@ export default class Game extends React.Component {
       console.log(player, ' saw the future of the deck!')
     }.bind(this))
 
+    this.props.socket.on('update discard', function(updatedDiscard) {
+      this.setState({
+        discard: updatedDiscard
+      })
+      console.log('discard pile udpated ::: ', this.state.discard)
+    }.bind(this))
+
   }
 
   handleCardClick(cardName, handIndex) {
@@ -170,9 +177,11 @@ export default class Game extends React.Component {
     let updatedDiscard = this.state.discard.slice()
     updatedDiscard.push(discardCard)
 
-    this.setState({
-      discard: updatedDiscard
-    })
+    // this.setState({
+    //   discard: updatedDiscard
+    // })
+
+    this.props.socket.emit('discarded', updatedDiscard)
 
   }
 

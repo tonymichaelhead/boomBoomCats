@@ -52,6 +52,11 @@ io.on('connection', function(socket) {
     io.emit('saw future', player)
   })
 
+  socket.on('discarded', function(updatedDiscard) {
+    console.log('everyone, time to update your discard piles')
+    io.emit('update discard', updatedDiscard)
+  })
+
   socket.on('chat message', function(msg) {
     io.emit('chat message', msg, users[socket.id])
   })

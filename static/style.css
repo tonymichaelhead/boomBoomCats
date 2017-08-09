@@ -125,6 +125,12 @@ li {
 .discard-pile {
   margin-top: 20px;
   height: 300px;
+  width: 200px;
+  font-size: 20px;
+}
+
+.discard-image {
+  max-height: 150px;
 }
 
 /* .gameTable {
