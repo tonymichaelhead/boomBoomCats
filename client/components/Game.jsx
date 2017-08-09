@@ -9,10 +9,12 @@ import cardFunctions from '../function/cardFunctions.js'
 export default class Game extends React.Component {
   constructor(props) {
     super(props)
-    this.attackNextPlayer = cardFunctions.attackNextPlayer.bind(this);
-    this.skipATurn = cardFunctions.skipATurn.bind(this);
-    this.shuffleDeck = cardFunctions.shuffleDeck.bind(this);
-    this.seeFutureCards = cardFunctions.seeTheFuture.bind(this);
+    this.attackNextPlayer = cardFunctions.attackNextPlayer.bind(this)
+    this.skipATurn = cardFunctions.skipATurn.bind(this)
+    this.shuffleDeck = cardFunctions.shuffleDeck.bind(this)
+    this.seeFutureCards = cardFunctions.seeTheFuture.bind(this)
+    this.drawACard = this.drawACard.bind(this)
+    this.handleDeckClick = this.handleDeckClick.bind(this)
     this.state = {
       allPlayersId: [],
       playerId: '',
@@ -60,14 +62,9 @@ export default class Game extends React.Component {
   }
 
   handleDeckClick() {
-<<<<<<< HEAD
-    drawACard()
+    console.log('the handleDeckClick works!')
+    this.drawACard()
   }
-=======
-    drawACard();
-  }
-  
->>>>>>> Working on handler for handleDeckClick
 
   drawACard() {
     let gameDeck = this.state.deck.slice()
@@ -80,7 +77,7 @@ export default class Game extends React.Component {
       //EMIT BOOM
       console.log('shucks you dead fool')
       this.endTurn('dead')
-    } else if (drawCard.type === "bomb" && !!hasDefuse) {
+    } else if (drawnCard.type === "bomb" && !!hasDefuse) {
       //this.defuseBomb()
 
       //remove defuse from hand
@@ -106,6 +103,7 @@ export default class Game extends React.Component {
       this.endTurn()
 
     } else {
+      console.log('NO BOMBS')
       //update the player's hand
       //copy each object
 
@@ -113,10 +111,12 @@ export default class Game extends React.Component {
       let currentPlayerWithUpdatedHand = Object.assign({}, currentPlayer)
       currentPlayerWithUpdatedHand.hand.push(drawnCard)
 
+
       this.setState({ 
         deck: gameDeck,
         allPlayers: [currentPlayerWithUpdatedHand,...allPlayersExceptCurrent]
       }) //update the deck
+      this.endTurn()
     }
   }
 
@@ -133,8 +133,8 @@ export default class Game extends React.Component {
       let playerWhoEndedTurn = gameTurns.shift()
       gameTurns.push(playerWhoEndedTurn)
     }
-    this.setState({ turns: gameTurns })
-
+    this.setState({ turn: gameTurns })
+    console.log('this is the the game turn', gameTurns)
   }
 
   discardCard(cardIndex) {
@@ -194,7 +194,8 @@ export default class Game extends React.Component {
             player={player} 
             opponents={opponents} 
             opponentsUsernames={opponentsUsernames} 
-            handleDeckClick={this.props.handleDeckClick}/> : 
+            isPlayerTurn={isPlayerTurn}
+            handleDeckClick={this.handleDeckClick}/> :
           <LoadingView socket={this.props.socket} /> }
       </div>
 
