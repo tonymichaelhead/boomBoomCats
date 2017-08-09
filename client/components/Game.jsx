@@ -29,15 +29,18 @@ export default class Game extends React.Component {
 
   componentDidMount() {
     this.props.socket.on('game start', function(gameState, users) {
-      let usersId = Object.keys(users)
-      let user = this.props.socket.id
-      // console.log(`socket id is ${this.props.socket.id}`)
-      // console.log(`users is ${JSON.stringify(users)}`)
+      let usersUniqueId = Object.keys(users)
+      let userUniqueId = this.props.socket.id
+      let userIndex = usersUniqueId.findIndex( (e) => e === userUniqueId)
+      let allPlayersId = Object.values(users)
+      let playerId = allPlayersId[userIndex]
+
+      //console.log(`usersUniqueId is ${usersUniqueId} and userUniqueId ${userUniqueId} and userIndex ${userIndex} and allPlayersId ${allPlayersId} and playerId ${playerId}`)
       this.setState({
-        allPlayersId: usersId, // array
-        playerId: user, //string
+        allPlayersId: allPlayersId, // array
+        playerId: playerId, //string
         allPlayers: gameState.allPlayers, // array with objects with hand
-        playerIndex: usersId.findIndex( (e) => e === user), //string
+        playerIndex: userIndex, //string
         deck: gameState.deck, //array of card objects
         discard: [],
         turn: [0,1,2,3]
@@ -77,13 +80,9 @@ export default class Game extends React.Component {
       //EMIT BOOM
       console.log('shucks you dead fool')
       this.endTurn('dead')
+
     } else if (drawnCard.type === "bomb" && !!hasDefuse) {
-      //this.defuseBomb()
-
-      //remove defuse from hand
-        //find the index with defuse
-
-        //remove it from the hand array
+      console.log(`in drawACard(), you haz a bomb!!! and you gotta defuse`)
       let allPlayersExceptCurrent = this.state.allPlayers.slice(1)
       let currentPlayerHand = Object.assign({}, currentPlayer)
       currentPlayerHand.hand.splice(hasDefuse, 1)
@@ -106,7 +105,7 @@ export default class Game extends React.Component {
       console.log('NO BOMBS')
       //update the player's hand
       //copy each object
-
+      console.log(`in drawACard(), and it's a normal or defuse card`)
       let allPlayersExceptCurrent = this.state.allPlayers.slice(1)
       let currentPlayerWithUpdatedHand = Object.assign({}, currentPlayer)
       currentPlayerWithUpdatedHand.hand.push(drawnCard)
@@ -177,6 +176,8 @@ export default class Game extends React.Component {
     this.state.turn[0] === this.state.playerIndex ? isPlayerTurn = true: isPlayerTurn = false
     
     // if (this.state.allPlayers.length === 4) { debugger }
+
+    
 
     return (
 
