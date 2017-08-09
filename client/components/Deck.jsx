@@ -1,12 +1,33 @@
-import React from 'react';
+import React, { Component } from 'react';
 
-const Deck = (props) => {
-  console.log('these are the props of Deck', props)
-  return (
+class Deck extends Component {
+  constructor(props) {
+    super(props)
+    this.state = {
+      isPlayerTurn: this.props.isPlayerTurn
+    }
+  }
+
+  shouldComponentUpdate(nextProps) {
+    console.log('these are the "nextProps"', JSON.stringify(nextProps))
+    if (this.state.isPlayerTurn !== nextProps.isPlayerTurn) {
+      this.setState({isPlayerTurn: nextProps.isPlayerTurn})
+    }
+  }
+
+  render() {
+    return (
       <div className='col-xs-4 col-xs-offset-1'>
-        <img className="deck img-rounded" onClick={props.handleDeckClick} src={'./assets/cardBack.jpg'} />
+        { this.props.isPlayerTurn ?
+          <img className="deck img-rounded" 
+            onClick={this.props.handleDeckClick} 
+            src={'./assets/cardBack.jpg'} /> : 
+          <img className="deck img-rounded"  
+            src={'./assets/cardBack.jpg'} /> 
+        }
       </div>
-  )
-};
+    );
+  }
+}
 
 export default Deck;
