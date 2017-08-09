@@ -52,14 +52,24 @@ io.on('connection', function(socket) {
     io.emit('saw future', player)
   })
 
-  socket.on('discarded', function(updatedDiscard) {
+  socket.on('discarded', function(updatedDiscard, newHand) {
     console.log('everyone, time to update your discard piles')
-    io.emit('update discard', updatedDiscard)
+    io.emit('update discard', updatedDiscard, newHand)
   })
 
   socket.on('drew card', function(newDeck, newHand) {
     console.log('heard drew card socket from client')
     io.emit('update deck', newDeck, newHand)
+  })
+
+  socket.on('attack card', function(newTurns) {
+    console.log('heard a player got attacked. update it boiz')
+    io.emit('update turn', newTurns)
+  })
+
+  socket.on('ended turn', function(newTurns) {
+    console.log('WE ENDED THE TURN THIS IS FROM THE SERVER :::: ', newTurns)
+    io.emit('update turn', newTurns)
   })
 
   socket.on('chat message', function(msg) {

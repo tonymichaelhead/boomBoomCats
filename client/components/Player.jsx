@@ -8,14 +8,28 @@ export default class Player extends React.Component {
     super(props);
     
     this.state = {
-      hand: []
+      hand: this.props.player.hand
     }
     
   }
-  
+
   componentDidMount() {
     this.setState({hand: this.props.player.hand})
+
+    this.props.socket.on('update deck', function(newDeck, newHand) {
+      this.setState({
+        hand: this.props.player.hand
+      })
+    }.bind(this))
   }
+
+  // shouldComponentUpdate(nextProps) {
+  //   if (nextProps.player.hand.length !== this.state.hand.length) {
+  //     return true
+  //   } else {
+  //     return false
+  //   }
+  // }
 
 
   render() {

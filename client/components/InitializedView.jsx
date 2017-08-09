@@ -18,6 +18,7 @@ const InitializedView = (props) => {
           isPlayerTurn={props.isPlayerTurn} 
           player={props.player} 
           handleCardClick={props.handleCardClick}
+          socket={props.socket}
         />
     </div>
   );
