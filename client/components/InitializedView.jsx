@@ -11,7 +11,7 @@ const InitializedView = (props) => {
     <div className='gameTable'>
       <Opponents opponents={props.opponents} opponentsUsernames={props.opponentsUsernames} />
       <div className="row">
-        <Deck deck={props.deck} handleDeckClick={props.handleDeckClick}/>
+        <Deck deck={props.deck} isPlayerTurn={props.isPlayerTurn} handleDeckClick={props.handleDeckClick}/>
         <DiscardPile discard={props.discard}/>
       </div>
         <Player isPlayerTurn={props.isPlayerTurn} player={props.player} />
