@@ -1,10 +1,12 @@
 module.exports = {
 
     seeTheFuture: function (cardPosition) {
+        console.log('future being seen')
+        let nextThreeCards;
         if(this.state.deck.length > 3){
-            let nextThreeCards = this.state.deck.slice(this.state.deck.length-3) //FROM THE END OF THE DECK
+            nextThreeCards = this.state.deck.slice(this.state.deck.length-3) //FROM THE END OF THE DECK
         } else {
-            let nextThreeCards = this.state.deck.slice();
+            nextThreeCards = this.state.deck.slice();
         }
         this.setState({
             seeFutureCards: nextThreeCards
@@ -14,6 +16,7 @@ module.exports = {
     shuffleDeck: function (cardPosition) {
         let unshuffledDeck = this.state.deck.slice()
         let shuffledDeck = []
+        console.log('shuffling');
         while (unshuffledDeck.length > 0) {
             let min = 0
             let max = unshuffledDeck.length - 1
@@ -26,9 +29,10 @@ module.exports = {
         this.discardCard(cardPosition)
     },
     attackNextPlayer: function(cardPosition){ //add extra turn on first element
-        let gameTurns = this.state.turn.slice
+        let gameTurns = this.state.turn.slice()
         let myself = gameTurns[0];
         let attackedPlayerTurnIndex = 1
+        console.log('attack')
         for(let i = 1; i < gameTurns.length; i++){
             if(myself !== gameTurns[i]){
                 attackedPlayerTurnIndex = i;
@@ -42,6 +46,7 @@ module.exports = {
         this.endTurn()
     },
     skipATurn: function (cardPosition) {
+        console.log('skip')
         this.discardCard(cardPosition)
         this.endTurn()
     }

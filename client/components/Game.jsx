@@ -12,9 +12,10 @@ export default class Game extends React.Component {
     this.attackNextPlayer = cardFunctions.attackNextPlayer.bind(this)
     this.skipATurn = cardFunctions.skipATurn.bind(this)
     this.shuffleDeck = cardFunctions.shuffleDeck.bind(this)
-    this.seeFutureCards = cardFunctions.seeTheFuture.bind(this)
+    this.seeTheFuture = cardFunctions.seeTheFuture.bind(this)
     this.drawACard = this.drawACard.bind(this)
     this.handleDeckClick = this.handleDeckClick.bind(this)
+    this.handleCardClick = this.handleCardClick.bind(this)
     this.state = {
       allPlayersId: [],
       playerId: '',
@@ -53,14 +54,15 @@ export default class Game extends React.Component {
   }
 
   handleCardClick(cardName, handIndex) {
+    console.log('handling card click on game level')
     if (cardName === 'attack') {
-      cardFunctions.attackNextPlayer.bind(this, handIndex)
+      this.attackNextPlayer(handIndex);
     } else if ( cardName === 'shuffle') {
-      cardFunctions.shuffleDeck.bind(this, handIndex)
+      this.shuffleDeck(handIndex)
     } else if (cardName === 'skip') {
-      cardFunctions.skipATurn.bind(this, handIndex)
+      this.skipATurn(handIndex)
     } else if (cardName === 'see-the-future') {
-      cardFunctions.seeTheFuture.bind(this, handIndex)
+      this.seeTheFuture(handIndex)
     }
   }
 
@@ -196,7 +198,8 @@ export default class Game extends React.Component {
             opponents={opponents} 
             opponentsUsernames={opponentsUsernames} 
             isPlayerTurn={isPlayerTurn}
-            handleDeckClick={this.handleDeckClick}/> :
+            handleDeckClick={this.handleDeckClick}
+            handleCardClick={this.handleCardClick}/> :
           <LoadingView socket={this.props.socket} /> }
       </div>
 

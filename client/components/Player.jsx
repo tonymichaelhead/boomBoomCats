@@ -22,8 +22,11 @@ export default class Player extends React.Component {
     return (
       <div className="player row">
         Player
-        <Hand isPlayerTurn={this.props.isPlayerTurn} cards={this.state.hand}/>
-      </div>
+        <Hand 
+          isPlayerTurn={this.props.isPlayerTurn} 
+          cards={this.state.hand}
+          handleCardClick={this.props.handleCardClick}/>
+      </div> 
     )
   }
 }
