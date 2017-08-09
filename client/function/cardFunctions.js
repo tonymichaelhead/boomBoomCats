@@ -39,6 +39,7 @@ module.exports = {
         gameTurns.splice( attackedPlayerTurnIndex,0, attackedPlayer )
         this.setState( { turn: gameTurns } )
         this.discardCard(cardPosition)
+        this.endTurn()
     },
     skipATurn: function (cardPosition) {
         this.discardCard(cardPosition)
