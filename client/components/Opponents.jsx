@@ -19,9 +19,10 @@ export default class Opponents extends React.Component {
             console.log('these are the opponents usernames on the opponent component', opponentsUsernames)
             return (
               <span className="opponent col-xs-4"/*opponent={opponentsUsernames[i]} name={opponentsUsernames[i]}*/>
-                <h2>Player: {opponentsUsernames[i]}</h2>
+                <h4>Player:</h4>
+                <h3 className='oppName text-center'>{opponentsUsernames[i]}</h3>
                 {
-                  opp.hand.map(card => (<div className="cardBack col-xs-2">cardback</div> ))
+                  opp.hand.map(card => (<div className="col-xs-1"><img src={'./assets/cardBack.jpg'} className='card-back img-rounded' /></div> ))
                 }
               </span>
             )

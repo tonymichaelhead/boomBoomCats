@@ -3,8 +3,9 @@ import React from 'react';
 const Deck = (props) => {
   console.log('these are the props of Deck', props)
   return (
-      <img className="deck col-xs-3 thumbnail" onClick={props.handleDeckClick} src="https://www.explodingkittens.com/img/shared/ek-kitty-simple.svg">
-      </img>
+      <div className='col-xs-4 col-xs-offset-2'>
+        <img className="deck img-rounded" onClick={props.handleDeckClick} src={'./assets/cardBack.jpg'} />
+      </div>
   )
 };
 
