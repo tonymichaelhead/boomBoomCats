@@ -145,7 +145,18 @@ export default class Game extends React.Component {
       // }) 
       //update the deck
 
-      this.props.socket.emit('drew card', gameDeck, [currentPlayerHand, ...allPlayersExceptCurrent])
+      let newPlayersHand = []
+
+      for (let i = 0; i < this.state.allPlayers.length; i++) {
+        if (i === this.state.turn[0]) {
+          newPlayersHand.push(currentPlayerHand)
+        } else {
+          newPlayersHand.push( this.state.allPlayers[i] )
+        }
+      }
+
+
+      this.props.socket.emit('drew card', gameDeck, newPlayersHand)
 
       this.endTurn()
 
@@ -158,8 +169,18 @@ export default class Game extends React.Component {
       let currentPlayerWithUpdatedHand = Object.assign({}, currentPlayer)
       currentPlayerWithUpdatedHand.hand.push(drawnCard)
 
+      let newPlayersHand = []
+
+      for (let i = 0; i < this.state.allPlayers.length; i++) {
+        if (i === this.state.turn[0]) {
+          newPlayersHand.push(currentPlayerWithUpdatedHand)
+        } else {
+          newPlayersHand.push( this.state.allPlayers[i] )
+        }
+      }
+
       console.log('THIS IS THE NEW HAND AFTER CLICKING DRAW BEFORE THE EMIT ::::: ', JSON.stringify(currentPlayerWithUpdatedHand))
-      this.props.socket.emit('drew card', gameDeck, [currentPlayerWithUpdatedHand, ...allPlayersExceptCurrent])
+      this.props.socket.emit('drew card', gameDeck, newPlayersHand )
 
       this.endTurn()
     }
@@ -203,7 +224,17 @@ export default class Game extends React.Component {
     //   discard: updatedDiscard
     // })
 
-    this.props.socket.emit('discarded', updatedDiscard, [currentPlayer, ...allPlayersExceptCurrent])
+    let newPlayersHand = []
+
+    for (let i = 0; i < this.state.allPlayers.length; i++) {
+      if (i === this.state.turn[0]) {
+        newPlayersHand.push(currentPlayer)
+      } else {
+        newPlayersHand.push( this.state.allPlayers[i] )
+      }
+    }
+
+    this.props.socket.emit('discarded', updatedDiscard, newPlayersHand)
 
   }
 
