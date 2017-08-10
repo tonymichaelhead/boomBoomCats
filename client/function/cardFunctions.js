@@ -10,7 +10,7 @@ module.exports = {
         }
         this.setState({
             seeFutureCards: nextThreeCards
-        })
+        }, () => {alert('DO THIS LATER')})
         this.discardCard(cardPosition)
     },
     shuffleDeck: function (cardPosition) {

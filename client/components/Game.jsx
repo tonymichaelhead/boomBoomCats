@@ -121,18 +121,22 @@ export default class Game extends React.Component {
     let drawnCard = gameDeck.pop()  //draw from the last index in the array for performant
     let currentPlayer = this.state.allPlayers[this.state.turn[0]]
     let hand = currentPlayer.hand
-    let hasDefuse = hand.findIndex( (e) => { e.type === "defuse"} )
+    console.log("THIS IS THE HAND :::: ", hand)
+    let hasDefuse = hand.findIndex( e => e.type === "defuse" )
 
-    if (drawnCard.type === "bomb" && !hasDefuse ) { //player has no defuse
+    if (drawnCard.type === "bomb" && hasDefuse === -1 ) { //player has no defuse
       //EMIT BOOM
-      console.log('shucks you dead fool')
+      alert("Drew a bomb!" + this.state.playerId + "'s cat just got BOOM BOOM'D!")
       this.endTurn('dead')
 
-    } else if (drawnCard.type === "bomb" && !!hasDefuse) {
-      console.log(`in drawACard(), you haz a bomb!!! and you gotta defuse`)
+    } else if (drawnCard.type === "bomb" && hasDefuse > -1) {
+      //console.log(`in drawACard(), you haz a bomb!!! and you gotta defuse`)
+      alert('Drew a bomb! GOOD THING ' + this.state.playerId + ' HAS A DEFUSE CARD!')
       let allPlayersExceptCurrent = this.state.allPlayers.slice(1)
       let currentPlayerHand = Object.assign({}, currentPlayer)
-      currentPlayerHand.hand.splice(hasDefuse, 1)
+      //currentPlayerHand.hand.splice(hasDefuse, 1)
+      console.log('THIS IS THE VALUE OF hasDefuse ::::: ', hasDefuse)
+      this.discardCard(hasDefuse)
 
       let min = 0
       let max = this.state.deck - 1
