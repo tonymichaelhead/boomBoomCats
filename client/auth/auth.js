@@ -1,11 +1,11 @@
 import auth0 from 'auth0-js';
-if(!process.env.DOMAIN || !process.env.CLIENT_ID || !process.env.REDIRECT_URI || !process.env.AUDIENCE){
-    import config from './config.js';
-}
-let DOMAIN = process.env.DOMAIN || config.DOMAIN
-let CLIENT_ID = process.env.CLIENT_ID || config.CLIENT_ID
-let REDIRECT_URI = process.env.REDIRECT_URI || config.REDIRECT_URI
-let AUDIENCE = process.env.AUDIENCE || config.AUDIENCE
+// if(!process.env.DOMAIN || !process.env.CLIENT_ID || !process.env.REDIRECT_URI || !process.env.AUDIENCE){
+//     import config from './config.js';
+// }
+let DOMAIN = process.env.DOMAIN //|| config.DOMAIN
+let CLIENT_ID = process.env.CLIENT_ID //|| config.CLIENT_ID
+let REDIRECT_URI = process.env.REDIRECT_URI //|| config.REDIRECT_URI
+let AUDIENCE = process.env.AUDIENCE //|| config.AUDIENCE
 
 export default class Auth {
     constructor() {
