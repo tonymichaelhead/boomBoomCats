@@ -47,11 +47,6 @@ let createGameState = function(callback) {
       Each allPlayers's starting hands currently has ${gameState.allPlayers[0].hand.length} cards.
       `)
 
-      return 'normal part done'
-
-    }).then( (pass) => {
-      console.log(pass)
-
       cards.find({type: "defuse"}).toArray().then( (defuse) => {
         console.log(`There are ${defuse.length} ${defuse[0].type} cards in the database
         `)
@@ -82,47 +77,36 @@ let createGameState = function(callback) {
 
         console.log(`There are now ${gameState.deck.length} cards in the deck after defusing card initialization.        
         `)
-      })      
 
-      return 'defuse part done'
+        cards.find({type: "bomb"}).toArray().then( (bombs) => {
+          console.log(`There are ${bombs.length} ${bombs[0].type} cards in the database
+          `)
 
-    }).then( (pass) => {
-      console.log(pass)
+          let min = 0
+          let max = gameState.deck.length
 
-      cards.find({type: "bomb"}).toArray().then( (bombs) => {
-        console.log(`There are ${bombs.length} ${bombs[0].type} cards in the database
-        `)
+          //insert bombs into the deck
+          while (bombs.length > 0) {
+            let randomIndex = Math.floor(Math.random() * (max - min + 1)) + min
+            gameState.deck.splice(randomIndex, 0, bombs.pop())
 
-        let min = 0
-        let max = gameState.deck.length
+          }
+          console.log(`There are now ${gameState.deck.length} cards in the deck after bomb card initialization.
+          `)
 
-        //insert bombs into the deck
-        while (bombs.length > 0) {
-          let randomIndex = Math.floor(Math.random() * (max - min + 1)) + min
-          gameState.deck.splice(randomIndex, 0, bombs.pop())
+          gameState.deck.forEach( (card,i) => {
+            console.log(`card at index ${i} is ${card.name}`)
+          })
 
-        }
-        console.log(`There are now ${gameState.deck.length} cards in the deck after bomb card initialization.
-        `)
+          console.log('now in the callback portion')
+          if (callback) {
+            callback(gameState)
+          }
 
-        gameState.deck.forEach( (card,i) => {
-          console.log(`card at index ${i} is ${card.name}`)
         })
-
-        console.log('now in the callback portion')
-        if (callback) {
-          callback(gameState)
-        }
-
       })
-
-      return 'bomb part done'
-
-    }).then( (pass) => {
-      console.log(pass)
-
     })
-  })
+  })      
 }
 
 //createGameState()
