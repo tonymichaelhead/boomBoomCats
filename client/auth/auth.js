@@ -1,12 +1,17 @@
 import auth0 from 'auth0-js';
+import config from './config.js';
+let DOMAIN = process.env.DOMAIN || config.DOMAIN
+let CLIENT_ID = process.env.CLIENT_ID || config.CLIENT_ID
+let REDIRECT_URI = process.env.REDIRECT_URI || config.REDIRECT_URI
+let AUDIENCE = process.env.AUDIENCE || config.AUDIENCE
 
 export default class Auth {
     constructor() {
         this.auth0 = new auth0.WebAuth({
-            domain: 'michaelkdai.auth0.com',
-            clientID: 'Bt93UxMPclylp6P1iwcOY6ofPQsNeSZo',
-            redirectUri: 'http://localhost:3000/',
-            audience: 'https://michaelkdai.auth0.com/userinfo',
+            domain: DOMAIN,
+            clientID: CLIENT_ID,
+            redirectUri: REDIRECT_URI,
+            audience: AUDIENCE,
             responseType: 'token id_token',
             scope: 'openid profile'
         });
