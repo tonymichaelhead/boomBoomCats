@@ -1,31 +1,31 @@
 [
   {
     "name":"defuse",
-    "image":"https://media.giphy.com/media/Mliueouehmpag/giphy.gif",
+    "image":"./assets/defuse1.gif",
     "description":"Put your last drawn card back into the deck",
     "type":"defuse"
   },
   {
     "name":"defuse",
-    "image":"https://media.giphy.com/media/tqSghIpN7IZ7G/giphy.gif",
+    "image":"./assets/defuse2.gif",
     "description":"Put your last drawn card back into the deck",
     "type":"defuse"
   },
   {
     "name":"defuse",
-    "image":"https://media.giphy.com/media/D5NwIZ0EY1w1a/giphy.gif",
+    "image":"./assets/defuse3.gif",
     "description":"Put your last drawn card back into the deck",
     "type":"defuse"
   },
   {
     "name":"defuse",
-    "image":"https://media.giphy.com/media/3o6ZteNvnQgMqoRbSE/giphy.gif",
+    "image":"./assets/defuse4.gif",
     "description":"Put your last drawn card back into the deck",
     "type":"defuse"
   },
   {
     "name":"defuse",
-    "image":"https://media.giphy.com/media/NHDzXqeSDdkoo/giphy.gif",
+    "image":"./assets/defuse5.gif",
     "description":"Put your last drawn card back into the deck",
     "type":"defuse"
   }

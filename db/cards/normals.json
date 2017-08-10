@@ -1,13 +1,13 @@
 [
   {
     "name":"shuffle",
-    "image":"https://media.giphy.com/media/SUlQAk4YfWErS/giphy.gif",
+    "image":"./assets/shuffle1.gif",
     "description":"Shuffle dem cards.",
     "type":"normal"
     },
   {
     "name":"see-the-future",
-    "image":"https://media.giphy.com/media/3oz8xMYH87VQbwqLRu/giphy.gif",
+    "image": "./assets/seethefuture1.gif",
     "description":"See the next 3 cards. It's like cheating, except not.",
     "type":"normal"
   },
@@ -25,13 +25,13 @@
   },
     {
     "name":"shuffle",
-    "image":"https://media.giphy.com/media/dsMFrxB2agKf6/giphy.gif",
+    "image":"./assets/shuffle12.gif",
     "description":"Shuffle dem cards.",
     "type":"normal"
     },
   {
     "name":"see-the-future",
-    "image":"https://media.giphy.com/media/dy34lXgVdd6FO/giphy.gif",
+    "image":"./assets/seethefuture2.gif",
     "description":"See the next 3 cards. It's like cheating, except not.",
     "type":"normal"
   },
@@ -48,13 +48,13 @@
     "type":"normal"
   },  {
     "name":"shuffle",
-    "image":"https://media.giphy.com/media/iU2yJX5YKI9pe/giphy.gif",
+    "image":"./assets/shuffle2.gif",
     "description":"Shuffle dem cards.",
     "type":"normal"
     },
   {
     "name":"see-the-future",
-    "image":"https://media.giphy.com/media/vbNWVFTw5RdRe/giphy.gif",
+    "image":"./assets/seethefuture3.gif",
     "description":"See the next 3 cards. It's like cheating, except not.",
     "type":"normal"
   },
@@ -71,13 +71,13 @@
     "type":"normal"
   },  {
     "name":"shuffle",
-    "image":"https://media.giphy.com/media/26BoElcdr7OiEHmfu/giphy.gif",
+    "image":"./assets/shuffle3.gif",
     "description":"Shuffle dem cards.",
     "type":"normal"
     },
   {
     "name":"see-the-future",
-    "image":"https://media.giphy.com/media/ZGsvZX8yo1ioM/giphy.gif",
+    "image":"./assets/seethefuture4.gif",
     "description":"See the next 3 cards. It's like cheating, except not.",
     "type":"normal"
   },
@@ -94,13 +94,13 @@
     "type":"normal"
   },  {
     "name":"shuffle",
-    "image":"https://media.giphy.com/media/953Nn3kYUbGxO/giphy.gif",
+    "image":"./assets/shuffle4.gif",
     "description":"Shuffle dem cards.",
     "type":"normal"
     },
   {
     "name":"see-the-future",
-    "image":"https://media.giphy.com/media/qKgwRH8hyp6py/giphy.gif",
+    "image":"./assets/seethefuture5.gif",
     "description":"See the next 3 cards. It's like cheating, except not.",
     "type":"normal"
   },
@@ -117,13 +117,13 @@
     "type":"normal"
   },  {
     "name":"shuffle",
-    "image":"https://media.giphy.com/media/WXjuxv5mGZXqg/giphy.gif",
+    "image":"./assets/shuffle5.gif",
     "description":"Shuffle dem cards.",
     "type":"normal"
     },
   {
     "name":"see-the-future",
-    "image":"https://media.giphy.com/media/13d2jHlSlxklVe/giphy.gif",
+    "image":"./assets/seethefuture6.gif",
     "description":"See the next 3 cards. It's like cheating, except not.",
     "type":"normal"
   },
@@ -140,13 +140,13 @@
     "type":"normal"
   },  {
     "name":"shuffle",
-    "image":"https://media.giphy.com/media/b8q3fMVmFMzkc/giphy.gif",
+    "image":"./assets/shuffle6.gif",
     "description":"Shuffle dem cards.",
     "type":"normal"
     },
   {
     "name":"see-the-future",
-    "image":"https://media.giphy.com/media/1WjGmnIA1LWz6/giphy.gif",
+    "image":"./assets/seethefuture7.gif",
     "description":"See the next 3 cards. It's like cheating, except not.",
     "type":"normal"
   },
@@ -164,13 +164,13 @@
   },
     {
     "name":"shuffle",
-    "image":"https://media.giphy.com/media/xNWqtyzT3S6v6/giphy.gif",
+    "image":"./assets/shuffle7.gif",
     "description":"Shuffle dem cards.",
     "type":"normal"
     },
   {
     "name":"see-the-future",
-    "image":"https://media.giphy.com/media/l46CaUs3XUKHaPmak/giphy.gif",
+    "image": "./assets/seethefuture8.gif",
     "description":"See the next 3 cards. It's like cheating, except not.",
     "type":"normal"
   },
@@ -187,13 +187,13 @@
     "type":"normal"
   },  {
     "name":"shuffle",
-    "image":"https://media.giphy.com/media/uYmxaWUM7tUn6/giphy.gif",
+    "image":"./assets/shuffle8.gif",
     "description":"Shuffle dem cards.",
     "type":"normal"
     },
   {
     "name":"see-the-future",
-    "image":"https://media.giphy.com/media/3o72F5QygiI9hF3ZyU/giphy.gif",
+    "image": "./assets/seethefuture9.gif",
     "description":"See the next 3 cards. It's like cheating, except not.",
     "type":"normal"
   },
@@ -210,13 +210,13 @@
     "type":"normal"
   },  {
     "name":"shuffle",
-    "image":"https://media.giphy.com/media/11Hjo5tFOb2HC0/giphy.gif",
+    "image":"./assets/shuffle9.gif",
     "description":"Shuffle dem cards.",
     "type":"normal"
     },
   {
     "name":"see-the-future",
-    "image":"https://media.giphy.com/media/dG7ZiL6ImLyNO/giphy.gif",
+    "image":"./assets/seethefuture10.gif",
     "description":"See the next 3 cards. It's like cheating, except not.",
     "type":"normal"
   },
@@ -233,13 +233,13 @@
     "type":"normal"
   },  {
     "name":"shuffle",
-    "image":"https://media.giphy.com/media/fXMPBIOZND6lq/giphy.gif",
+    "image":"./assets/shuffle10.gif",
     "description":"Shuffle dem cards.",
     "type":"normal"
     },
   {
     "name":"see-the-future",
-    "image":"https://media.giphy.com/media/NFA61GS9qKZ68/giphy.gif",
+    "image":"./assets/seethefuture11.gif",
     "description":"See the next 3 cards. It's like cheating, except not.",
     "type":"normal"
   },
@@ -256,13 +256,13 @@
     "type":"normal"
   },  {
     "name":"shuffle",
-    "image":"https://media.giphy.com/media/Q56SF4czEtSZG/giphy.gif",
+    "image":"./assets/shuffle11.gif",
     "description":"Shuffle dem cards.",
     "type":"normal"
     },
   {
     "name":"see-the-future",
-    "image":"https://media.giphy.com/media/13CoXDiaCcCoyk/giphy.gif",
+    "image":"./assets/seethefuture12.gif",
     "description":"See the next 3 cards. It's like cheating, except not.",
     "type":"normal"
   },
