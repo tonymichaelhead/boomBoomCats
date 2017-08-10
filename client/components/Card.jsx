@@ -3,7 +3,7 @@ import React from 'react'
 const Card = (props) => {
   // console.log('these are the props of the card component', props)
   return (
-    <div className={"card " + props.name + "  col-xs-1 thumbnail"}
+    <div className={`card ${props.name} col-xs-1 thumbnail ${props.isPlayerTurn ? 'playerActive' : ''} `}
       onClick={()=>{
         console.log('click registered')
         if(props.isPlayerTurn){

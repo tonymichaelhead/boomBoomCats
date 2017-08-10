@@ -9,7 +9,7 @@ const InitializedView = (props) => {
   // console.log('these are the props of the Initialized View', props)
   return (
     <div className='gameTable'>
-      <Opponents opponents={props.opponents} opponentsUsernames={props.opponentsUsernames} />
+      <Opponents opponents={props.opponents} opponentsUsernames={props.opponentsUsernames} currentPlayerTurn={props.currentPlayerTurn} />
       <div className="row">
         <Deck deck={props.deck} isPlayerTurn={props.isPlayerTurn} handleDeckClick={props.handleDeckClick}/>
         <DiscardPile discard={props.discard}/>

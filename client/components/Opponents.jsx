@@ -20,7 +20,10 @@ export default class Opponents extends React.Component {
             return (
               <span className="opponent col-xs-3" key={i}/*opponent={opponentsUsernames[i]} name={opponentsUsernames[i]}*/>
                 <h4>Player:</h4>
-                <h3 className='oppName'>{opponentsUsernames[i]}</h3>
+
+                {this.props.currentPlayerTurn === opp.index ? <h3 className='oppName oppActive'>{opponentsUsernames[i]}</h3> : 
+                  <h3 className='oppName'>{opponentsUsernames[i]}</h3>}
+
                 <div className='row'>
                 {
                   opp.hand.map((card, j) => (<div key={j} className="col-xs-1"><img src={'./assets/cardBack.jpg'} className='card-back img-rounded' /></div> ))

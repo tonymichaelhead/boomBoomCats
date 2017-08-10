@@ -126,6 +126,14 @@ li {
   margin-top: -10px;
 }
 
+.oppActive {
+  color: yellow;
+}
+
+.playerActive {
+  box-shadow: 0 0 10px 5px #f9f8bb;
+}
+
 .deck {
   margin-top: 30px;
   height: 300px;
