@@ -96,8 +96,9 @@ export default class Game extends React.Component {
 
     } else if ( cardName === 'shuffle') {
 
-      this.shuffleDeck(handIndex)
-      this.props.socket.emit('shuffle card', this.state.deck)
+      this.shuffleDeck(handIndex,()=>{
+        this.props.socket.emit('shuffle card', this.state.deck)
+      })   
 
     } else if (cardName === 'skip') {
 
@@ -105,8 +106,9 @@ export default class Game extends React.Component {
 
     } else if (cardName === 'see-the-future') {
 
-      this.seeTheFuture(handIndex)
-      this.props.socket.emit('future card', this.state.playerId)
+      this.seeTheFuture(handIndex, ()=>{
+        this.props.socket.emit('future card', this.state.playerId)
+      })
 
     }
   }

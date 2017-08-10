@@ -17,7 +17,7 @@ module.exports = {
         }, () => {alert(nextCardsString)})
         this.discardCard(cardPosition)
     },
-    shuffleDeck: function (cardPosition) {
+    shuffleDeck: function (cardPosition, cb) {
         let unshuffledDeck = this.state.deck.slice()
         let shuffledDeck = []
         console.log('shuffling');
@@ -29,10 +29,13 @@ module.exports = {
             unshuffledDeck.splice(randomIndex, 1)
         }
 
-        this.setState({ deck: shuffledDeck })
-        this.discardCard(cardPosition)
+        this.setState({ deck: shuffledDeck }, ()=>{
+            this.discardCard(cardPosition)
+            cb()
+        })
+
     },
-    attackNextPlayer: function(cardPosition){ //add extra turn on first element
+    attackNextPlayer: function(cardPosition, cb){ //add extra turn on first element
         let gameTurns = this.state.turn.slice()
         let myself = gameTurns[0];
         let attackedPlayerTurnIndex = 1
@@ -48,7 +51,7 @@ module.exports = {
         let newTurns = gameTurns.slice()
         this.setState({
             turn: newTurns
-        }, () => {this.discardCard(cardPosition); this.endTurn()})
+        }, () => {this.discardCard(cardPosition); this.endTurn(); cb()})
     },
     skipATurn: function (cardPosition) {
         console.log('skip')
