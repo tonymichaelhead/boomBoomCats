@@ -13,13 +13,13 @@
   },
   {
     "name":"skip",
-    "image":"https://media.giphy.com/media/26BGE9mt1ZuHYzvOw/giphy.gif",
+    "image":"./assets/skip1.gif",
     "description":"Run away from your responsibilities. End your turn without drawing.",
     "type":"normal"
   },
   {
     "name":"attack",
-    "image":"https://media.giphy.com/media/DG1kfwY9o6YIU/giphy.gif",
+    "image":"./assets/attack1.gif",
     "description":"End your turn without drawing, and drop a deuce on the next guy",
     "type":"normal"
   },
@@ -37,13 +37,13 @@
   },
   {
     "name":"skip",
-    "image":"https://media0.giphy.com/media/10bRCSvYnFrBte/giphy.gif",
+    "image":"./assets/skip2.gif",
     "description":"Run away from your responsibilities. End your turn without drawing.",
     "type":"normal"
   },
   {
     "name":"attack",
-    "image":"https://media.giphy.com/media/G9MeYgpouOYDe/giphy.gif",
+    "image":"./assets/attack2.gif",
     "description":"End your turn without drawing, and drop a deuce on the next guy.",
     "type":"normal"
   },  {
@@ -60,13 +60,13 @@
   },
   {
     "name":"skip",
-    "image":"https://media.giphy.com/media/O6zCP2m0JwduU/giphy.gif",
+    "image":"./assets/skip3.gif",
     "description":"Run away from your responsibilities. End your turn without drawing.",
     "type":"normal"
   },
   {
     "name":"attack",
-    "image":"https://media.giphy.com/media/13xmdZjGdVabKg/giphy.gif",
+    "image":"./assets/attack3.gif",
     "description":"End your turn without drawing, and drop a deuce on the next guy.",
     "type":"normal"
   },  {
@@ -83,13 +83,13 @@
   },
   {
     "name":"skip",
-    "image":"https://media.giphy.com/media/XAkdeyKuDq1ri/giphy.gif",
+    "image":"./assets/skip4.gif",
     "description":"Run away from your responsibilities. End your turn without drawing.",
     "type":"normal"
   },
   {
     "name":"attack",
-    "image":"https://media.giphy.com/media/X9tSed3yhVom4/giphy.gif",
+    "image":"./assets/attack4.gif",
     "description":"End your turn without drawing, and drop a deuce on the next guy.",
     "type":"normal"
   },  {
@@ -106,13 +106,13 @@
   },
   {
     "name":"skip",
-    "image":"https://i.chzbgr.com/full/5966517248/h2CFA5351/",
+    "image":"./assets/skip5.gif",
     "description":"Run away from your responsibilities. End your turn without drawing.",
     "type":"normal"
   },
   {
     "name":"attack",
-    "image":"https://media.giphy.com/media/We5pQjlgWrbu8/giphy.gif",
+    "image":"./assets/attack5.gif",
     "description":"End your turn without drawing, and drop a deuce on the next guy.",
     "type":"normal"
   },  {
@@ -129,13 +129,13 @@
   },
   {
     "name":"skip",
-    "image":"https://media.giphy.com/media/wJkr1P9QewrTy/giphy.gif",
+    "image":"./assets/skip6.gif",
     "description":"Run away from your responsibilities. End your turn without drawing.",
     "type":"normal"
   },
   {
     "name":"attack",
-    "image":"https://media.giphy.com/media/e4BoeNGwaTvYk/giphy.gif",
+    "image":"./assets/attack6.gif",
     "description":"End your turn without drawing, and drop a deuce on the next guy.",
     "type":"normal"
   },  {
@@ -152,13 +152,13 @@
   },
   {
     "name":"skip",
-    "image":"https://media.giphy.com/media/3o7abyJmscDvHlkbu0/giphy.gif",
+    "image":"./assets/skip7.gif",
     "description":"Run away from your responsibilities. End your turn without drawing.",
     "type":"normal"
   },
   {
     "name":"attack",
-    "image":"https://media.giphy.com/media/vFxJ3RuSKRIfS/giphy.gif",
+    "image":"./assets/attack7.gif",
     "description":"End your turn without drawing, and drop a deuce on the next guy.",
     "type":"normal"
   },
@@ -176,13 +176,13 @@
   },
   {
     "name":"skip",
-    "image":"https://media.giphy.com/media/DNlBVVKyAhNEk/giphy.gif",
+    "image":"./assets/skip8.gif",
     "description":"Run away from your responsibilities. End your turn without drawing.",
     "type":"normal"
   },
   {
     "name":"attack",
-    "image":"https://media.giphy.com/media/l41lTn1liPDzkv0Zi/giphy.gif",
+    "image":"./assets/attack8.gif",
     "description":"End your turn without drawing, and drop a deuce on the next guy.",
     "type":"normal"
   },  {
@@ -199,13 +199,13 @@
   },
   {
     "name":"skip",
-    "image":"https://media.giphy.com/media/lXEvDQ69mWCis/giphy.gif",
+    "image":"./assets/skip9.gif",
     "description":"Run away from your responsibilities. End your turn without drawing.",
     "type":"normal"
   },
   {
     "name":"attack",
-    "image":"https://media.giphy.com/media/ASdLsce6Wq8hO/giphy.gif",
+    "image":"./assets/attack9.gif",
     "description":"End your turn without drawing, and drop a deuce on the next guy.",
     "type":"normal"
   },  {
@@ -222,13 +222,13 @@
   },
   {
     "name":"skip",
-    "image":"https://media.giphy.com/media/xiDXIq5foBHri/giphy.gif",
+    "image":"./assets/skip10.gif",
     "description":"Run away from your responsibilities. End your turn without drawing.",
     "type":"normal"
   },
   {
     "name":"attack",
-    "image":"https://media.giphy.com/media/rW5BFRzuX04bm/giphy.gif",
+    "image":"./assets/attack10.gif",
     "description":"End your turn without drawing, and drop a deuce on the next guy.",
     "type":"normal"
   },  {
@@ -245,13 +245,13 @@
   },
   {
     "name":"skip",
-    "image":"https://media.giphy.com/media/iKhktCJ5fZEA0/giphy.gif",
+    "image":"./assets/skip11.gif",
     "description":"Run away from your responsibilities. End your turn without drawing.",
     "type":"normal"
   },
   {
     "name":"attack",
-    "image":"https://media.giphy.com/media/PeaT7yaHFpifK/giphy.gif",
+    "image":"./assets/attack11.gif",
     "description":"End your turn without drawing, and drop a deuce on the next guy.",
     "type":"normal"
   },  {
@@ -268,13 +268,13 @@
   },
   {
     "name":"skip",
-    "image":"https://media.giphy.com/media/RP5trF0DjM7vi/giphy.gif",
+    "image":"./assets/skip12.gif",
     "description":"Run away from your responsibilities. End your turn without drawing.",
     "type":"normal"
   },
   {
     "name":"attack",
-    "image":"https://media.giphy.com/media/bcqAMUTUHoLDy/giphy.gif",
+    "image":"./assets/attack12.gif",
     "description":"End your turn without drawing, and drop a deuce on the next guy.",
     "type":"normal"
   } 
