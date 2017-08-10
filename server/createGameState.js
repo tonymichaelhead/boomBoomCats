@@ -9,7 +9,7 @@ let createGameState = function(callback) {
     const cards = db.collection('cards')
 
     let gameState = {
-      allPlayers: [{hand: []},{hand: []},{hand: []},{hand:[]}],
+      allPlayers: [{hand: [], index: 0},{hand: [], index: 1},{hand: [], index: 2},{hand:[], index: 3}],
       deck: [],
       discard: [],
       turn: [1, 2, 3, 4]

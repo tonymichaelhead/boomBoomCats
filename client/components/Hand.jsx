@@ -12,7 +12,8 @@ export default class Hand extends React.Component {
     // console.log('this is the first card in the hand', this.props.cards[0])
     return (
       <div className="hand row">
-         { this.props.cards.map((card, i) => (
+        { this.props.cards.map((card, i) => (
+
           <Card name={card.name}
             image={card.image} 
             description={card.description} 
@@ -21,7 +22,8 @@ export default class Hand extends React.Component {
             isPlayerTurn={this.props.isPlayerTurn}
             key={i}
           />
-          ))}
+          
+        ))}
       </div>
     )
   }

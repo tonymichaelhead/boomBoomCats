@@ -269,6 +269,8 @@ export default class Game extends React.Component {
     let player = this.state.allPlayers[this.state.playerIndex]
     let isPlayerTurn
     this.state.turn[0] === this.state.playerIndex ? isPlayerTurn = true: isPlayerTurn = false
+
+    let currentPlayerTurn = this.state.turn[0]
     
     // if (this.state.allPlayers.length === 4) { debugger }
 
@@ -292,6 +294,7 @@ export default class Game extends React.Component {
             opponentsUsernames={opponentsUsernames} 
             isPlayerTurn={isPlayerTurn}
             socket={this.props.socket}
+            currentPlayerTurn = {currentPlayerTurn}
             handleDeckClick={this.handleDeckClick}
             handleCardClick={this.handleCardClick}/> :
           <LoadingView socket={this.props.socket} /> }
