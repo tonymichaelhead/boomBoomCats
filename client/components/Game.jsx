@@ -24,7 +24,8 @@ export default class Game extends React.Component {
       deck: [],
       discard: [],
       turn: [],
-      seeFutureCards: []
+      seeFutureCards: [],
+      exploderCount: 3
     }
   }
 
@@ -44,7 +45,8 @@ export default class Game extends React.Component {
         playerIndex: userIndex, //string
         deck: gameState.deck, //array of card objects
         discard: [],
-        turn: [0,1,2,3]
+        turn: [0,1,2,3],
+        exploderCount: 3
       })
       // console.log('we are in the game component')
       // console.log(`Game Component: usersID is ${JSON.stringify(Object.values(users))}`)
@@ -208,6 +210,9 @@ export default class Game extends React.Component {
       for (var i = this.state.allPlayers[this.state.playerIndex].hand.length; i >= 0; i--) {
         this.discardCard(i)
       }
+      this.setState({
+        exploderCount: this.state.exploderCount - 1
+      })
     } else if (this.state.turn[0] === this.state.turn[1]){
       let playerWhoEndedTurn = gameTurns.shift()
     } else {
@@ -301,6 +306,7 @@ export default class Game extends React.Component {
             opponentsUsernames={opponentsUsernames} 
             isPlayerTurn={isPlayerTurn}
             socket={this.props.socket}
+            exploderCount={this.state.exploderCount}
             currentPlayerTurn = {currentPlayerTurn}
             handleDeckClick={this.handleDeckClick}
             handleCardClick={this.handleCardClick}/> :
