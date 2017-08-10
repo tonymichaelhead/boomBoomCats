@@ -2,31 +2,31 @@
   {
     "name":"defuse",
     "image":"./assets/defuse1.gif",
-    "description":"Put your last drawn card back into the deck",
+    "description":"I swear this is a lucky card.",
     "type":"defuse"
   },
   {
     "name":"defuse",
     "image":"./assets/defuse2.gif",
-    "description":"Put your last drawn card back into the deck",
+    "description":"I swear this is a lucky card.",
     "type":"defuse"
   },
   {
     "name":"defuse",
     "image":"./assets/defuse3.gif",
-    "description":"Put your last drawn card back into the deck",
+    "description":"I swear this is a lucky card.",
     "type":"defuse"
   },
   {
     "name":"defuse",
     "image":"./assets/defuse4.gif",
-    "description":"Put your last drawn card back into the deck",
+    "description":"I swear this is a lucky card.",
     "type":"defuse"
   },
   {
     "name":"defuse",
     "image":"./assets/defuse5.gif",
-    "description":"Put your last drawn card back into the deck",
+    "description":"I swear this is a lucky card.",
     "type":"defuse"
   }
 ]
