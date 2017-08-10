@@ -17,7 +17,7 @@ class Deck extends Component {
 
   render() {
     return (
-      <div className='col-xs-4 col-xs-offset-1'>
+      <div className='col-xs-4 col-xs-offset-1 deck-wrapper'>
         { this.props.isPlayerTurn ?
           <img className="deck img-rounded" 
             onClick={this.props.handleDeckClick} 
@@ -25,6 +25,7 @@ class Deck extends Component {
           <img className="deck img-rounded"  
             src={'./assets/cardBack.jpg'} /> 
         }
+        <h2 id='deckCount'>{this.props.deck.length}</h2>
       </div>
     );
   }
