@@ -1,20 +1,20 @@
 [
   {
     "name":"exploding-kitten",
-    "image":"https://media.giphy.com/media/pkicJPJDvhom4/giphy.gif",
-    "description":"Show this card immediately",
+    "image":"./assets/bomb1.gif",
+    "description": "Draw this and you die.",
     "type":"bomb"
   },
   {
     "name":"exploding-kitten",
-    "image":"https://media.giphy.com/media/pkicJPJDvhom4/giphy.gif",
-    "description":"https://media.giphy.com/media/pkicJPJDvhom4/giphy.gif",
+    "image":"./assets/bomb3.gif",
+    "description":"Draw this and you die.",
     "type":"bomb"
   },
   {
     "name":"exploding-kitten",
-    "image":"http://tinyurl.com/h98z9cq",
-    "description":"Show this card immediately",
+    "image":"./assets/bomb2.gif",
+    "description":"Draw this and you die.",
     "type":"bomb"
   }
 ]
