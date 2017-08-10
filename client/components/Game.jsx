@@ -127,6 +127,7 @@ export default class Game extends React.Component {
     if (drawnCard.type === "bomb" && hasDefuse === -1 ) { //player has no defuse
       //EMIT BOOM
       alert("Drew a bomb!" + this.state.playerId + "'s cat just got BOOM BOOM'D!")
+      hand.unshift(drawnCard)
       this.endTurn('dead')
 
     } else if (drawnCard.type === "bomb" && hasDefuse > -1) {
@@ -199,6 +200,9 @@ export default class Game extends React.Component {
     //if there's been an attack or player dead, get rid of the duplicate since it's a one-time thing
     if ( status === 'dead' || this.state.turn[0] === this.state.turn[1] ) {
       let playerWhoEndedTurn = gameTurns.shift()
+      for (var i = this.state.allPlayers[this.state.playerIndex].hand.length; i >= 0; i--) {
+        this.discardCard(i)
+      }
     } else {
       // let playerWhoEndedTurn = gameTurns.shift()
       // gameTurns.push(playerWhoEndedTurn)
