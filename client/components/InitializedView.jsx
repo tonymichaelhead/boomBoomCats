@@ -7,12 +7,14 @@ import DiscardPile from './DiscardPile.jsx'
 const InitializedView = (props) => {
   // console.log('ATTN: hitting the initilized view')
   // console.log('these are the props of the Initialized View', props)
+  //var deathChance = Math.round((props.exploderCount / props.deck.length) * 100)
   return (
     <div className='gameTable'>
       <Opponents opponents={props.opponents} opponentsUsernames={props.opponentsUsernames} currentPlayerTurn={props.currentPlayerTurn} />
-      <div className="row">
+      <div className="row text-center">
         <Deck deck={props.deck} isPlayerTurn={props.isPlayerTurn} handleDeckClick={props.handleDeckClick}/>
         <DiscardPile discard={props.discard}/>
+        <h3 id='calculation'>You have a {Math.round((props.exploderCount / props.deck.length) * 100)} chance of blowing up!</h3>
       </div>
         <Player 
           isPlayerTurn={props.isPlayerTurn} 
