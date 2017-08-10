@@ -198,11 +198,13 @@ export default class Game extends React.Component {
     let gameTurns = this.state.turn.slice()
 
     //if there's been an attack or player dead, get rid of the duplicate since it's a one-time thing
-    if ( status === 'dead' || this.state.turn[0] === this.state.turn[1] ) {
+    if ( status === 'dead') {
       let playerWhoEndedTurn = gameTurns.shift()
       for (var i = this.state.allPlayers[this.state.playerIndex].hand.length; i >= 0; i--) {
         this.discardCard(i)
       }
+    } else if (this.state.turn[0] === this.state.turn[1]){
+      let playerWhoEndedTurn = gameTurns.shift()
     } else {
       // let playerWhoEndedTurn = gameTurns.shift()
       // gameTurns.push(playerWhoEndedTurn)
