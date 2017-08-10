@@ -196,8 +196,10 @@ export default class Game extends React.Component {
     if ( status === 'dead' || this.state.turn[0] === this.state.turn[1] ) {
       let playerWhoEndedTurn = gameTurns.shift()
     } else {
-      let playerWhoEndedTurn = gameTurns.shift()
-      gameTurns.push(playerWhoEndedTurn)
+      // let playerWhoEndedTurn = gameTurns.shift()
+      // gameTurns.push(playerWhoEndedTurn)
+      gameTurns.push(gameTurns[0])
+      gameTurns.shift()
     }
     // this.setState({ turn: gameTurns })
 

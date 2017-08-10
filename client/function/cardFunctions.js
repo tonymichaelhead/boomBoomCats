@@ -40,10 +40,11 @@ module.exports = {
             }
         }
         let attackedPlayer = this.state.turn.slice(attackedPlayerTurnIndex,attackedPlayerTurnIndex+1)
-        gameTurns.splice( attackedPlayerTurnIndex,0, attackedPlayer )
-        this.setState( { turn: gameTurns } )
-        this.discardCard(cardPosition)
-        this.endTurn()
+        gameTurns.splice( attackedPlayerTurnIndex,0, attackedPlayer[0] )
+        let newTurns = gameTurns.slice()
+        this.setState({
+            turn: newTurns
+        }, () => {this.discardCard(cardPosition); this.endTurn()})
     },
     skipATurn: function (cardPosition) {
         console.log('skip')
