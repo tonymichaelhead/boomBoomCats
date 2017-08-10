@@ -2,280 +2,280 @@
   {
     "name":"shuffle",
     "image":"https://media.giphy.com/media/SUlQAk4YfWErS/giphy.gif",
-    "description":"Shuffle the Draw Pile",
+    "description":"Shuffle dem cards.",
     "type":"normal"
     },
   {
     "name":"see-the-future",
     "image":"https://media.giphy.com/media/3oz8xMYH87VQbwqLRu/giphy.gif",
-    "description":"Privately View the top three cards of the deck",
+    "description":"See the next 3 cards. It's like cheating, except not.",
     "type":"normal"
   },
   {
     "name":"skip",
     "image":"https://media.giphy.com/media/26BGE9mt1ZuHYzvOw/giphy.gif",
-    "description":"End your turn without drawing a card",
+    "description":"Run away from your responsibilities. End your turn without drawing.",
     "type":"normal"
   },
   {
     "name":"attack",
     "image":"https://media.giphy.com/media/DG1kfwY9o6YIU/giphy.gif",
-    "description":"End your turn without drawing a card.  Force the next player to take two turns",
+    "description":"End your turn without drawing, and drop a deuce on the next guy",
     "type":"normal"
   },
     {
     "name":"shuffle",
     "image":"https://media.giphy.com/media/dsMFrxB2agKf6/giphy.gif",
-    "description":"Shuffle the Draw Pile",
+    "description":"Shuffle dem cards.",
     "type":"normal"
     },
   {
     "name":"see-the-future",
     "image":"https://media.giphy.com/media/dy34lXgVdd6FO/giphy.gif",
-    "description":"Privately View the top three cards of the deck",
+    "description":"See the next 3 cards. It's like cheating, except not.",
     "type":"normal"
   },
   {
     "name":"skip",
     "image":"https://media0.giphy.com/media/10bRCSvYnFrBte/giphy.gif",
-    "description":"End your turn without drawing a card",
+    "description":"Run away from your responsibilities. End your turn without drawing.",
     "type":"normal"
   },
   {
     "name":"attack",
     "image":"https://media.giphy.com/media/G9MeYgpouOYDe/giphy.gif",
-    "description":"End your turn without drawing a card.  Force the next player to take two turns",
+    "description":"End your turn without drawing, and drop a deuce on the next guy.",
     "type":"normal"
   },  {
     "name":"shuffle",
     "image":"https://media.giphy.com/media/iU2yJX5YKI9pe/giphy.gif",
-    "description":"Shuffle the Draw Pile",
+    "description":"Shuffle dem cards.",
     "type":"normal"
     },
   {
     "name":"see-the-future",
     "image":"https://media.giphy.com/media/vbNWVFTw5RdRe/giphy.gif",
-    "description":"Privately View the top three cards of the deck",
+    "description":"See the next 3 cards. It's like cheating, except not.",
     "type":"normal"
   },
   {
     "name":"skip",
     "image":"https://media.giphy.com/media/O6zCP2m0JwduU/giphy.gif",
-    "description":"End your turn without drawing a card",
+    "description":"Run away from your responsibilities. End your turn without drawing.",
     "type":"normal"
   },
   {
     "name":"attack",
     "image":"https://media.giphy.com/media/13xmdZjGdVabKg/giphy.gif",
-    "description":"End your turn without drawing a card.  Force the next player to take two turns",
+    "description":"End your turn without drawing, and drop a deuce on the next guy.",
     "type":"normal"
   },  {
     "name":"shuffle",
     "image":"https://media.giphy.com/media/26BoElcdr7OiEHmfu/giphy.gif",
-    "description":"Shuffle the Draw Pile",
+    "description":"Shuffle dem cards.",
     "type":"normal"
     },
   {
     "name":"see-the-future",
     "image":"https://media.giphy.com/media/ZGsvZX8yo1ioM/giphy.gif",
-    "description":"Privately View the top three cards of the deck",
+    "description":"See the next 3 cards. It's like cheating, except not.",
     "type":"normal"
   },
   {
     "name":"skip",
     "image":"https://media.giphy.com/media/XAkdeyKuDq1ri/giphy.gif",
-    "description":"End your turn without drawing a card",
+    "description":"Run away from your responsibilities. End your turn without drawing.",
     "type":"normal"
   },
   {
     "name":"attack",
     "image":"https://media.giphy.com/media/X9tSed3yhVom4/giphy.gif",
-    "description":"End your turn without drawing a card.  Force the next player to take two turns",
+    "description":"End your turn without drawing, and drop a deuce on the next guy.",
     "type":"normal"
   },  {
     "name":"shuffle",
     "image":"https://media.giphy.com/media/953Nn3kYUbGxO/giphy.gif",
-    "description":"Shuffle the Draw Pile",
+    "description":"Shuffle dem cards.",
     "type":"normal"
     },
   {
     "name":"see-the-future",
     "image":"https://media.giphy.com/media/qKgwRH8hyp6py/giphy.gif",
-    "description":"Privately View the top three cards of the deck",
+    "description":"See the next 3 cards. It's like cheating, except not.",
     "type":"normal"
   },
   {
     "name":"skip",
     "image":"https://i.chzbgr.com/full/5966517248/h2CFA5351/",
-    "description":"End your turn without drawing a card",
+    "description":"Run away from your responsibilities. End your turn without drawing.",
     "type":"normal"
   },
   {
     "name":"attack",
     "image":"https://media.giphy.com/media/We5pQjlgWrbu8/giphy.gif",
-    "description":"End your turn without drawing a card.  Force the next player to take two turns",
+    "description":"End your turn without drawing, and drop a deuce on the next guy.",
     "type":"normal"
   },  {
     "name":"shuffle",
     "image":"https://media.giphy.com/media/WXjuxv5mGZXqg/giphy.gif",
-    "description":"Shuffle the Draw Pile",
+    "description":"Shuffle dem cards.",
     "type":"normal"
     },
   {
     "name":"see-the-future",
     "image":"https://media.giphy.com/media/13d2jHlSlxklVe/giphy.gif",
-    "description":"Privately View the top three cards of the deck",
+    "description":"See the next 3 cards. It's like cheating, except not.",
     "type":"normal"
   },
   {
     "name":"skip",
     "image":"https://media.giphy.com/media/wJkr1P9QewrTy/giphy.gif",
-    "description":"End your turn without drawing a card",
+    "description":"Run away from your responsibilities. End your turn without drawing.",
     "type":"normal"
   },
   {
     "name":"attack",
     "image":"https://media.giphy.com/media/e4BoeNGwaTvYk/giphy.gif",
-    "description":"End your turn without drawing a card.  Force the next player to take two turns",
+    "description":"End your turn without drawing, and drop a deuce on the next guy.",
     "type":"normal"
   },  {
     "name":"shuffle",
     "image":"https://media.giphy.com/media/b8q3fMVmFMzkc/giphy.gif",
-    "description":"Shuffle the Draw Pile",
+    "description":"Shuffle dem cards.",
     "type":"normal"
     },
   {
     "name":"see-the-future",
     "image":"https://media.giphy.com/media/1WjGmnIA1LWz6/giphy.gif",
-    "description":"Privately View the top three cards of the deck",
+    "description":"See the next 3 cards. It's like cheating, except not.",
     "type":"normal"
   },
   {
     "name":"skip",
     "image":"https://media.giphy.com/media/3o7abyJmscDvHlkbu0/giphy.gif",
-    "description":"End your turn without drawing a card",
+    "description":"Run away from your responsibilities. End your turn without drawing.",
     "type":"normal"
   },
   {
     "name":"attack",
     "image":"https://media.giphy.com/media/vFxJ3RuSKRIfS/giphy.gif",
-    "description":"End your turn without drawing a card.  Force the next player to take two turns",
+    "description":"End your turn without drawing, and drop a deuce on the next guy.",
     "type":"normal"
   },
     {
     "name":"shuffle",
     "image":"https://media.giphy.com/media/xNWqtyzT3S6v6/giphy.gif",
-    "description":"Shuffle the Draw Pile",
+    "description":"Shuffle dem cards.",
     "type":"normal"
     },
   {
     "name":"see-the-future",
     "image":"https://media.giphy.com/media/l46CaUs3XUKHaPmak/giphy.gif",
-    "description":"Privately View the top three cards of the deck",
+    "description":"See the next 3 cards. It's like cheating, except not.",
     "type":"normal"
   },
   {
     "name":"skip",
     "image":"https://media.giphy.com/media/DNlBVVKyAhNEk/giphy.gif",
-    "description":"End your turn without drawing a card",
+    "description":"Run away from your responsibilities. End your turn without drawing.",
     "type":"normal"
   },
   {
     "name":"attack",
     "image":"https://media.giphy.com/media/l41lTn1liPDzkv0Zi/giphy.gif",
-    "description":"End your turn without drawing a card.  Force the next player to take two turns",
+    "description":"End your turn without drawing, and drop a deuce on the next guy.",
     "type":"normal"
   },  {
     "name":"shuffle",
     "image":"https://media.giphy.com/media/uYmxaWUM7tUn6/giphy.gif",
-    "description":"Shuffle the Draw Pile",
+    "description":"Shuffle dem cards.",
     "type":"normal"
     },
   {
     "name":"see-the-future",
     "image":"https://media.giphy.com/media/3o72F5QygiI9hF3ZyU/giphy.gif",
-    "description":"Privately View the top three cards of the deck",
+    "description":"See the next 3 cards. It's like cheating, except not.",
     "type":"normal"
   },
   {
     "name":"skip",
     "image":"https://media.giphy.com/media/lXEvDQ69mWCis/giphy.gif",
-    "description":"End your turn without drawing a card",
+    "description":"Run away from your responsibilities. End your turn without drawing.",
     "type":"normal"
   },
   {
     "name":"attack",
     "image":"https://media.giphy.com/media/ASdLsce6Wq8hO/giphy.gif",
-    "description":"End your turn without drawing a card.  Force the next player to take two turns",
+    "description":"End your turn without drawing, and drop a deuce on the next guy.",
     "type":"normal"
   },  {
     "name":"shuffle",
     "image":"https://media.giphy.com/media/11Hjo5tFOb2HC0/giphy.gif",
-    "description":"Shuffle the Draw Pile",
+    "description":"Shuffle dem cards.",
     "type":"normal"
     },
   {
     "name":"see-the-future",
     "image":"https://media.giphy.com/media/dG7ZiL6ImLyNO/giphy.gif",
-    "description":"Privately View the top three cards of the deck",
+    "description":"See the next 3 cards. It's like cheating, except not.",
     "type":"normal"
   },
   {
     "name":"skip",
     "image":"https://media.giphy.com/media/xiDXIq5foBHri/giphy.gif",
-    "description":"End your turn without drawing a card",
+    "description":"Run away from your responsibilities. End your turn without drawing.",
     "type":"normal"
   },
   {
     "name":"attack",
     "image":"https://media.giphy.com/media/rW5BFRzuX04bm/giphy.gif",
-    "description":"End your turn without drawing a card.  Force the next player to take two turns",
+    "description":"End your turn without drawing, and drop a deuce on the next guy.",
     "type":"normal"
   },  {
     "name":"shuffle",
     "image":"https://media.giphy.com/media/fXMPBIOZND6lq/giphy.gif",
-    "description":"Shuffle the Draw Pile",
+    "description":"Shuffle dem cards.",
     "type":"normal"
     },
   {
     "name":"see-the-future",
     "image":"https://media.giphy.com/media/NFA61GS9qKZ68/giphy.gif",
-    "description":"Privately View the top three cards of the deck",
+    "description":"See the next 3 cards. It's like cheating, except not.",
     "type":"normal"
   },
   {
     "name":"skip",
     "image":"https://media.giphy.com/media/iKhktCJ5fZEA0/giphy.gif",
-    "description":"End your turn without drawing a card",
+    "description":"Run away from your responsibilities. End your turn without drawing.",
     "type":"normal"
   },
   {
     "name":"attack",
     "image":"https://media.giphy.com/media/PeaT7yaHFpifK/giphy.gif",
-    "description":"End your turn without drawing a card.  Force the next player to take two turns",
+    "description":"End your turn without drawing, and drop a deuce on the next guy.",
     "type":"normal"
   },  {
     "name":"shuffle",
     "image":"https://media.giphy.com/media/Q56SF4czEtSZG/giphy.gif",
-    "description":"Shuffle the Draw Pile",
+    "description":"Shuffle dem cards.",
     "type":"normal"
     },
   {
     "name":"see-the-future",
     "image":"https://media.giphy.com/media/13CoXDiaCcCoyk/giphy.gif",
-    "description":"Privately View the top three cards of the deck",
+    "description":"See the next 3 cards. It's like cheating, except not.",
     "type":"normal"
   },
   {
     "name":"skip",
     "image":"https://media.giphy.com/media/RP5trF0DjM7vi/giphy.gif",
-    "description":"End your turn without drawing a card",
+    "description":"Run away from your responsibilities. End your turn without drawing.",
     "type":"normal"
   },
   {
     "name":"attack",
     "image":"https://media.giphy.com/media/bcqAMUTUHoLDy/giphy.gif",
-    "description":"End your turn without drawing a card.  Force the next player to take two turns",
+    "description":"End your turn without drawing, and drop a deuce on the next guy.",
     "type":"normal"
   } 
 ]
