@@ -86,8 +86,11 @@ io.on('connection', function(socket) {
 MongoClient.connect(dbURL, (err, database) => {
   assert.equal(null, err);
   db = database;
+  // server.listen(PORT, function() {
+  //   console.log('now serving app on port ', PORT)
+  // });
+});
+
   server.listen(PORT, function() {
     console.log('now serving app on port ', PORT)
   });
-});
-
