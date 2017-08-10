@@ -8,9 +8,13 @@ module.exports = {
         } else {
             nextThreeCards = this.state.deck.slice();
         }
+        let nextCardsString = ''
+        for (let i = 0; i < nextThreeCards.length; i++) {
+            nextCardsString += ':: ' + nextThreeCards[i].name + ' :: '
+        }
         this.setState({
             seeFutureCards: nextThreeCards
-        }, () => {alert('DO THIS LATER')})
+        }, () => {alert(nextCardsString)})
         this.discardCard(cardPosition)
     },
     shuffleDeck: function (cardPosition) {
