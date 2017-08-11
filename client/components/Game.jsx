@@ -132,6 +132,16 @@ export default class Game extends React.Component {
       //EMIT BOOM
       alert("Drew a bomb!" + this.state.playerId + "'s cat just got BOOM BOOM'D!")
       hand.unshift(drawnCard)
+      let newPlayersHand = []
+
+      for (let i = 0; i < this.state.allPlayers.length; i++) {
+        if (i === this.state.turn[0]) {
+          newPlayersHand.push(currentPlayer)
+        } else {
+          newPlayersHand.push( this.state.allPlayers[i] )
+        }
+      }
+      this.props.socket.emit('drew card', gameDeck, newPlayersHand)
       this.endTurn('dead')
 
     } else if (drawnCard.type === "bomb" && hasDefuse > -1) {
