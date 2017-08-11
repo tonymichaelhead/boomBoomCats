@@ -52,7 +52,11 @@ module.exports = {
         let newTurns = gameTurns.slice()
         this.setState({
             turn: newTurns
-        }, () => {this.discardCard(cardPosition); this.endTurn(); cb()})
+        }, () => {
+            this.discardCard(cardPosition); 
+            cb();
+            this.endTurn(); 
+            })
     },
     skipATurn: function (cardPosition) {
         console.log('skip')

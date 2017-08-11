@@ -42646,7 +42646,7 @@ var InitializedView = function InitializedView(props) {
         { id: 'calculation' },
         'You have a ',
         Math.round(props.exploderCount / props.deck.length * 100),
-        ' chance of blowing up!'
+        '% chance of blowing up!'
       )
     ),
     _react2.default.createElement(_Player2.default, {
@@ -42843,7 +42843,9 @@ module.exports = {
         this.setState({
             turn: newTurns
         }, function () {
-            _this2.discardCard(cardPosition);_this2.endTurn();cb();
+            _this2.discardCard(cardPosition);
+            cb();
+            _this2.endTurn();
         });
     },
     skipATurn: function skipATurn(cardPosition) {
