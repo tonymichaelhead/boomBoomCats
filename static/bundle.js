@@ -9859,7 +9859,7 @@ var Game = function (_React$Component) {
         while (gameTurns[0] === playerWhoEndedTurn) {
           gameTurns.shift();
         }
-        for (var i = this.state.allPlayers[this.state.playerIndex].hand.length; i >= 0; i--) {
+        for (var i = this.state.allPlayers[this.state.playerIndex].hand.length - 1; i >= 0; i--) {
           this.discardCard(i);
         }
         this.setState({
