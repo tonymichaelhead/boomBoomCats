@@ -9748,8 +9748,9 @@ var Game = function (_React$Component) {
       console.log('handling card click on game level');
       if (cardName === 'attack') {
 
-        this.attackNextPlayer(handIndex);
-        this.props.socket.emit('attack card', this.state.turn);
+        this.attackNextPlayer(handIndex, function () {
+          _this2.props.socket.emit('attack card', _this2.state.turn);
+        });
       } else if (cardName === 'shuffle') {
 
         this.shuffleDeck(handIndex, function () {
@@ -9914,8 +9915,10 @@ var Game = function (_React$Component) {
     key: 'printAllCardsInDeck',
     value: function printAllCardsInDeck() {
       var deckStr = '';
-      for (var i = 0; i < this.state.deck.length; i++) {
-        deckStr += i + ') ' + this.state.deck[i].name + ' ';
+      var counter = 1;
+      for (var i = this.state.deck.length - 1; i >= 0; i--) {
+        deckStr += counter + ') ' + this.state.deck[i].name + ' ';
+        counter++;
       }
       console.log(deckStr);
     }
@@ -42771,7 +42774,7 @@ exports.default = DiscardPile;
 
 module.exports = {
 
-    seeTheFuture: function seeTheFuture(cardPosition) {
+    seeTheFuture: function seeTheFuture(cardPosition, cb) {
         console.log('future being seen');
         var nextThreeCards = void 0;
         if (this.state.deck.length > 3) {
@@ -42780,7 +42783,7 @@ module.exports = {
             nextThreeCards = this.state.deck.slice();
         }
         var nextCardsString = '';
-        for (var i = 0; i < nextThreeCards.length; i++) {
+        for (var i = nextThreeCards.length - 1; i >= 0; i--) {
             nextCardsString += ':: ' + nextThreeCards[i].name + ' :: ';
         }
         this.setState({
@@ -42789,6 +42792,7 @@ module.exports = {
             alert(nextCardsString);
         });
         this.discardCard(cardPosition);
+        cb();
     },
     shuffleDeck: function shuffleDeck(cardPosition, cb) {
         var _this = this;

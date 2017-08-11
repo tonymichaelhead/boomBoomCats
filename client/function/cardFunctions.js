@@ -1,6 +1,6 @@
 module.exports = {
 
-    seeTheFuture: function (cardPosition) {
+    seeTheFuture: function (cardPosition, cb) {
         console.log('future being seen')
         let nextThreeCards;
         if(this.state.deck.length > 3){
@@ -9,13 +9,14 @@ module.exports = {
             nextThreeCards = this.state.deck.slice();
         }
         let nextCardsString = ''
-        for (let i = 0; i < nextThreeCards.length; i++) {
+        for (let i = nextThreeCards.length-1; i >= 0; i--) {
             nextCardsString += ':: ' + nextThreeCards[i].name + ' :: '
         }
         this.setState({
             seeFutureCards: nextThreeCards
         }, () => {alert(nextCardsString)})
         this.discardCard(cardPosition)
+        cb();
     },
     shuffleDeck: function (cardPosition, cb) {
         let unshuffledDeck = this.state.deck.slice()
