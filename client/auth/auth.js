@@ -1,13 +1,12 @@
 import auth0 from 'auth0-js';
-//TODO:Remove // for dev     import config from './config.js';
+import config from './config.js';
 
 export default class Auth {
     constructor() {
-        let DOMAIN = process.env.AUTHDOMAIN //|| config.DOMAIN
-        console.log(JSON.stringify(process.env));
-        let CLIENT_ID = process.env.CLIENT_ID //|| config.CLIENT_ID
-        let REDIRECT_URI = process.env.REDIRECT_URI //|| config.REDIRECT_URI
-        let AUDIENCE = process.env.AUDIENCE //|| config.AUDIENCE
+        let DOMAIN = process.env.AUTHDOMAIN || config.DOMAIN
+        let CLIENT_ID = process.env.CLIENT_ID || config.CLIENT_ID
+        let REDIRECT_URI = process.env.REDIRECT_URI || config.REDIRECT_URI
+        let AUDIENCE = process.env.AUDIENCE || config.AUDIENCE
         this.auth0 = new auth0.WebAuth({
             domain: DOMAIN,
             clientID: CLIENT_ID,
