@@ -62,14 +62,14 @@ io.on('connection', function(socket) {
     io.emit('update deck', newDeck, newHand)
   })
 
-  socket.on('attack card', function(newTurns) {
+  socket.on('attack card', function(newTurns, newBombCount) {
     console.log('heard a player got attacked. update it boiz')
-    io.emit('update turn', newTurns)
+    io.emit('update turn', newTurns, newBombCount)
   })
 
-  socket.on('ended turn', function(newTurns) {
+  socket.on('ended turn', function(newTurns, newBombCount) {
     console.log('WE ENDED THE TURN THIS IS FROM THE SERVER :::: ', newTurns)
-    io.emit('update turn', newTurns)
+    io.emit('update turn', newTurns, newBombCount)
   })
 
   socket.on('chat message', function(msg) {

@@ -9734,9 +9734,10 @@ var Game = function (_React$Component) {
         console.log('THIS IS THE NEW HAND FOR THE PLAYER :::: ', this.state.allPlayers[0].hand);
       }.bind(this));
 
-      this.props.socket.on('update turn', function (newTurn) {
+      this.props.socket.on('update turn', function (newTurn, newBombCount) {
         this.setState({
-          turn: newTurn
+          turn: newTurn,
+          exploderCount: newBombCount
         });
       }.bind(this));
     }
@@ -9749,7 +9750,7 @@ var Game = function (_React$Component) {
       if (cardName === 'attack') {
 
         this.attackNextPlayer(handIndex, function () {
-          _this2.props.socket.emit('attack card', _this2.state.turn);
+          _this2.props.socket.emit('attack card', _this2.state.turn, _this2.state.exploderCount);
         });
       } else if (cardName === 'shuffle') {
 
@@ -9885,7 +9886,7 @@ var Game = function (_React$Component) {
       }
       // this.setState({ turn: gameTurns })
 
-      this.props.socket.emit('ended turn', gameTurns);
+      this.props.socket.emit('ended turn', gameTurns, this.state.exploderCount);
       console.log('this is the the game turn', gameTurns);
     }
   }, {

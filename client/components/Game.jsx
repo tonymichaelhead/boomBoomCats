@@ -81,9 +81,10 @@ export default class Game extends React.Component {
       console.log('THIS IS THE NEW HAND FOR THE PLAYER :::: ', this.state.allPlayers[0].hand)
     }.bind(this))
 
-    this.props.socket.on('update turn', function(newTurn) {
+    this.props.socket.on('update turn', function(newTurn, newBombCount) {
       this.setState({
-        turn: newTurn
+        turn: newTurn,
+        exploderCount: newBombCount
       })
     }.bind(this))
 
@@ -93,7 +94,7 @@ export default class Game extends React.Component {
     console.log('handling card click on game level')
     if (cardName === 'attack') {
 
-      this.attackNextPlayer(handIndex, ()=>{this.props.socket.emit('attack card', this.state.turn)});
+      this.attackNextPlayer(handIndex, ()=>{this.props.socket.emit('attack card', this.state.turn, this.state.exploderCount)});
       
 
     } else if ( cardName === 'shuffle') {
@@ -233,7 +234,7 @@ export default class Game extends React.Component {
     }
     // this.setState({ turn: gameTurns })
 
-    this.props.socket.emit('ended turn', gameTurns)
+    this.props.socket.emit('ended turn', gameTurns, this.state.exploderCount)
     console.log('this is the the game turn', gameTurns)
   }
 
