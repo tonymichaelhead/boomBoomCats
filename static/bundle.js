@@ -9789,6 +9789,16 @@ var Game = function (_React$Component) {
         //EMIT BOOM
         alert("Drew a bomb!" + this.state.playerId + "'s cat just got BOOM BOOM'D!");
         hand.unshift(drawnCard);
+        var newPlayersHand = [];
+
+        for (var i = 0; i < this.state.allPlayers.length; i++) {
+          if (i === this.state.turn[0]) {
+            newPlayersHand.push(currentPlayer);
+          } else {
+            newPlayersHand.push(this.state.allPlayers[i]);
+          }
+        }
+        this.props.socket.emit('drew card', gameDeck, newPlayersHand);
         this.endTurn('dead');
       } else if (drawnCard.type === "bomb" && hasDefuse > -1) {
         //console.log(`in drawACard(), you haz a bomb!!! and you gotta defuse`)
@@ -9810,17 +9820,17 @@ var Game = function (_React$Component) {
         // }) 
         //update the deck
 
-        var newPlayersHand = [];
+        var _newPlayersHand = [];
 
-        for (var i = 0; i < this.state.allPlayers.length; i++) {
-          if (i === this.state.turn[0]) {
-            newPlayersHand.push(currentPlayerHand);
+        for (var _i = 0; _i < this.state.allPlayers.length; _i++) {
+          if (_i === this.state.turn[0]) {
+            _newPlayersHand.push(currentPlayerHand);
           } else {
-            newPlayersHand.push(this.state.allPlayers[i]);
+            _newPlayersHand.push(this.state.allPlayers[_i]);
           }
         }
 
-        this.props.socket.emit('drew card', gameDeck, newPlayersHand);
+        this.props.socket.emit('drew card', gameDeck, _newPlayersHand);
 
         this.endTurn();
       } else {
@@ -9832,18 +9842,18 @@ var Game = function (_React$Component) {
         var currentPlayerWithUpdatedHand = Object.assign({}, currentPlayer);
         currentPlayerWithUpdatedHand.hand.push(drawnCard);
 
-        var _newPlayersHand = [];
+        var _newPlayersHand2 = [];
 
-        for (var _i = 0; _i < this.state.allPlayers.length; _i++) {
-          if (_i === this.state.turn[0]) {
-            _newPlayersHand.push(currentPlayerWithUpdatedHand);
+        for (var _i2 = 0; _i2 < this.state.allPlayers.length; _i2++) {
+          if (_i2 === this.state.turn[0]) {
+            _newPlayersHand2.push(currentPlayerWithUpdatedHand);
           } else {
-            _newPlayersHand.push(this.state.allPlayers[_i]);
+            _newPlayersHand2.push(this.state.allPlayers[_i2]);
           }
         }
 
         console.log('THIS IS THE NEW HAND AFTER CLICKING DRAW BEFORE THE EMIT ::::: ', JSON.stringify(currentPlayerWithUpdatedHand));
-        this.props.socket.emit('drew card', gameDeck, _newPlayersHand);
+        this.props.socket.emit('drew card', gameDeck, _newPlayersHand2);
 
         this.endTurn();
       }
