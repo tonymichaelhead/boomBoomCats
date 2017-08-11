@@ -4,7 +4,7 @@ import auth0 from 'auth0-js';
 export default class Auth {
     constructor() {
         let DOMAIN = process.env.AUTHDOMAIN //|| config.DOMAIN
-        console.log(process.env.AUTHDOMAIN);
+        console.log(JSON.stringify(process.env));
         let CLIENT_ID = process.env.CLIENT_ID //|| config.CLIENT_ID
         let REDIRECT_URI = process.env.REDIRECT_URI //|| config.REDIRECT_URI
         let AUDIENCE = process.env.AUDIENCE //|| config.AUDIENCE
