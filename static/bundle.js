@@ -13679,8 +13679,8 @@ var Auth = function () {
     function Auth() {
         _classCallCheck(this, Auth);
 
-        var DOMAIN = process.env.DOMAIN; //|| config.DOMAIN
-        console.log(process.env.DOMAIN);
+        var DOMAIN = process.env.AUTHDOMAIN; //|| config.DOMAIN
+        console.log(process.env.AUTHDOMAIN);
         var CLIENT_ID = process.env.CLIENT_ID; //|| config.CLIENT_ID
         var REDIRECT_URI = process.env.REDIRECT_URI; //|| config.REDIRECT_URI
         var AUDIENCE = process.env.AUDIENCE; //|| config.AUDIENCE
