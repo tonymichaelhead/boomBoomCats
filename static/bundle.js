@@ -13675,15 +13675,15 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
 //TODO:Remove // for dev     import config from './config.js';
 
-var DOMAIN = process.env.DOMAIN; //|| config.DOMAIN
-var CLIENT_ID = process.env.CLIENT_ID; //|| config.CLIENT_ID
-var REDIRECT_URI = process.env.REDIRECT_URI; //|| config.REDIRECT_URI
-var AUDIENCE = process.env.AUDIENCE; //|| config.AUDIENCE
-
 var Auth = function () {
     function Auth() {
         _classCallCheck(this, Auth);
 
+        var DOMAIN = process.env.DOMAIN; //|| config.DOMAIN
+        console.log(DOMAIN);
+        var CLIENT_ID = process.env.CLIENT_ID; //|| config.CLIENT_ID
+        var REDIRECT_URI = process.env.REDIRECT_URI; //|| config.REDIRECT_URI
+        var AUDIENCE = process.env.AUDIENCE; //|| config.AUDIENCE
         this.auth0 = new _auth0Js2.default.WebAuth({
             domain: DOMAIN,
             clientID: CLIENT_ID,
