@@ -93,8 +93,8 @@ export default class Game extends React.Component {
     console.log('handling card click on game level')
     if (cardName === 'attack') {
 
-      this.attackNextPlayer(handIndex);
-      this.props.socket.emit('attack card', this.state.turn)
+      this.attackNextPlayer(handIndex, ()=>{this.props.socket.emit('attack card', this.state.turn)});
+      
 
     } else if ( cardName === 'shuffle') {
 
@@ -262,8 +262,10 @@ export default class Game extends React.Component {
 
   printAllCardsInDeck() {
     let deckStr = ''
-    for (let i = 0; i < this.state.deck.length; i++) {
-      deckStr += `${i}) ${this.state.deck[i].name} `
+    let counter = 1;
+    for (let i = this.state.deck.length-1; i >=0; i--) {
+      deckStr += `${counter}) ${this.state.deck[i].name} `
+      counter++;
     }
     console.log(deckStr)
   }

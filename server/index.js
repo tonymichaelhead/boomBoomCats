@@ -10,7 +10,7 @@ const PORT = process.env.PORT || 3000
 const server = require('http').Server(app)
 const io = require('socket.io')(server)
 let db // mongo
-const dbURL = process.env.dbURL || require('../env/config.js');
+const dbURL = process.env.dbURL //TODO: remove // for dev|| require('../env/config.js');
 const createGameState = require('./createGameState')
 
 app.use(parser.urlencoded({extended: true}))
@@ -86,8 +86,11 @@ io.on('connection', function(socket) {
 MongoClient.connect(dbURL, (err, database) => {
   assert.equal(null, err);
   db = database;
+  // server.listen(PORT, function() {
+  //   console.log('now serving app on port ', PORT)
+  // });
+});
+
   server.listen(PORT, function() {
     console.log('now serving app on port ', PORT)
   });
-});
-
