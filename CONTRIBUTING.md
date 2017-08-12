@@ -3,6 +3,7 @@
 ## General Workflow
 
 1. Fork the repo
+1. If you desire to make changes to the cards themselves, you can request for an auth key from the owners of this project.
 1. Cut a namespaced feature branch from master
   - bug/...
   - feat/...
