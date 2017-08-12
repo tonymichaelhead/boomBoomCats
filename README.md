@@ -1,6 +1,6 @@
 # BOOM BOOM CATS
 
-> A Hack Reactor Student project loosely based on the card game, "Exploding Kittens"
+> A Hack Reactor Student web application project loosely based on the card game, "Exploding Kittens"
 
 ## Team
 
@@ -26,7 +26,6 @@
 
 - Node 7.10.0
 - Webpack ^3.4.1
-
 
 ## Development
 
