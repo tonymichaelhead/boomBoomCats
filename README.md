@@ -20,7 +20,12 @@
 
 ## Usage
 
-> Some usage instructions
+> For testing, nodemon has been installed as a dependency.  After installing dependecies, run the
+following from the root directory
+```sh
+npm run build
+npm start
+```
 
 ## Requirements
 
@@ -35,8 +40,6 @@ From within the root directory:
 
 ```sh
 npm install
-npm run build
-npm start
 ```
 
 ### Roadmap
@@ -45,5 +48,9 @@ View the project roadmap [here](https://github.com/team-alpha-wolf-squadron/boom
 
 
 ## Contributing
+
+Our team is looking for several contributions to be made.
+1. Added added animations.  Specifically a drag-and-drop feature that allows users to drag cards to their hands and drag cards to the discard pile.
+2. Added cards based on the cards of the actual game.
 
 See [CONTRIBUTING.md](CONTRIBUTING.md) for contribution guidelines.
