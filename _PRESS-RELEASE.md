@@ -16,14 +16,11 @@ Oh, and I also like to write press-releases in what I call "Oprah-speak" for mai
 Once the project moves into development, the press release can be used as a touchstone; a guiding light. The product team can ask themselves, "Are we building what is in the press release?" If they find they're spending time building things that aren't in the press release (overbuilding), they need to ask themselves why. This keeps product development focused on achieving the customer benefits and not building extraneous stuff that takes longer to build, takes resources to maintain, and doesn't provide real customer benefit (at least not enough to warrant inclusion in the press release).
  -->
  
-## BOOMBOOM CATS - An Online Card Game ##
+## An Online Card Game ##
 
-## An online, Real-Time multiplayer card game inspired by the wildly fun, “Exploding Kittens” ##
+  ### A Real-Time multiplayer card game inspired by the wildly fun, “Exploding Kittens”. ###
 
-## Summary ##
-  Kitten-powered game of Russian-Roulette. Users will be able play a game of exploding kittens and chat with others.
-
-  For the casual gamer looking for a fast and fun game with low commitment. This card game easily fits that bill. Our app gives users the ability to easily generate an account, and meet with people who share the same affinity for the game.
+  For the casual gamer looking for a fast and fun game with low commitment, this card game easily fits that bill. Our app gives users the ability to easily generate an account, and meet with people who share the same affinity for the game.
 
   "Blow up kitties with your friends, any time, any where, for any reason!" - Eddie K.
 
