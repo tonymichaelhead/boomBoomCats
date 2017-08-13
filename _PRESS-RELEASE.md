@@ -29,7 +29,7 @@ Once the project moves into development, the press release can be used as a touc
 
 ## How to Get Started ##
 
-  --> https://www.BOOMBOOMCATS.herokuapp.com <-- Start the fun!!!!
+  --> https://BOOMBOOMCATS.herokuapp.com <-- Start the fun!!!!
  
   BOOMBOOM CATS is in no way affliated with Exploding Kittens or the Oatmeal.
   Please buy the original card game or mobile app to support an awesome company.
