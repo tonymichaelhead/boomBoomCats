@@ -3,8 +3,7 @@
 ## General Workflow
 
 1. Fork the repo
-1. You can request an auth key from the owners of this project.
-1. Create a config.js in the auth repo and enter your credentials in the same manner as the config.example.js
+1. If you would like to make contributions to our database, please request for an auth key.
 1. Cut a namespaced feature branch from master
   - bug/...
   - feat/...
