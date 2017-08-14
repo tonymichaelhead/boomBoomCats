@@ -91,9 +91,9 @@ export default class Game extends React.Component {
 
     this.props.socket.on('bomb less', function() {
       this.setState({
-        exploderCount: exploderCount - 1
+        exploderCount: this.state.exploderCount - 1
       })
-    })
+    }.bind(this))
 
   }
 
@@ -332,6 +332,7 @@ export default class Game extends React.Component {
             opponentsUsernames={opponentsUsernames} 
             isPlayerTurn={isPlayerTurn}
             socket={this.props.socket}
+            winner={this.state.allPlayersId[currentPlayerTurn]}
             exploderCount={this.state.exploderCount}
             currentPlayerTurn = {currentPlayerTurn}
             handleDeckClick={this.handleDeckClick}
