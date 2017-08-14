@@ -9673,7 +9673,8 @@ var Game = function (_React$Component) {
       discard: [],
       turn: [],
       seeFutureCards: [],
-      exploderCount: 3
+      exploderCount: 3,
+      gameOver: false
     };
     return _this;
   }
@@ -9740,6 +9741,12 @@ var Game = function (_React$Component) {
           exploderCount: newBombCount
         });
       }.bind(this));
+
+      this.props.socket.on('bomb less', function () {
+        this.setState({
+          exploderCount: exploderCount - 1
+        });
+      });
     }
   }, {
     key: 'handleCardClick',
@@ -9800,6 +9807,7 @@ var Game = function (_React$Component) {
           }
         }
         this.props.socket.emit('drew card', gameDeck, newPlayersHand);
+        this.props.socket.emit('less bomb');
         this.endTurn('dead');
       } else if (drawnCard.type === "bomb" && hasDefuse > -1) {
         //console.log(`in drawACard(), you haz a bomb!!! and you gotta defuse`)
@@ -9876,6 +9884,11 @@ var Game = function (_React$Component) {
         this.setState({
           exploderCount: this.state.exploderCount - 1
         });
+        if (gameTurns.length === 1) {
+          this.setState({
+            gameOver: true
+          });
+        }
       } else if (this.state.turn[0] === this.state.turn[1]) {
         var _playerWhoEndedTurn = gameTurns.shift();
       } else {
@@ -9975,6 +9988,7 @@ var Game = function (_React$Component) {
             exploderCount: this.state.exploderCount,
             currentPlayerTurn: currentPlayerTurn,
             handleDeckClick: this.handleDeckClick,
+            gameOver: this.state.gameOver,
             handleCardClick: this.handleCardClick }) : _react2.default.createElement(_LoadingView2.default, { socket: this.props.socket })
         )
       );
@@ -42660,7 +42674,12 @@ var InitializedView = function InitializedView(props) {
       { className: 'row text-center' },
       _react2.default.createElement(_Deck2.default, { deck: props.deck, isPlayerTurn: props.isPlayerTurn, handleDeckClick: props.handleDeckClick }),
       _react2.default.createElement(_DiscardPile2.default, { discard: props.discard }),
-      _react2.default.createElement(
+      undefined.props.gameOver ? _react2.default.createElement(
+        'h3',
+        { id: 'winner' },
+        undefined.props.currentPlayerTurn,
+        ' is the winner!'
+      ) : _react2.default.createElement(
         'h3',
         { id: 'calculation' },
         'You have a ',
