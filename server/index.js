@@ -72,6 +72,10 @@ io.on('connection', function(socket) {
     io.emit('update turn', newTurns, newBombCount)
   })
 
+  socket.on('less bomb', function() {
+    io.emit('bomb less')
+  })
+
   socket.on('chat message', function(msg) {
     io.emit('chat message', msg, users[socket.id])
   })

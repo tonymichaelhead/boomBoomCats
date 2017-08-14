@@ -7,7 +7,7 @@
   /* bottom: 0px; */
   border: 1px solid black;
   overflow: auto;
-  height: 700px;
+  height: 690px;
   width: 300px; 
   top: 0;
   left: 0;
@@ -158,12 +158,18 @@ li {
   z-index: 9999;
   position: absolute;
   top: 140px;
-  left: 95px;
+  left: 110px;
   color: #f4f4f4;
   text-shadow: -3px 0 black, 0 3px black, 3px 0 black, 0 -3px black;
 }
 
 #calculation {
+  margin-top: 80px;
+  margin-left: 40px;
+}
+
+#winner {
+  color: yellow
   margin-top: 80px;
   margin-left: 40px;
 }

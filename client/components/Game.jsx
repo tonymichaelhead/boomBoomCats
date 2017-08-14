@@ -25,7 +25,8 @@ export default class Game extends React.Component {
       discard: [],
       turn: [],
       seeFutureCards: [],
-      exploderCount: 3
+      exploderCount: 3,
+      gameOver: false
     }
   }
 
@@ -88,6 +89,12 @@ export default class Game extends React.Component {
       })
     }.bind(this))
 
+    this.props.socket.on('bomb less', function() {
+      this.setState({
+        exploderCount: exploderCount - 1
+      })
+    })
+
   }
 
   handleCardClick(cardName, handIndex) {
@@ -143,6 +150,7 @@ export default class Game extends React.Component {
         }
       }
       this.props.socket.emit('drew card', gameDeck, newPlayersHand)
+      this.props.socket.emit('less bomb')
       this.endTurn('dead')
 
     } else if (drawnCard.type === "bomb" && hasDefuse > -1) {
@@ -224,6 +232,11 @@ export default class Game extends React.Component {
       this.setState({
         exploderCount: this.state.exploderCount - 1
       })
+      if (gameTurns.length === 1) {
+        this.setState({
+          gameOver: true
+        })
+      }
     } else if (this.state.turn[0] === this.state.turn[1]){
       let playerWhoEndedTurn = gameTurns.shift()
     } else {
@@ -322,6 +335,7 @@ export default class Game extends React.Component {
             exploderCount={this.state.exploderCount}
             currentPlayerTurn = {currentPlayerTurn}
             handleDeckClick={this.handleDeckClick}
+            gameOver = {this.state.gameOver}
             handleCardClick={this.handleCardClick}/> :
           <LoadingView socket={this.props.socket} /> }
       </div>
