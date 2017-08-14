@@ -42674,10 +42674,10 @@ var InitializedView = function InitializedView(props) {
       { className: 'row text-center' },
       _react2.default.createElement(_Deck2.default, { deck: props.deck, isPlayerTurn: props.isPlayerTurn, handleDeckClick: props.handleDeckClick }),
       _react2.default.createElement(_DiscardPile2.default, { discard: props.discard }),
-      undefined.props.gameOver ? _react2.default.createElement(
+      props.gameOver ? _react2.default.createElement(
         'h3',
         { id: 'winner' },
-        undefined.props.currentPlayerTurn,
+        props.currentPlayerTurn,
         ' is the winner!'
       ) : _react2.default.createElement(
         'h3',
