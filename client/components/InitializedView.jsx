@@ -14,7 +14,7 @@ const InitializedView = (props) => {
       <div className="row text-center">
         <Deck deck={props.deck} isPlayerTurn={props.isPlayerTurn} handleDeckClick={props.handleDeckClick}/>
         <DiscardPile discard={props.discard}/>
-        {this.props.gameOver ? <h3 id='winner'>{this.props.currentPlayerTurn} is the winner!</h3> : <h3 id='calculation'>You have a {Math.round((props.exploderCount / props.deck.length) * 100)}% chance of blowing up!</h3>}
+        {props.gameOver ? <h3 id='winner'>{props.winner} is the winner!</h3> : <h3 id='calculation'>You have a {Math.round((props.exploderCount / props.deck.length) * 100)}% chance of blowing up!</h3>}
       </div>
         <Player 
           isPlayerTurn={props.isPlayerTurn} 
