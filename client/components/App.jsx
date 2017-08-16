@@ -18,6 +18,7 @@ export default class App extends React.Component {
       user: '',
       picture: '',
     }
+    this.handleLogout = this.handleLogout.bind(this);
   }
   componentWillMount() {
     if (!this.auth.isAuthenticated()) {
@@ -35,13 +36,16 @@ export default class App extends React.Component {
       });
     }
   }
+  handleLogout() {
+    this.auth.logout();
+  }
   render() {
     return (
       <Router>
 
         <div>
-          <Route exact path='/' render={() => <Lobby auth={this.auth} />} />
-          <Route path='/room' render={() => <Room user={this.state.user} picture={this.state.picture} />} />
+          <Route exact path='/' render={() => <Lobby logout={this.handleLogout} auth={this.auth} />} />
+          <Route path='/room' render={() => <Room logout={this.handleLogout} user={this.state.user} picture={this.state.picture} />} />
           <Route path='/profile' render={()=> <Profile user={this.state.user} picture={this.state.picture} />} />
         </div>
 
