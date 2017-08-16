@@ -16435,7 +16435,7 @@ var _Game = __webpack_require__(81);
 
 var _Game2 = _interopRequireDefault(_Game);
 
-var _profile = __webpack_require__(343);
+var _profile = __webpack_require__(344);
 
 var _profile2 = _interopRequireDefault(_profile);
 
@@ -16444,6 +16444,10 @@ var _reactRouterDom = __webpack_require__(72);
 var _socket = __webpack_require__(77);
 
 var _socket2 = _interopRequireDefault(_socket);
+
+var _Auth = __webpack_require__(114);
+
+var _Auth2 = _interopRequireDefault(_Auth);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -16493,6 +16497,15 @@ var Room = function (_React$Component) {
             'div',
             { className: 'col-sm-2 col-sm-offset-1' },
             _react2.default.createElement(_Chat2.default, { socket: this.state.socket })
+          ),
+          _react2.default.createElement(
+            _reactRouterDom.Link,
+            { to: '/' },
+            _react2.default.createElement(
+              'button',
+              { onClick: this.props.logout },
+              'Logout'
+            )
           ),
           _react2.default.createElement(
             _reactRouterDom.Link,
@@ -18320,19 +18333,10 @@ var Lobby = function (_Component) {
     function Lobby(props) {
         _classCallCheck(this, Lobby);
 
-        var _this = _possibleConstructorReturn(this, (Lobby.__proto__ || Object.getPrototypeOf(Lobby)).call(this, props));
-
-        _this.clickHandler = _this.clickHandler.bind(_this);
-        return _this;
+        return _possibleConstructorReturn(this, (Lobby.__proto__ || Object.getPrototypeOf(Lobby)).call(this, props));
     }
 
     _createClass(Lobby, [{
-        key: 'clickHandler',
-        value: function clickHandler() {
-            console.log('clicked');
-            this.props.auth.logout();
-        }
-    }, {
         key: 'render',
         value: function render() {
             return _react2.default.createElement(
@@ -18373,7 +18377,7 @@ var Lobby = function (_Component) {
                                     { to: '/' },
                                     _react2.default.createElement(
                                         'button',
-                                        { onClick: this.clickHandler },
+                                        { onClick: this.props.logout },
                                         'logout'
                                     )
                                 )
@@ -18417,7 +18421,7 @@ var _Room = __webpack_require__(128);
 
 var _Room2 = _interopRequireDefault(_Room);
 
-var _profile = __webpack_require__(343);
+var _profile = __webpack_require__(344);
 
 var _profile2 = _interopRequireDefault(_profile);
 
@@ -30628,7 +30632,7 @@ var _RouteIndex = __webpack_require__(143);
 
 var _RouteIndex2 = _interopRequireDefault(_RouteIndex);
 
-var _profile = __webpack_require__(343);
+var _profile = __webpack_require__(344);
 
 var _profile2 = _interopRequireDefault(_profile);
 
@@ -30653,6 +30657,7 @@ var App = function (_React$Component) {
       user: '',
       picture: ''
     };
+    _this.handleLogout = _this.handleLogout.bind(_this);
     return _this;
   }
 
@@ -30677,6 +30682,11 @@ var App = function (_React$Component) {
       }
     }
   }, {
+    key: 'handleLogout',
+    value: function handleLogout() {
+      this.auth.logout();
+    }
+  }, {
     key: 'render',
     value: function render() {
       var _this3 = this;
@@ -30688,10 +30698,10 @@ var App = function (_React$Component) {
           'div',
           null,
           _react2.default.createElement(_reactRouterDom.Route, { exact: true, path: '/', render: function render() {
-              return _react2.default.createElement(_Lobby2.default, { auth: _this3.auth });
+              return _react2.default.createElement(_Lobby2.default, { logout: _this3.handleLogout, auth: _this3.auth });
             } }),
           _react2.default.createElement(_reactRouterDom.Route, { path: '/room', render: function render() {
-              return _react2.default.createElement(_Room2.default, { user: _this3.state.user, picture: _this3.state.picture });
+              return _react2.default.createElement(_Room2.default, { logout: _this3.handleLogout, user: _this3.state.user, picture: _this3.state.picture });
             } }),
           _react2.default.createElement(_reactRouterDom.Route, { path: '/profile', render: function render() {
               return _react2.default.createElement(_profile2.default, { user: _this3.state.user, picture: _this3.state.picture });
@@ -42959,7 +42969,8 @@ module.exports = {
 };
 
 /***/ }),
-/* 343 */
+/* 343 */,
+/* 344 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";

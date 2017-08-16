@@ -9,12 +9,6 @@ import {
 class Lobby extends Component {
     constructor(props) {
         super(props)
-        this.clickHandler = this.clickHandler.bind(this);
-    }
-
-    clickHandler() {
-        console.log('clicked');
-        this.props.auth.logout();
     }
 
     render() {
@@ -32,7 +26,7 @@ class Lobby extends Component {
                                         <h3 className='lobbyText'>Click to Enter a Game</h3>
                                     </Link>
                                     <Link to='/'>
-                                        <button onClick={this.clickHandler}>logout</button>
+                                        <button onClick={this.props.logout}>logout</button>
                                     </Link>
                                 </div>
                             }
