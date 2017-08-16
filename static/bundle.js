@@ -16435,7 +16435,7 @@ var _Game = __webpack_require__(81);
 
 var _Game2 = _interopRequireDefault(_Game);
 
-var _profile = __webpack_require__(343);
+var _profile = __webpack_require__(344);
 
 var _profile2 = _interopRequireDefault(_profile);
 
@@ -18417,7 +18417,7 @@ var _Room = __webpack_require__(128);
 
 var _Room2 = _interopRequireDefault(_Room);
 
-var _profile = __webpack_require__(343);
+var _profile = __webpack_require__(344);
 
 var _profile2 = _interopRequireDefault(_profile);
 
@@ -30628,7 +30628,7 @@ var _RouteIndex = __webpack_require__(143);
 
 var _RouteIndex2 = _interopRequireDefault(_RouteIndex);
 
-var _profile = __webpack_require__(343);
+var _profile = __webpack_require__(344);
 
 var _profile2 = _interopRequireDefault(_profile);
 
@@ -42959,7 +42959,8 @@ module.exports = {
 };
 
 /***/ }),
-/* 343 */
+/* 343 */,
+/* 344 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
