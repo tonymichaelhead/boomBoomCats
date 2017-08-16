@@ -13708,7 +13708,7 @@ var _auth0Js = __webpack_require__(246);
 
 var _auth0Js2 = _interopRequireDefault(_auth0Js);
 
-var _authConfig = __webpack_require__(283);
+var _authConfig = __webpack_require__(344);
 
 var _authConfig2 = _interopRequireDefault(_authConfig);
 
@@ -36926,24 +36926,7 @@ module.exports = CrossOriginAuthentication;
 
 
 /***/ }),
-/* 283 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = {
-  CLIENT_ID: 'cKJZiVQotdU18F4H014vgCUZlDy4gRgP',
-  DOMAIN: 'mikedoyle007.auth0.com',
-  REDIRECT_URI: 'http://localhost:3000/',
-  //REDIRECT_URI: 'https://boomboomcats.herokuapp.com/',
-  AUDIENCE: 'https://mikedoyle007.auth0.com/userinfo'
-};
-
-/***/ }),
+/* 283 */,
 /* 284 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -42975,6 +42958,8 @@ var _react = __webpack_require__(4);
 
 var _react2 = _interopRequireDefault(_react);
 
+var _reactRouterDom = __webpack_require__(72);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -43018,6 +43003,19 @@ var Profile = function (_Component) {
           'div',
           null,
           _react2.default.createElement('img', { src: this.props.picture, alt: '' })
+        ),
+        _react2.default.createElement(
+          'div',
+          null,
+          _react2.default.createElement(
+            _reactRouterDom.Link,
+            { to: '/' },
+            _react2.default.createElement(
+              'button',
+              null,
+              ' Back to Lobby '
+            )
+          )
         )
       );
     }
@@ -43027,6 +43025,24 @@ var Profile = function (_Component) {
 }(_react.Component);
 
 exports.default = Profile;
+
+/***/ }),
+/* 344 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = {
+  CLIENT_ID: 'cKJZiVQotdU18F4H014vgCUZlDy4gRgP',
+  DOMAIN: 'mikedoyle007.auth0.com',
+  REDIRECT_URI: 'http://localhost:3000/',
+  //REDIRECT_URI: 'https://boomboomcats.herokuapp.com/',
+  AUDIENCE: 'https://mikedoyle007.auth0.com/userinfo'
+};
 
 /***/ })
 /******/ ]);

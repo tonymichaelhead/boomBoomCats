@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 
 class Profile extends Component {
   constructor(props){
@@ -23,6 +24,10 @@ class Profile extends Component {
 
         <div>
           <img src={this.props.picture} alt=""></img>
+        </div>
+
+        <div>
+        <Link to = '/'  ><button > Back to Lobby </button></Link>
         </div>
       </div>
     )
