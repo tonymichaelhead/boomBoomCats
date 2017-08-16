@@ -13703,14 +13703,16 @@ Object.defineProperty(exports, "__esModule", {
 });
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+// import config from './config.js';
+
 
 var _auth0Js = __webpack_require__(246);
 
 var _auth0Js2 = _interopRequireDefault(_auth0Js);
 
-var _config = __webpack_require__(283);
+var _authConfig = __webpack_require__(283);
 
-var _config2 = _interopRequireDefault(_config);
+var _authConfig2 = _interopRequireDefault(_authConfig);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -13720,10 +13722,10 @@ var Auth = function () {
     function Auth() {
         _classCallCheck(this, Auth);
 
-        var DOMAIN = process.env.AUTHDOMAIN || _config2.default.DOMAIN;
-        var CLIENT_ID = process.env.CLIENT_ID || _config2.default.CLIENT_ID;
-        var REDIRECT_URI = process.env.REDIRECT_URI || _config2.default.REDIRECT_URI;
-        var AUDIENCE = process.env.AUDIENCE || _config2.default.AUDIENCE;
+        var DOMAIN = process.env.AUTHDOMAIN || _authConfig2.default.DOMAIN;
+        var CLIENT_ID = process.env.CLIENT_ID || _authConfig2.default.CLIENT_ID;
+        var REDIRECT_URI = process.env.REDIRECT_URI || _authConfig2.default.REDIRECT_URI;
+        var AUDIENCE = process.env.AUDIENCE || _authConfig2.default.AUDIENCE;
         this.auth0 = new _auth0Js2.default.WebAuth({
             domain: DOMAIN,
             clientID: CLIENT_ID,
@@ -36880,14 +36882,14 @@ module.exports = CrossOriginAuthentication;
 
 
 Object.defineProperty(exports, "__esModule", {
-    value: true
+  value: true
 });
 exports.default = {
-    CLIENT_ID: 'Bt93UxMPclylp6P1iwcOY6ofPQsNeSZo',
-    DOMAIN: 'michaelkdai.auth0.com',
-    REDIRECT_URI: 'http://localhost:3000/',
-    //REDIRECT_URI: 'https://boomboomcats.herokuapp.com/',
-    AUDIENCE: 'https://michaelkdai.auth0.com/userinfo'
+  CLIENT_ID: 'cKJZiVQotdU18F4H014vgCUZlDy4gRgP',
+  DOMAIN: 'mikedoyle007.auth0.com',
+  REDIRECT_URI: 'http://localhost:3000/',
+  //REDIRECT_URI: 'https://boomboomcats.herokuapp.com/',
+  AUDIENCE: 'https://mikedoyle007.auth0.com/userinfo'
 };
 
 /***/ }),
