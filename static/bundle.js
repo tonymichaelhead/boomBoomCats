@@ -42983,7 +42983,20 @@ var Profile = function (_Component) {
       return _react2.default.createElement(
         'div',
         null,
-        'hello, look at me'
+        _react2.default.createElement(
+          'div',
+          null,
+          _react2.default.createElement(
+            'h2',
+            null,
+            this.props.user
+          )
+        ),
+        _react2.default.createElement(
+          'div',
+          null,
+          _react2.default.createElement('img', { src: this.props.picture, alt: '' })
+        )
       );
     }
   }]);

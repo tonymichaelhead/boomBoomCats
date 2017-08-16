@@ -17,7 +17,13 @@ class Profile extends Component {
     console.log('props:', this.props)
     return (
       <div>
-        hello, look at me
+        <div>
+          <h2>{this.props.user}</h2>
+        </div>
+
+        <div>
+          <img src={this.props.picture} alt=""></img>
+        </div>
       </div>
     )
   }
