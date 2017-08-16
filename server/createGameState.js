@@ -1,5 +1,6 @@
 const MongoClient = require('mongodb').MongoClient
-const dbURL = process.env.dbURL //TODO: remove // for dev require('../env/config')
+// const dbURL = process.env.dbURL 
+const dbURL =require('../env/config')
 
 
 let createGameState = function(callback) {
