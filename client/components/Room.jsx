@@ -1,6 +1,8 @@
 import React from 'react'
 import Chat from './Chat.jsx'
 import Game from './Game.jsx'
+import Profile from './profile.jsx'
+import { Link } from 'react-router-dom';
 import io from 'socket.io-client'
 
 
@@ -9,12 +11,14 @@ export default class Room extends React.Component {
     super(props)
     this.state = {
       user: this.props.user,
+      picture: this.props.picture,
       socket: io()
     }
   }
 
   componentDidMount() {
     this.state.socket.emit('addUser', this.state.user)
+    console.log(this.state.user, this.props.picture)
   }
 
   render() {
@@ -30,6 +34,8 @@ export default class Room extends React.Component {
           <div className='col-sm-2 col-sm-offset-1'>
             <Chat socket={this.state.socket} />
           </div>
+
+          <Link to = '/profile'  ><button > View your Profile </button></Link>
         </div>
 
       </div>
