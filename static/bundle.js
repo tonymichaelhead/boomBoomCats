@@ -13703,8 +13703,6 @@ Object.defineProperty(exports, "__esModule", {
 });
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-// import config from './config.js';
-
 
 var _auth0Js = __webpack_require__(246);
 
@@ -18305,10 +18303,19 @@ var Lobby = function (_Component) {
     function Lobby(props) {
         _classCallCheck(this, Lobby);
 
-        return _possibleConstructorReturn(this, (Lobby.__proto__ || Object.getPrototypeOf(Lobby)).call(this, props));
+        var _this = _possibleConstructorReturn(this, (Lobby.__proto__ || Object.getPrototypeOf(Lobby)).call(this, props));
+
+        _this.clickHandler = _this.clickHandler.bind(_this);
+        return _this;
     }
 
     _createClass(Lobby, [{
+        key: 'clickHandler',
+        value: function clickHandler() {
+            console.log('clicked');
+            this.props.auth.logout();
+        }
+    }, {
         key: 'render',
         value: function render() {
             return _react2.default.createElement(
@@ -18333,12 +18340,25 @@ var Lobby = function (_Component) {
                                 { className: 'lobbyText', onClick: this.props.auth.login },
                                 'Please Click to Login & Play'
                             ) : _react2.default.createElement(
-                                _reactRouterDom.Link,
-                                { to: '/room' },
+                                'div',
+                                null,
                                 _react2.default.createElement(
-                                    'h3',
-                                    { className: 'lobbyText' },
-                                    'Click to Enter a Game'
+                                    _reactRouterDom.Link,
+                                    { to: '/room' },
+                                    _react2.default.createElement(
+                                        'h3',
+                                        { className: 'lobbyText' },
+                                        'Click to Enter a Game'
+                                    )
+                                ),
+                                _react2.default.createElement(
+                                    _reactRouterDom.Link,
+                                    { to: '/' },
+                                    _react2.default.createElement(
+                                        'button',
+                                        { onClick: this.clickHandler },
+                                        'logout'
+                                    )
                                 )
                             )
                         )
