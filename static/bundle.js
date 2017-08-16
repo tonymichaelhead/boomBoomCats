@@ -13708,9 +13708,9 @@ var _auth0Js = __webpack_require__(246);
 
 var _auth0Js2 = _interopRequireDefault(_auth0Js);
 
-var _config = __webpack_require__(283);
+var _authConfig = __webpack_require__(283);
 
-var _config2 = _interopRequireDefault(_config);
+var _authConfig2 = _interopRequireDefault(_authConfig);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -13720,10 +13720,10 @@ var Auth = function () {
     function Auth() {
         _classCallCheck(this, Auth);
 
-        var DOMAIN = process.env.AUTHDOMAIN || _config2.default.DOMAIN;
-        var CLIENT_ID = process.env.CLIENT_ID || _config2.default.CLIENT_ID;
-        var REDIRECT_URI = process.env.REDIRECT_URI || _config2.default.REDIRECT_URI;
-        var AUDIENCE = process.env.AUDIENCE || _config2.default.AUDIENCE;
+        var DOMAIN = process.env.AUTHDOMAIN || _authConfig2.default.DOMAIN;
+        var CLIENT_ID = process.env.CLIENT_ID || _authConfig2.default.CLIENT_ID;
+        var REDIRECT_URI = process.env.REDIRECT_URI || _authConfig2.default.REDIRECT_URI;
+        var AUDIENCE = process.env.AUDIENCE || _authConfig2.default.AUDIENCE;
         this.auth0 = new _auth0Js2.default.WebAuth({
             domain: DOMAIN,
             clientID: CLIENT_ID,
@@ -18303,10 +18303,19 @@ var Lobby = function (_Component) {
     function Lobby(props) {
         _classCallCheck(this, Lobby);
 
-        return _possibleConstructorReturn(this, (Lobby.__proto__ || Object.getPrototypeOf(Lobby)).call(this, props));
+        var _this = _possibleConstructorReturn(this, (Lobby.__proto__ || Object.getPrototypeOf(Lobby)).call(this, props));
+
+        _this.clickHandler = _this.clickHandler.bind(_this);
+        return _this;
     }
 
     _createClass(Lobby, [{
+        key: 'clickHandler',
+        value: function clickHandler() {
+            console.log('clicked');
+            this.props.auth.logout();
+        }
+    }, {
         key: 'render',
         value: function render() {
             return _react2.default.createElement(
@@ -18331,12 +18340,25 @@ var Lobby = function (_Component) {
                                 { className: 'lobbyText', onClick: this.props.auth.login },
                                 'Please Click to Login & Play'
                             ) : _react2.default.createElement(
-                                _reactRouterDom.Link,
-                                { to: '/room' },
+                                'div',
+                                null,
                                 _react2.default.createElement(
-                                    'h3',
-                                    { className: 'lobbyText' },
-                                    'Click to Enter a Game'
+                                    _reactRouterDom.Link,
+                                    { to: '/room' },
+                                    _react2.default.createElement(
+                                        'h3',
+                                        { className: 'lobbyText' },
+                                        'Click to Enter a Game'
+                                    )
+                                ),
+                                _react2.default.createElement(
+                                    _reactRouterDom.Link,
+                                    { to: '/' },
+                                    _react2.default.createElement(
+                                        'button',
+                                        { onClick: this.clickHandler },
+                                        'logout'
+                                    )
                                 )
                             )
                         )
@@ -36880,14 +36902,14 @@ module.exports = CrossOriginAuthentication;
 
 
 Object.defineProperty(exports, "__esModule", {
-    value: true
+  value: true
 });
 exports.default = {
-    CLIENT_ID: 'Bt93UxMPclylp6P1iwcOY6ofPQsNeSZo',
-    DOMAIN: 'michaelkdai.auth0.com',
-    REDIRECT_URI: 'http://localhost:3000/',
-    //REDIRECT_URI: 'https://boomboomcats.herokuapp.com/',
-    AUDIENCE: 'https://michaelkdai.auth0.com/userinfo'
+  CLIENT_ID: 'cKJZiVQotdU18F4H014vgCUZlDy4gRgP',
+  DOMAIN: 'mikedoyle007.auth0.com',
+  REDIRECT_URI: 'http://localhost:3000/',
+  //REDIRECT_URI: 'https://boomboomcats.herokuapp.com/',
+  AUDIENCE: 'https://mikedoyle007.auth0.com/userinfo'
 };
 
 /***/ }),

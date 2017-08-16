@@ -1,5 +1,5 @@
 import auth0 from 'auth0-js';
-import config from './config.js';
+import config from '../../env/auth-config';
 
 export default class Auth {
     constructor() {
