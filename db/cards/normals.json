@@ -6,9 +6,9 @@
     "type":"normal"
     },
   {
-    "name":"see-the-future",
-    "image": "./assets/seethefuture1.gif",
-    "description":"See the next 3 cards. It's like cheating, except not.",
+    "name":"reverse",
+    "image": "./assets/reverse1.gif",
+    "description":"Reverse the turn order.",
     "type":"normal"
   },
   {
