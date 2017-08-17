@@ -3,7 +3,6 @@ const path = require('path')
 const parser = require('body-parser')
 const MongoClient = require('mongodb').MongoClient;
 const assert = require('assert');
-
 const app = express()
 const PORT = process.env.PORT || 3000
 
@@ -13,9 +12,16 @@ let db // mongo
 const dbURL = process.env.dbURL || require('../env/config.js');
 const createGameState = require('./createGameState')
 
+//database connections/routes for user profiles only
+//@@@@@
+const profileRouter = require('./router/profilerouter')
+const sqldb = require ('../db/postgres/sqldb.js')
+//@@@@@
+
 app.use(parser.urlencoded({extended: true}))
 app.use(parser.json())
 app.use(express.static(path.join(__dirname, '../static')))
+app.use('/api', profileRouter)
 app.get('*', function (request, response){
   response.redirect('/')
 })
