@@ -38,12 +38,14 @@ module.exports = {
             }, () => {
                 this.discardCard(cardPosition);
                 cb();
+                this.endTurn();
             });
 
         } else if (this.state.deck.length === 1) {
             alert('There is only one card remaining so the order can\'t be changed!');
             this.discardCard(cardPosition);
             cb();
+            this.endTurn();
 
         } else if (this.state.deck.length === 2) {
             let nextTwoCards = this.state.deck.slice();
@@ -60,12 +62,14 @@ module.exports = {
             }, () => {
                 this.discardCard(cardPosition);
                 cb();
+                this.endTurn();
             });
 
         } else {
             console.log('Wow what went wrong here?');
             this.discardCard(cardPosition);
             cb();
+            this.endTurn();
         }
     },
 
