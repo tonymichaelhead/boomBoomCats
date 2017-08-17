@@ -13708,7 +13708,7 @@ var _auth0Js = __webpack_require__(246);
 
 var _auth0Js2 = _interopRequireDefault(_auth0Js);
 
-var _authConfig = __webpack_require__(283);
+var _authConfig = __webpack_require__(!(function webpackMissingModule() { var e = new Error("Cannot find module \"../../env/auth-config\""); e.code = 'MODULE_NOT_FOUND'; throw e; }()));
 
 var _authConfig2 = _interopRequireDefault(_authConfig);
 
@@ -16435,7 +16435,7 @@ var _Game = __webpack_require__(81);
 
 var _Game2 = _interopRequireDefault(_Game);
 
-var _profile = __webpack_require__(344);
+var _profile = __webpack_require__(343);
 
 var _profile2 = _interopRequireDefault(_profile);
 
@@ -18421,7 +18421,7 @@ var _Room = __webpack_require__(128);
 
 var _Room2 = _interopRequireDefault(_Room);
 
-var _profile = __webpack_require__(344);
+var _profile = __webpack_require__(343);
 
 var _profile2 = _interopRequireDefault(_profile);
 
@@ -30632,7 +30632,7 @@ var _RouteIndex = __webpack_require__(143);
 
 var _RouteIndex2 = _interopRequireDefault(_RouteIndex);
 
-var _profile = __webpack_require__(344);
+var _profile = __webpack_require__(343);
 
 var _profile2 = _interopRequireDefault(_profile);
 
@@ -36936,24 +36936,7 @@ module.exports = CrossOriginAuthentication;
 
 
 /***/ }),
-/* 283 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = {
-  CLIENT_ID: 'cKJZiVQotdU18F4H014vgCUZlDy4gRgP',
-  DOMAIN: 'mikedoyle007.auth0.com',
-  REDIRECT_URI: 'http://localhost:3000/',
-  //REDIRECT_URI: 'https://boomboomcats.herokuapp.com/',
-  AUDIENCE: 'https://mikedoyle007.auth0.com/userinfo'
-};
-
-/***/ }),
+/* 283 */,
 /* 284 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -42969,8 +42952,7 @@ module.exports = {
 };
 
 /***/ }),
-/* 343 */,
-/* 344 */
+/* 343 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
