@@ -18358,7 +18358,7 @@ var Lobby = function (_Component) {
                             ),
                             !this.props.auth.isAuthenticated() ? _react2.default.createElement(
                                 'h3',
-                                { className: 'lobbyText', onClick: this.props.auth.login },
+                                { className: 'lobbyText login', onClick: this.props.auth.login },
                                 'Please Click to Login & Play'
                             ) : _react2.default.createElement(
                                 'div',
@@ -18368,7 +18368,7 @@ var Lobby = function (_Component) {
                                     { to: '/room' },
                                     _react2.default.createElement(
                                         'h3',
-                                        { className: 'lobbyText' },
+                                        { className: 'lobbyText login' },
                                         'Click to Enter a Game'
                                     )
                                 ),
