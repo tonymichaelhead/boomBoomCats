@@ -18,8 +18,7 @@ let createGameState = function(callback) {
 
     cards.find({type: "normal"}).toArray().then( (orderedDeck) => {
       console.log('')
-      console.log(`There are ${orderedDeck.length} ${orderedDeck[0].type} cards in the database
-      `)
+      console.log(`There are ${orderedDeck.length} ${orderedDeck[0].type} cards in the database`)
 
       let shuffledDeck = []
 
