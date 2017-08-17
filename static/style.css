@@ -41,6 +41,22 @@ input {
     animation: spin 1s linear infinite;
 }
 
+/* .lobbybutton {
+  text-align: center;
+}
+
+.profilepicture {
+  position: fixed;
+  top:50%;
+  bottom: 50%;
+  margin-top: -50px;
+  margin-left: -100px;
+} */
+
+.profile {
+  margin-left: 500px;
+}
+
 @keyframes spin {
     0% { transform: rotate(0deg); }
     100% { transform: rotate(360deg); }
