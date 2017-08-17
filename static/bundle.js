@@ -9784,6 +9784,12 @@ var Game = function (_React$Component) {
         this.seeTheFuture(handIndex, function () {
           _this3.props.socket.emit('future card', _this3.state.playerId);
         });
+      } else if (cardName === 'reverse') {
+
+        var reversedTurns = this.state.turn;
+        this.setState({
+          turn: reversedTurns
+        });
       }
     }
   }, {

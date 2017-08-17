@@ -128,6 +128,13 @@ export default class Game extends React.Component {
         this.props.socket.emit('future card', this.state.playerId)
       })
 
+    } else if (cardName === 'reverse') {
+
+      let reversedTurns = this.state.turn;
+      this.setState({
+        turn: reversedTurns
+      });
+
     }
   }
 
