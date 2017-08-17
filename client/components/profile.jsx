@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
+import FriendsList from './FriendsList.jsx';
 
 class Profile extends Component {
   constructor(props) {
@@ -35,6 +36,9 @@ class Profile extends Component {
 
         </div>
 
+        <div>
+          <FriendsList friends={[{ username: 'Doyle', profilePicUrl: 'https://someshit.com'}, { username: 'K-Nips', profilePicUrl: 'https://ahhhhyeaah.com'}]}/>
+        </div>
 
         <div >
           <Link to='/'  ><button class="lobbybutton"> Back to Lobby </button></Link>
