@@ -25,14 +25,14 @@ export default class App extends React.Component {
       this.auth.handleAuthentication((accessToken) => {
         this.auth.getProfile(accessToken, (err, profile) => {
           this.setState({ user: profile.nickname, picture: profile.picture });
-          console.log(`profile in App.jsx ${profile}`)
+          console.log(`refresh profile in App.jsx ${profile}`)
         })
       });
     } else {
       this.auth.getProfile(localStorage.getItem('access_token'), (err, profile) => {
         this.setState({ user: profile.nickname, picture: profile.picture });
         this.profileInfo = JSON.stringify(profile);
-        console.log(`profile in App.jsx ${JSON.stringify(profile)}`)
+        console.log(`refresh profile in App.jsx ${JSON.stringify(profile)}`)
       });
     }
   }
