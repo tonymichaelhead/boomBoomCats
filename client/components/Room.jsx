@@ -4,6 +4,7 @@ import Game from './Game.jsx'
 import Profile from './profile.jsx'
 import { Link } from 'react-router-dom';
 import io from 'socket.io-client'
+import Auth from '../Auth/Auth.js';
 
 
 export default class Room extends React.Component {
@@ -34,6 +35,8 @@ export default class Room extends React.Component {
           <div className='col-sm-2 col-sm-offset-1'>
             <Chat socket={this.state.socket} />
           </div>
+
+          <Link to = '/'><button onClick={this.props.logout}>Logout</button></Link>
 
           <Link to = '/profile'  ><button > View your Profile </button></Link>
         </div>
