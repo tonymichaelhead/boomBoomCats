@@ -42989,7 +42989,21 @@ var Profile = function (_Component) {
       console.log('props:', this.props);
       return _react2.default.createElement(
         'div',
-        null,
+        { 'class': 'profile' },
+        _react2.default.createElement(
+          'div',
+          null,
+          _react2.default.createElement(
+            'h1',
+            null,
+            'Your Profile'
+          )
+        ),
+        _react2.default.createElement(
+          'div',
+          null,
+          _react2.default.createElement('img', { 'class': 'profilepicture', src: this.props.picture, alt: '' })
+        ),
         _react2.default.createElement(
           'div',
           null,
@@ -42997,12 +43011,19 @@ var Profile = function (_Component) {
             'h2',
             null,
             this.props.user
+          ),
+          _react2.default.createElement('br', null),
+          _react2.default.createElement(
+            'p',
+            null,
+            'Wins:'
+          ),
+          ' ',
+          _react2.default.createElement(
+            'p',
+            null,
+            ' Losses: '
           )
-        ),
-        _react2.default.createElement(
-          'div',
-          null,
-          _react2.default.createElement('img', { src: this.props.picture, alt: '' })
         ),
         _react2.default.createElement(
           'div',
@@ -43012,7 +43033,7 @@ var Profile = function (_Component) {
             { to: '/' },
             _react2.default.createElement(
               'button',
-              null,
+              { 'class': 'lobbybutton' },
               ' Back to Lobby '
             )
           )
