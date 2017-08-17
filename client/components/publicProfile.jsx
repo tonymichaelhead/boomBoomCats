@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import FriendsList from './FriendsList.jsx';
 
-class Profile extends Component {
+class pubProfile extends Component {
   constructor(props) {
     super(props);
 
@@ -24,7 +24,7 @@ class Profile extends Component {
         </div>
 
         <div>
-          <img className="profilepicture" src={this.props.picture} alt=""></img>
+          <img class="profilepicture" src={this.props.picture} alt=""></img>
         </div>
 
 

@@ -30,7 +30,7 @@ export default class App extends React.Component {
               console.log('this finna be response', response)
             })
           this.setState({ user: profile.nickname, picture: profile.picture });
-          console.log(`this is refresh profile in App.jsx ${profile}`)
+          console.log(`refresh profile in App.jsx ${profile}`)
         })
       });
     } else {
