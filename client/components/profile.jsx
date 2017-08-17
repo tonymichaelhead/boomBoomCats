@@ -23,7 +23,7 @@ class Profile extends Component {
         </div>
 
         <div>
-          <img class="profilepicture" src={this.props.picture} alt=""></img>
+          <img className="profilepicture" src={this.props.picture} alt=""></img>
         </div>
 
 
