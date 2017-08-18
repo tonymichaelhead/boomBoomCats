@@ -64,21 +64,16 @@ module.exports = {
         this.endTurn()
     },
     reverseTurnOrder: function (cardPosition, cb) {
-        console.log('Reverse turn order has been requested inside cardFunctions.js');
-        console.log('current turn order = ', this.state.turn)
         let reverseTurnOrder = this.state.turn.slice().reverse()
-        console.log('reverse turn order = ', reverseTurnOrder)
-        // this.setState({
-        //   turn: reverseTurnOrder
-        // }, () => {
-        //     this.discardCard(cardPosition);
-        //     console.log('card should have been discarded');
-        //     cb(reverseTurnOrder)
-        //     this.endTurn();
-        // })
-        this.discardCard(cardPosition);
-        cb(reverseTurnOrder)
-        this.endTurn();
+        let lastBecomeFirst = reverseTurnOrder.pop()
+        reverseTurnOrder.unshift(lastBecomeFirst)
+        this.setState({
+          turn: reverseTurnOrder
+        }, () => {
+            this.discardCard(cardPosition);
+            cb(reverseTurnOrder)
+            this.endTurn();
+        })
 
     }
 

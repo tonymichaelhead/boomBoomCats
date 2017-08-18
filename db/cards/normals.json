@@ -6,11 +6,29 @@
     "type":"normal"
   },
   {
-    "name":"reverse",
-    "image": "./assets/reverse1.gif",
-    "description":"Reverse the turn order.",
+    "name":"shuffle",
+    "image":"./assets/shuffle1.gif",
+    "description":"Shuffle dem cards.",
     "type":"normal"
   },
+  {
+    "name":"skip",
+    "image":"./assets/skip1.gif",
+    "description":"Run away from your responsibilities. End your turn without drawing.",
+    "type":"normal"
+  },
+  {
+    "name":"attack",
+    "image":"./assets/attack1.gif",
+    "description":"End your turn without drawing, and drop a deuce on the next guy",
+    "type":"normal"
+  },
+    {
+    "name":"shuffle",
+    "image":"./assets/shuffle12.gif",
+    "description":"Shuffle dem cards.",
+    "type":"normal"
+    },
   {
     "name":"reverse",
     "image": "./assets/reverse1.gif",
@@ -18,11 +36,22 @@
     "type":"normal"
   },
   {
-    "name":"reverse",
-    "image": "./assets/reverse1.gif",
-    "description":"Reverse the turn order.",
+    "name":"skip",
+    "image":"./assets/skip2.gif",
+    "description":"Run away from your responsibilities. End your turn without drawing.",
     "type":"normal"
   },
+  {
+    "name":"attack",
+    "image":"./assets/attack2.gif",
+    "description":"End your turn without drawing, and drop a deuce on the next guy.",
+    "type":"normal"
+  },  {
+    "name":"shuffle",
+    "image":"./assets/shuffle2.gif",
+    "description":"Shuffle dem cards.",
+    "type":"normal"
+    },
   {
     "name":"reverse",
     "image": "./assets/reverse1.gif",
@@ -30,11 +59,22 @@
     "type":"normal"
   },
   {
-    "name":"reverse",
-    "image": "./assets/reverse1.gif",
-    "description":"Reverse the turn order.",
+    "name":"skip",
+    "image":"./assets/skip3.gif",
+    "description":"Run away from your responsibilities. End your turn without drawing.",
     "type":"normal"
   },
+  {
+    "name":"attack",
+    "image":"./assets/attack3.gif",
+    "description":"End your turn without drawing, and drop a deuce on the next guy.",
+    "type":"normal"
+  },  {
+    "name":"shuffle",
+    "image":"./assets/shuffle3.gif",
+    "description":"Shuffle dem cards.",
+    "type":"normal"
+    },
   {
     "name":"reverse",
     "image": "./assets/reverse1.gif",
@@ -42,249 +82,200 @@
     "type":"normal"
   },
   {
-    "name":"reverse",
-    "image": "./assets/reverse1.gif",
-    "description":"Reverse the turn order.",
+    "name":"skip",
+    "image":"./assets/skip4.gif",
+    "description":"Run away from your responsibilities. End your turn without drawing.",
     "type":"normal"
   },
   {
-    "name":"reverse",
-    "image": "./assets/reverse1.gif",
-    "description":"Reverse the turn order.",
+    "name":"attack",
+    "image":"./assets/attack4.gif",
+    "description":"End your turn without drawing, and drop a deuce on the next guy.",
+    "type":"normal"
+  },  {
+    "name":"shuffle",
+    "image":"./assets/shuffle4.gif",
+    "description":"Shuffle dem cards.",
+    "type":"normal"
+    },
+  {
+    "name":"see-the-future",
+    "image":"./assets/seethefuture5.gif",
+    "description":"See the next 3 cards. It's like cheating, except not.",
     "type":"normal"
   },
   {
-    "name":"reverse",
-    "image": "./assets/reverse1.gif",
-    "description":"Reverse the turn order.",
+    "name":"skip",
+    "image":"./assets/skip5.gif",
+    "description":"Run away from your responsibilities. End your turn without drawing.",
     "type":"normal"
   },
   {
-    "name":"reverse",
-    "image": "./assets/reverse1.gif",
-    "description":"Reverse the turn order.",
+    "name":"attack",
+    "image":"./assets/attack5.gif",
+    "description":"End your turn without drawing, and drop a deuce on the next guy.",
+    "type":"normal"
+  },  {
+    "name":"shuffle",
+    "image":"./assets/shuffle5.gif",
+    "description":"Shuffle dem cards.",
+    "type":"normal"
+    },
+  {
+    "name":"see-the-future",
+    "image":"./assets/seethefuture6.gif",
+    "description":"See the next 3 cards. It's like cheating, except not.",
     "type":"normal"
   },
   {
-    "name":"reverse",
-    "image": "./assets/reverse1.gif",
-    "description":"Reverse the turn order.",
+    "name":"skip",
+    "image":"./assets/skip6.gif",
+    "description":"Run away from your responsibilities. End your turn without drawing.",
     "type":"normal"
   },
   {
-    "name":"reverse",
-    "image": "./assets/reverse1.gif",
-    "description":"Reverse the turn order.",
+    "name":"attack",
+    "image":"./assets/attack6.gif",
+    "description":"End your turn without drawing, and drop a deuce on the next guy.",
+    "type":"normal"
+  },  {
+    "name":"shuffle",
+    "image":"./assets/shuffle6.gif",
+    "description":"Shuffle dem cards.",
+    "type":"normal"
+    },
+  {
+    "name":"see-the-future",
+    "image":"./assets/seethefuture7.gif",
+    "description":"See the next 3 cards. It's like cheating, except not.",
     "type":"normal"
   },
   {
-    "name":"reverse",
-    "image": "./assets/reverse1.gif",
-    "description":"Reverse the turn order.",
+    "name":"skip",
+    "image":"./assets/skip7.gif",
+    "description":"Run away from your responsibilities. End your turn without drawing.",
     "type":"normal"
   },
   {
-    "name":"reverse",
-    "image": "./assets/reverse1.gif",
-    "description":"Reverse the turn order.",
+    "name":"attack",
+    "image":"./assets/attack7.gif",
+    "description":"End your turn without drawing, and drop a deuce on the next guy.",
+    "type":"normal"
+  },
+    {
+    "name":"shuffle",
+    "image":"./assets/shuffle7.gif",
+    "description":"Shuffle dem cards.",
+    "type":"normal"
+    },
+  {
+    "name":"see-the-future",
+    "image": "./assets/seethefuture8.gif",
+    "description":"See the next 3 cards. It's like cheating, except not.",
     "type":"normal"
   },
   {
-    "name":"reverse",
-    "image": "./assets/reverse1.gif",
-    "description":"Reverse the turn order.",
+    "name":"skip",
+    "image":"./assets/skip8.gif",
+    "description":"Run away from your responsibilities. End your turn without drawing.",
     "type":"normal"
   },
   {
-    "name":"reverse",
-    "image": "./assets/reverse1.gif",
-    "description":"Reverse the turn order.",
+    "name":"attack",
+    "image":"./assets/attack8.gif",
+    "description":"End your turn without drawing, and drop a deuce on the next guy.",
+    "type":"normal"
+  },  {
+    "name":"shuffle",
+    "image":"./assets/shuffle8.gif",
+    "description":"Shuffle dem cards.",
+    "type":"normal"
+    },
+  {
+    "name":"see-the-future",
+    "image": "./assets/seethefuture9.gif",
+    "description":"See the next 3 cards. It's like cheating, except not.",
     "type":"normal"
   },
   {
-    "name":"reverse",
-    "image": "./assets/reverse1.gif",
-    "description":"Reverse the turn order.",
+    "name":"skip",
+    "image":"./assets/skip9.gif",
+    "description":"Run away from your responsibilities. End your turn without drawing.",
     "type":"normal"
   },
   {
-    "name":"reverse",
-    "image": "./assets/reverse1.gif",
-    "description":"Reverse the turn order.",
+    "name":"attack",
+    "image":"./assets/attack9.gif",
+    "description":"End your turn without drawing, and drop a deuce on the next guy.",
+    "type":"normal"
+  },  {
+    "name":"shuffle",
+    "image":"./assets/shuffle9.gif",
+    "description":"Shuffle dem cards.",
+    "type":"normal"
+    },
+  {
+    "name":"see-the-future",
+    "image":"./assets/seethefuture10.gif",
+    "description":"See the next 3 cards. It's like cheating, except not.",
     "type":"normal"
   },
   {
-    "name":"reverse",
-    "image": "./assets/reverse1.gif",
-    "description":"Reverse the turn order.",
+    "name":"skip",
+    "image":"./assets/skip10.gif",
+    "description":"Run away from your responsibilities. End your turn without drawing.",
     "type":"normal"
   },
   {
-    "name":"reverse",
-    "image": "./assets/reverse1.gif",
-    "description":"Reverse the turn order.",
+    "name":"attack",
+    "image":"./assets/attack10.gif",
+    "description":"End your turn without drawing, and drop a deuce on the next guy.",
+    "type":"normal"
+  },  {
+    "name":"shuffle",
+    "image":"./assets/shuffle10.gif",
+    "description":"Shuffle dem cards.",
+    "type":"normal"
+    },
+  {
+    "name":"see-the-future",
+    "image":"./assets/seethefuture11.gif",
+    "description":"See the next 3 cards. It's like cheating, except not.",
     "type":"normal"
   },
   {
-    "name":"reverse",
-    "image": "./assets/reverse1.gif",
-    "description":"Reverse the turn order.",
+    "name":"skip",
+    "image":"./assets/skip11.gif",
+    "description":"Run away from your responsibilities. End your turn without drawing.",
     "type":"normal"
   },
   {
-    "name":"reverse",
-    "image": "./assets/reverse1.gif",
-    "description":"Reverse the turn order.",
+    "name":"attack",
+    "image":"./assets/attack11.gif",
+    "description":"End your turn without drawing, and drop a deuce on the next guy.",
+    "type":"normal"
+  },  {
+    "name":"shuffle",
+    "image":"./assets/shuffle11.gif",
+    "description":"Shuffle dem cards.",
+    "type":"normal"
+    },
+  {
+    "name":"see-the-future",
+    "image":"./assets/seethefuture12.gif",
+    "description":"See the next 3 cards. It's like cheating, except not.",
     "type":"normal"
   },
   {
-    "name":"reverse",
-    "image": "./assets/reverse1.gif",
-    "description":"Reverse the turn order.",
+    "name":"skip",
+    "image":"./assets/skip12.gif",
+    "description":"Run away from your responsibilities. End your turn without drawing.",
     "type":"normal"
   },
   {
-    "name":"reverse",
-    "image": "./assets/reverse1.gif",
-    "description":"Reverse the turn order.",
+    "name":"attack",
+    "image":"./assets/attack12.gif",
+    "description":"End your turn without drawing, and drop a deuce on the next guy.",
     "type":"normal"
-  },
-  {
-    "name":"reverse",
-    "image": "./assets/reverse1.gif",
-    "description":"Reverse the turn order.",
-    "type":"normal"
-  },
-  {
-    "name":"reverse",
-    "image": "./assets/reverse1.gif",
-    "description":"Reverse the turn order.",
-    "type":"normal"
-  },
-  {
-    "name":"reverse",
-    "image": "./assets/reverse1.gif",
-    "description":"Reverse the turn order.",
-    "type":"normal"
-  },
-  {
-    "name":"reverse",
-    "image": "./assets/reverse1.gif",
-    "description":"Reverse the turn order.",
-    "type":"normal"
-  },
-  {
-    "name":"reverse",
-    "image": "./assets/reverse1.gif",
-    "description":"Reverse the turn order.",
-    "type":"normal"
-  },
-  {
-    "name":"reverse",
-    "image": "./assets/reverse1.gif",
-    "description":"Reverse the turn order.",
-    "type":"normal"
-  },
-  {
-    "name":"reverse",
-    "image": "./assets/reverse1.gif",
-    "description":"Reverse the turn order.",
-    "type":"normal"
-  },
-  {
-    "name":"reverse",
-    "image": "./assets/reverse1.gif",
-    "description":"Reverse the turn order.",
-    "type":"normal"
-  },
-  {
-    "name":"reverse",
-    "image": "./assets/reverse1.gif",
-    "description":"Reverse the turn order.",
-    "type":"normal"
-  },
-  {
-    "name":"reverse",
-    "image": "./assets/reverse1.gif",
-    "description":"Reverse the turn order.",
-    "type":"normal"
-  },
-  {
-    "name":"reverse",
-    "image": "./assets/reverse1.gif",
-    "description":"Reverse the turn order.",
-    "type":"normal"
-  },
-  {
-    "name":"reverse",
-    "image": "./assets/reverse1.gif",
-    "description":"Reverse the turn order.",
-    "type":"normal"
-  },
-  {
-    "name":"reverse",
-    "image": "./assets/reverse1.gif",
-    "description":"Reverse the turn order.",
-    "type":"normal"
-  },
-  {
-    "name":"reverse",
-    "image": "./assets/reverse1.gif",
-    "description":"Reverse the turn order.",
-    "type":"normal"
-  },
-  {
-    "name":"reverse",
-    "image": "./assets/reverse1.gif",
-    "description":"Reverse the turn order.",
-    "type":"normal"
-  },
-  {
-    "name":"reverse",
-    "image": "./assets/reverse1.gif",
-    "description":"Reverse the turn order.",
-    "type":"normal"
-  },
-  {
-    "name":"reverse",
-    "image": "./assets/reverse1.gif",
-    "description":"Reverse the turn order.",
-    "type":"normal"
-  },
-  {
-    "name":"reverse",
-    "image": "./assets/reverse1.gif",
-    "description":"Reverse the turn order.",
-    "type":"normal"
-  },
-  {
-    "name":"reverse",
-    "image": "./assets/reverse1.gif",
-    "description":"Reverse the turn order.",
-    "type":"normal"
-  },
-  {
-    "name":"reverse",
-    "image": "./assets/reverse1.gif",
-    "description":"Reverse the turn order.",
-    "type":"normal"
-  },
-  {
-    "name":"reverse",
-    "image": "./assets/reverse1.gif",
-    "description":"Reverse the turn order.",
-    "type":"normal"
-  },
-  {
-    "name":"reverse",
-    "image": "./assets/reverse1.gif",
-    "description":"Reverse the turn order.",
-    "type":"normal"
-  },
-  {
-    "name":"reverse",
-    "image": "./assets/reverse1.gif",
-    "description":"Reverse the turn order.",
-    "type":"normal"
-  }
+  } 
 ]

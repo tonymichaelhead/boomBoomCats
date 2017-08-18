@@ -10042,8 +10042,11 @@ var Game = function (_React$Component) {
       } else {
         // let playerWhoEndedTurn = gameTurns.shift()
         // gameTurns.push(playerWhoEndedTurn)
+        console.log('#1: GAMETURNS', gameTurns);
         gameTurns.push(gameTurns[0]);
         gameTurns.shift();
+        console.log('#2: THE GAMETURNS HAVE BEEN ADJUSTED AS REQUESTED');
+        console.log('#3: GAMETURNS', gameTurns);
       }
       // this.setState({ turn: gameTurns })
 
@@ -43050,21 +43053,18 @@ module.exports = {
         this.endTurn();
     },
     reverseTurnOrder: function reverseTurnOrder(cardPosition, cb) {
-        console.log('Reverse turn order has been requested inside cardFunctions.js');
-        console.log('current turn order = ', this.state.turn);
+        var _this3 = this;
+
         var reverseTurnOrder = this.state.turn.slice().reverse();
-        console.log('reverse turn order = ', reverseTurnOrder);
-        // this.setState({
-        //   turn: reverseTurnOrder
-        // }, () => {
-        //     this.discardCard(cardPosition);
-        //     console.log('card should have been discarded');
-        //     cb(reverseTurnOrder)
-        //     this.endTurn();
-        // })
-        this.discardCard(cardPosition);
-        cb(reverseTurnOrder);
-        this.endTurn();
+        var lastBecomeFirst = reverseTurnOrder.pop();
+        reverseTurnOrder.unshift(lastBecomeFirst);
+        this.setState({
+            turn: reverseTurnOrder
+        }, function () {
+            _this3.discardCard(cardPosition);
+            cb(reverseTurnOrder);
+            _this3.endTurn();
+        });
     }
 
 };

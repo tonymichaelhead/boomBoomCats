@@ -262,8 +262,11 @@ export default class Game extends React.Component {
     } else {
       // let playerWhoEndedTurn = gameTurns.shift()
       // gameTurns.push(playerWhoEndedTurn)
+      console.log('#1: GAMETURNS', gameTurns)
       gameTurns.push(gameTurns[0])
       gameTurns.shift()
+      console.log('#2: THE GAMETURNS HAVE BEEN ADJUSTED AS REQUESTED')
+      console.log('#3: GAMETURNS', gameTurns)
     }
     // this.setState({ turn: gameTurns })
 
