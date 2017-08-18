@@ -48,9 +48,23 @@ io.on('connection', function(socket) {
 
   })
 
+  socket.on('removeUser', function(name) {
+    socket.disconnect()
+    console.log(users)
+
+    io.emit('disconnect opponent', users)
+
+  })
+
+
   socket.on('shuffle card', function(deck) {
     console.log('shuffled deck! emitting to other players...')
     io.emit('shuffle deck', deck)
+  })
+
+  socket.on('change card', function(deck) {
+    console.log('rearranged the deck! emitting to other players...')
+    io.emit('rearrange deck', deck)
   })
 
   socket.on('future card', function(player) {

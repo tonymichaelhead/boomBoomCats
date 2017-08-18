@@ -22,6 +22,10 @@ export default class Room extends React.Component {
     console.log(this.state.user, this.props.picture)
   }
 
+  componentDidUnmount() {
+    this.state.socket.emit('disconnect')
+  }
+
   render() {
     return (
 
@@ -38,7 +42,7 @@ export default class Room extends React.Component {
 
           <Link to = '/'><button onClick={this.props.logout}>Logout</button></Link>
 
-          <Link to = '/profile'  ><button > View your Profile </button></Link>
+          <Link to = '/profile'  ><button onClick={()=>this.state.socket.emit('removeUser')}> View your Profile </button></Link>
         </div>
 
       </div>
