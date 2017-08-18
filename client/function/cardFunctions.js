@@ -27,17 +27,24 @@ module.exports = {
 
     if (this.state.deck.length > 3) {
       let nextThreeCards = this.state.deck.slice(this.state.deck.length - 3) //FROM THE END OF THE DECK
+      console.log('deck before = ', this.state.deck);
       while (order === null) {
         order = prompt('Please enter the new order for the first 3 cards e.g. 312 or 231 or etc', '123')
       }
       order = order.split('');
+      console.log('old = ', nextThreeCards);
       let newOrder = []
       for (let i = 0; i < 3; i++) {
-        newOrder.push(nextThreeCards[order.pop()]);
+        console.log('cards = ', nextThreeCards)
+        let index = order[i];
+        console.log('index = ', index);
+        newOrder.push(nextThreeCards[index-1]);
       }
+      console.log('new = ', newOrder);
       this.setState({
         deck: this.state.deck.slice(0, this.state.deck.length - 3).concat(newOrder)
       }, () => {
+        console.log('deck after = ', this.state.deck);
         this.discardCard(cardPosition);
         cb();
         this.endTurn();
@@ -62,6 +69,7 @@ module.exports = {
       this.setState({
         deck: this.state.deck.slice(0, this.state.deck.length - 3).concat(newOrder)
       }, () => {
+        console.log('the deck is : ', this.state.deck)
         this.discardCard(cardPosition);
         cb();
         this.endTurn();
@@ -70,46 +78,46 @@ module.exports = {
       console.log('Wow what went wrong here?');
       this.discardCard(cardPosition);
       cb();
-    },
-    attackNextPlayer: function(cardPosition, cb){ //add extra turn on first element
-        let gameTurns = this.state.turn.slice()
-        let myself = gameTurns[0];
-        let attackedPlayerTurnIndex = 1
-        console.log('attack')
-        for(let i = 1; i < gameTurns.length; i++){
-            if(myself !== gameTurns[i]){
-                attackedPlayerTurnIndex = i;
-                break;
-            }
-        }
-        let attackedPlayer = this.state.turn.slice(attackedPlayerTurnIndex,attackedPlayerTurnIndex+1)
-        gameTurns.splice( attackedPlayerTurnIndex,0, attackedPlayer[0] )
-        let newTurns = gameTurns.slice()
-        this.setState({
-            turn: newTurns
-        }, () => {
-            this.discardCard(cardPosition); 
-            cb();
-            this.endTurn(); 
-            })
-    },
-    skipATurn: function (cardPosition) {
-        console.log('skip')
-        this.discardCard(cardPosition)
-        this.endTurn()
-    },
-    reverseTurnOrder: function (cardPosition, cb) {
-        let reverseTurnOrder = this.state.turn.slice().reverse()
-        let lastBecomeFirst = reverseTurnOrder.pop()
-        reverseTurnOrder.unshift(lastBecomeFirst)
-        this.setState({
-          turn: reverseTurnOrder
-        }, () => {
-            this.discardCard(cardPosition);
-            cb(reverseTurnOrder)
-            this.endTurn();
-        })
     }
+  },
+  attackNextPlayer: function (cardPosition, cb) { //add extra turn on first element
+    let gameTurns = this.state.turn.slice()
+    let myself = gameTurns[0];
+    let attackedPlayerTurnIndex = 1
+    console.log('attack')
+    for (let i = 1; i < gameTurns.length; i++) {
+      if (myself !== gameTurns[i]) {
+        attackedPlayerTurnIndex = i;
+        break;
+      }
+    }
+    let attackedPlayer = this.state.turn.slice(attackedPlayerTurnIndex, attackedPlayerTurnIndex + 1)
+    gameTurns.splice(attackedPlayerTurnIndex, 0, attackedPlayer[0])
+    let newTurns = gameTurns.slice()
+    this.setState({
+      turn: newTurns
+    }, () => {
+      this.discardCard(cardPosition);
+      cb();
+      this.endTurn();
+    })
+  },
+  skipATurn: function (cardPosition) {
+    console.log('skip')
+    this.discardCard(cardPosition)
+    this.endTurn()
+  },
+  reverseTurnOrder: function (cardPosition, cb) {
+    let reverseTurnOrder = this.state.turn.slice().reverse()
+    let lastBecomeFirst = reverseTurnOrder.pop()
+    reverseTurnOrder.unshift(lastBecomeFirst)
+    this.setState({
+      turn: reverseTurnOrder
+    }, () => {
+      this.discardCard(cardPosition);
+      cb(reverseTurnOrder)
+      this.endTurn();
+    })
   },
 
   shuffleDeck: function (cardPosition, cb) {

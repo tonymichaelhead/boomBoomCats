@@ -140,7 +140,7 @@ export default class Game extends React.Component {
         this.props.socket.emit('shuffle card', this.state.deck)
       })   
 
-    } else if (cardName === 'change') {
+    } else if (cardName === 'change-the-future') {
       this.changeTheFuture(handIndex, () => {
         this.props.socket.emit('change card', this.state.deck)
       })

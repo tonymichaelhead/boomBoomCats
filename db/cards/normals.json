@@ -6,9 +6,9 @@
     "type":"normal"
   },
   {
-    "name":"shuffle",
-    "image":"./assets/shuffle1.gif",
-    "description":"Shuffle dem cards.",
+    "name":"change-the-future",
+    "image":"./assets/rearrange.gif",
+    "description":"Rearrange dem cards.",
     "type":"normal"
   },
   {
@@ -23,12 +23,12 @@
     "description":"End your turn without drawing, and drop a deuce on the next guy",
     "type":"normal"
   },
-    {
-    "name":"shuffle",
-    "image":"./assets/shuffle12.gif",
-    "description":"Shuffle dem cards.",
+  {
+    "name":"change-the-future",
+    "image":"./assets/rearrange.gif",
+    "description":"Rearrange dem cards.",
     "type":"normal"
-    },
+  },
   {
     "name":"reverse",
     "image": "./assets/reverse1.gif",
@@ -47,11 +47,11 @@
     "description":"End your turn without drawing, and drop a deuce on the next guy.",
     "type":"normal"
   },  {
-    "name":"shuffle",
-    "image":"./assets/shuffle2.gif",
-    "description":"Shuffle dem cards.",
+    "name":"change-the-future",
+    "image":"./assets/rearrange.gif",
+    "description":"Rearrange dem cards.",
     "type":"normal"
-    },
+  },
   {
     "name":"reverse",
     "image": "./assets/reverse1.gif",
@@ -70,11 +70,11 @@
     "description":"End your turn without drawing, and drop a deuce on the next guy.",
     "type":"normal"
   },  {
-    "name":"shuffle",
-    "image":"./assets/shuffle3.gif",
-    "description":"Shuffle dem cards.",
+    "name":"change-the-future",
+    "image":"./assets/rearrange.gif",
+    "description":"Rearrange dem cards.",
     "type":"normal"
-    },
+  },
   {
     "name":"reverse",
     "image": "./assets/reverse1.gif",

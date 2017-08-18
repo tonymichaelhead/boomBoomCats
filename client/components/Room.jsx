@@ -22,7 +22,7 @@ export default class Room extends React.Component {
     console.log(this.state.user, this.props.picture)
   }
 
-  componentDidUnmount() {
+  componentWillUnmount() {
     this.state.socket.emit('disconnect')
   }
 
