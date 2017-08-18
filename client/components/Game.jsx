@@ -150,7 +150,7 @@ export default class Game extends React.Component {
       this.skipATurn(handIndex)
 
     } else if (cardName === 'see-the-future') {
-
+      console.log('seeing the future');
       this.seeTheFuture(handIndex, ()=>{
         this.props.socket.emit('future card', this.state.playerId)
       })
