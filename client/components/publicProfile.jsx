@@ -2,21 +2,22 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import FriendsList from './FriendsList.jsx';
 
-class publicProfile extends Component {
+class PublicProfile extends Component {
   constructor(props) {
     super(props);
 
   }
 
   componentDidMount() {
-    console.log('Public Profile mounted')
+    console.log('Public Profile mounted!')
+    console.log('Public profile props: ', this.props.user)
   }
 
 
 
   render() {
     
-    //console.log('publicProfile props:', this.props)
+    //console.log('PublicProfile props:', this.props)
     return (
       <div className="profile">
         <div>
@@ -48,4 +49,4 @@ class publicProfile extends Component {
   }
 }
 
-export default publicProfile;
+export default PublicProfile;

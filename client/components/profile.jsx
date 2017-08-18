@@ -37,7 +37,7 @@ class Profile extends Component {
         </div>
 
         <div>
-          <FriendsList friends={[{ username: 'Doyle', profilePicUrl: 'https://someshit.com'}, { username: 'K-Nips', profilePicUrl: 'https://ahhhhyeaah.com'}]}/>
+          <FriendsList changeFriend={this.props.changeFriend} friends={[{ username: 'Doyle', profilePicUrl: 'https://someshit.com'}, { username: 'K-Nips', profilePicUrl: 'https://ahhhhyeaah.com'}]}/>
         </div>
 
         <div >
