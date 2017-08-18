@@ -8,11 +8,11 @@ class FriendsList extends React.Component {
 
     render() {
         return (
-            <div id="friends">
+            <div className="friends">
                 <h3>Friends</h3>
-                <ul>
+                <p className="friendfont">
                     { this.props.friends.map(friend => <Friend friend={friend}/>) }
-                </ul>
+                </p>
             </div>
         );
     }

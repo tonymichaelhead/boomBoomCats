@@ -18,18 +18,18 @@ class Profile extends Component {
     console.log(this.state)
     console.log('props:', this.props)
     return (
-      <div class="profile">
+      <div className="profile">
         <div>
           <h1>Your Profile</h1>
         </div>
 
-        <div>
-          <img className="profilepicture" src={this.props.picture} alt=""></img>
+        <div className="profilepicture">
+          <img  src={this.props.picture} alt=""></img>
         </div>
 
 
 
-        <div>
+        <div className="profiledata">
           <h2>{this.props.user}</h2><br/>
           <p>Wins:</p> <p> Losses: </p>
 
@@ -41,7 +41,7 @@ class Profile extends Component {
         </div>
 
         <div >
-          <Link to='/'  ><button class="lobbybutton"> Back to Lobby </button></Link>
+          <Link to='/'  ><button className="lobbybutton"> Back to Lobby </button></Link>
         </div>
       </div>
     )

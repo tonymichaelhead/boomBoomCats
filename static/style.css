@@ -54,7 +54,23 @@ input {
 } */
 
 .profile {
-  margin-left: 500px;
+
+  text-align: center;
+}
+.profilepicture {
+text-align: center;
+}
+
+.profiledata {
+  text-align: center;
+}
+
+.friendfont{
+  font-size: 22px;
+}
+
+.friends {
+  text-align: center;
 }
 
 @keyframes spin {
@@ -200,6 +216,11 @@ li {
   Links
   ====================================
 */
+
+.lobbybutton {
+  opacity: 65%;
+  border-radius: 20px;
+}
 
 .login {
   cursor: pointer;
