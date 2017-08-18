@@ -13,6 +13,7 @@ export default class Game extends React.Component {
     this.skipATurn = cardFunctions.skipATurn.bind(this)
     this.shuffleDeck = cardFunctions.shuffleDeck.bind(this)
     this.seeTheFuture = cardFunctions.seeTheFuture.bind(this)
+    this.reverseTurnOrder = cardFunctions.reverseTurnOrder.bind(this)
     this.drawACard = this.drawACard.bind(this)
     this.handleDeckClick = this.handleDeckClick.bind(this)
     this.handleCardClick = this.handleCardClick.bind(this)
@@ -97,6 +98,7 @@ export default class Game extends React.Component {
     }.bind(this))
 
     this.props.socket.on('update turn', function(newTurn, newBombCount) {
+      console.log('update turn inside client', newTurn, newBombCount)
       this.setState({
         turn: newTurn,
         exploderCount: newBombCount
@@ -117,12 +119,19 @@ export default class Game extends React.Component {
       })
     }.bind(this))
 
+    this.props.socket.on('reversed', function(newTurns) {
+      console.log('new turns inside client', newTurns);
+      this.setState({
+        turn: newTurns
+      })
+    }.bind(this))
+
   }
 
   handleCardClick(cardName, handIndex) {
     console.log('handling card click on game level')
     if (cardName === 'attack') {
-
+      console.log('ATTACK CARD WAS CLICKED');
       this.attackNextPlayer(handIndex, ()=>{this.props.socket.emit('attack card', this.state.turn, this.state.exploderCount)});
       
     } else if ( cardName === 'shuffle') {
@@ -146,6 +155,11 @@ export default class Game extends React.Component {
         this.props.socket.emit('future card', this.state.playerId)
       })
 
+    } else if (cardName === 'reverse') {
+
+      this.reverseTurnOrder(handIndex, (turns) => {
+        this.props.socket.emit('reverse', turns);
+      })
     }
   }
 
@@ -266,8 +280,11 @@ export default class Game extends React.Component {
     } else {
       // let playerWhoEndedTurn = gameTurns.shift()
       // gameTurns.push(playerWhoEndedTurn)
+      console.log('#1: GAMETURNS', gameTurns)
       gameTurns.push(gameTurns[0])
       gameTurns.shift()
+      console.log('#2: THE GAMETURNS HAVE BEEN ADJUSTED AS REQUESTED')
+      console.log('#3: GAMETURNS', gameTurns)
     }
     // this.setState({ turn: gameTurns })
 

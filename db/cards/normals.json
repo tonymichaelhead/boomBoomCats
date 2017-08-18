@@ -1,14 +1,14 @@
 [
   {
+    "name":"reverse",
+    "image": "./assets/reverse1.gif",
+    "description":"Reverse the turn order.",
+    "type":"normal"
+  },
+  {
     "name":"shuffle",
     "image":"./assets/shuffle1.gif",
     "description":"Shuffle dem cards.",
-    "type":"normal"
-    },
-  {
-    "name":"see-the-future",
-    "image": "./assets/seethefuture1.gif",
-    "description":"See the next 3 cards. It's like cheating, except not.",
     "type":"normal"
   },
   {
@@ -30,9 +30,9 @@
     "type":"normal"
     },
   {
-    "name":"see-the-future",
-    "image":"./assets/seethefuture2.gif",
-    "description":"See the next 3 cards. It's like cheating, except not.",
+    "name":"reverse",
+    "image": "./assets/reverse1.gif",
+    "description":"Reverse the turn order.",
     "type":"normal"
   },
   {
@@ -53,9 +53,9 @@
     "type":"normal"
     },
   {
-    "name":"see-the-future",
-    "image":"./assets/seethefuture3.gif",
-    "description":"See the next 3 cards. It's like cheating, except not.",
+    "name":"reverse",
+    "image": "./assets/reverse1.gif",
+    "description":"Reverse the turn order.",
     "type":"normal"
   },
   {
@@ -76,9 +76,9 @@
     "type":"normal"
     },
   {
-    "name":"see-the-future",
-    "image":"./assets/seethefuture4.gif",
-    "description":"See the next 3 cards. It's like cheating, except not.",
+    "name":"reverse",
+    "image": "./assets/reverse1.gif",
+    "description":"Reverse the turn order.",
     "type":"normal"
   },
   {
