@@ -25,6 +25,9 @@ class Lobby extends Component {
                                     <Link to='/room'>
                                         <h3 className='lobbyText login'>Click to Enter a Game</h3>
                                     </Link>
+                                    <Link to='/profile'>
+                                        <h3 className='lobbyText profile'>View Profile</h3>
+                                    </Link>
                                     <Link to='/'>
                                         <button onClick={this.props.logout}>logout</button>
                                     </Link>

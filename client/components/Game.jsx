@@ -17,6 +17,7 @@ export default class Game extends React.Component {
     this.drawACard = this.drawACard.bind(this)
     this.handleDeckClick = this.handleDeckClick.bind(this)
     this.handleCardClick = this.handleCardClick.bind(this)
+    this.changeTheFuture = cardFunctions.changeTheFuture.bind(this)
     this.state = {
       allPlayersId: [],
       playerId: '',
@@ -61,6 +62,19 @@ export default class Game extends React.Component {
       })
       console.log('we shuffled the deck guys')
     }.bind(this))
+
+    this.props.socket.on('rearrange deck', function(deck) {
+      this.setState({
+        deck: deck
+      })
+      console.log('we rearraged the deck guys')
+    }.bind(this))
+
+    this.props.socket.on('change order', function(deck) {
+      this.setState({
+        deck: deck
+      })
+    })
 
     this.props.socket.on('saw future', function(player) {
       console.log(player, ' saw the future of the deck!')
@@ -120,12 +134,16 @@ export default class Game extends React.Component {
       console.log('ATTACK CARD WAS CLICKED');
       this.attackNextPlayer(handIndex, ()=>{this.props.socket.emit('attack card', this.state.turn, this.state.exploderCount)});
       
-
     } else if ( cardName === 'shuffle') {
 
       this.shuffleDeck(handIndex,()=>{
         this.props.socket.emit('shuffle card', this.state.deck)
       })   
+
+    } else if (cardName === 'change') {
+      this.changeTheFuture(handIndex, () => {
+        this.props.socket.emit('change card', this.state.deck)
+      })
 
     } else if (cardName === 'skip') {
 
