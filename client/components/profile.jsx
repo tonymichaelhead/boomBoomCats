@@ -18,7 +18,7 @@ class Profile extends Component {
     console.log(this.state)
     console.log('props:', this.props)
     return (
-      <div class="profile">
+      <div className="profile">
         <div>
           <h1>Your Profile</h1>
         </div>
@@ -41,7 +41,7 @@ class Profile extends Component {
         </div>
 
         <div >
-          <Link to='/'  ><button class="lobbybutton"> Back to Lobby </button></Link>
+          <Link to='/'  ><button className="lobbybutton"> Back to Lobby </button></Link>
         </div>
       </div>
     )

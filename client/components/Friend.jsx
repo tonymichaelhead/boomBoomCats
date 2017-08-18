@@ -1,4 +1,6 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
+import publicProfile from './publicProfile.jsx'
 
 class Friend extends React.Component {
     constructor(props) {
@@ -9,7 +11,7 @@ class Friend extends React.Component {
         return (
             <div>
                 <li>
-                <a href={`/users/{this.props.friend.username}`}>{ this.props.friend.profilePicUrl } { this.props.friend.username }</a>
+                <Link to='/publicprofiles' >{ this.props.friend.profilePicUrl } { this.props.friend.username }</Link>
                 </li>
             </div>
         );

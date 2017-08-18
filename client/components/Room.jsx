@@ -5,6 +5,7 @@ import Profile from './profile.jsx'
 import { Link } from 'react-router-dom';
 import io from 'socket.io-client'
 import Auth from '../Auth/Auth.js';
+import publicProfile from './publicProfile.jsx'
 
 
 export default class Room extends React.Component {

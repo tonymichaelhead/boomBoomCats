@@ -20,5 +20,11 @@ router.post('/profiles', (req, res) => {
   })
 })
 
+router.get('/public', (req, res) => {
+  console.log(req.body);
+  res.status(200).send(result);  
+})
+  
+
 
 module.exports = router;
