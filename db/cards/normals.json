@@ -31,7 +31,7 @@
   },
   {
     "name":"reverse",
-    "image": "./assets/reverse1.gif",
+    "image": "./assets/reverse2.gif",
     "description":"Reverse the turn order.",
     "type":"normal"
   },
@@ -54,7 +54,7 @@
   },
   {
     "name":"reverse",
-    "image": "./assets/reverse1.gif",
+    "image": "./assets/reverse3.gif",
     "description":"Reverse the turn order.",
     "type":"normal"
   },
@@ -77,7 +77,7 @@
   },
   {
     "name":"reverse",
-    "image": "./assets/reverse1.gif",
+    "image": "./assets/reverse4.gif",
     "description":"Reverse the turn order.",
     "type":"normal"
   },
