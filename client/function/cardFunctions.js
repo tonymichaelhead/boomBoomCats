@@ -71,7 +71,6 @@ module.exports = {
       console.log('Wow what went wrong here?');
       this.discardCard(cardPosition);
       cb();
-      this.endTurn();
     }
   },
 

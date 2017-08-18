@@ -62,6 +62,13 @@ export default class Game extends React.Component {
       console.log('we shuffled the deck guys')
     }.bind(this))
 
+    this.props.socket.on('rearrange deck', function(deck) {
+      this.setState({
+        deck: deck
+      })
+      console.log('we rearraged the deck guys')
+    }.bind(this))
+
     this.props.socket.on('change order', function(deck) {
       this.setState({
         deck: deck
@@ -123,6 +130,11 @@ export default class Game extends React.Component {
       this.shuffleDeck(handIndex,()=>{
         this.props.socket.emit('shuffle card', this.state.deck)
       })   
+
+    } else if (cardName === 'change') {
+      this.changeTheFuture(handIndex, () => {
+        this.props.socket.emit('change card', this.state.deck)
+      })
 
     } else if (cardName === 'skip') {
 
