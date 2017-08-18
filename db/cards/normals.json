@@ -6,7 +6,7 @@
     "type":"normal"
   },
   {
-    "name":"change",
+    "name":"change-the-future",
     "image":"./assets/rearrange.gif",
     "description":"Rearrange dem cards.",
     "type":"normal"
@@ -24,7 +24,7 @@
     "type":"normal"
   },
   {
-    "name":"change",
+    "name":"change-the-future",
     "image":"./assets/rearrange.gif",
     "description":"Rearrange dem cards.",
     "type":"normal"
@@ -47,7 +47,7 @@
     "description":"End your turn without drawing, and drop a deuce on the next guy.",
     "type":"normal"
   },  {
-    "name":"change",
+    "name":"change-the-future",
     "image":"./assets/rearrange.gif",
     "description":"Rearrange dem cards.",
     "type":"normal"
@@ -70,7 +70,7 @@
     "description":"End your turn without drawing, and drop a deuce on the next guy.",
     "type":"normal"
   },  {
-    "name":"change",
+    "name":"change-the-future",
     "image":"./assets/rearrange.gif",
     "description":"Rearrange dem cards.",
     "type":"normal"

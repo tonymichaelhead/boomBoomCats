@@ -140,7 +140,7 @@ export default class Game extends React.Component {
         this.props.socket.emit('shuffle card', this.state.deck)
       })   
 
-    } else if (cardName === 'change') {
+    } else if (cardName === 'change-the-future') {
       this.changeTheFuture(handIndex, () => {
         this.props.socket.emit('change card', this.state.deck)
       })
@@ -150,7 +150,7 @@ export default class Game extends React.Component {
       this.skipATurn(handIndex)
 
     } else if (cardName === 'see-the-future') {
-      console.log('seeing the future');
+
       this.seeTheFuture(handIndex, ()=>{
         this.props.socket.emit('future card', this.state.playerId)
       })
