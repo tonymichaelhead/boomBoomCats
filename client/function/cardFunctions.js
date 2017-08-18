@@ -62,6 +62,24 @@ module.exports = {
         console.log('skip')
         this.discardCard(cardPosition)
         this.endTurn()
+    },
+    reverseTurnOrder: function (cardPosition, cb) {
+        console.log('Reverse turn order has been requested inside cardFunctions.js');
+        console.log('current turn order = ', this.state.turn)
+        let reverseTurnOrder = this.state.turn.slice().reverse()
+        console.log('reverse turn order = ', reverseTurnOrder)
+        // this.setState({
+        //   turn: reverseTurnOrder
+        // }, () => {
+        //     this.discardCard(cardPosition);
+        //     console.log('card should have been discarded');
+        //     cb(reverseTurnOrder)
+        //     this.endTurn();
+        // })
+        this.discardCard(cardPosition);
+        cb(reverseTurnOrder)
+        this.endTurn();
+
     }
 
 }

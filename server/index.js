@@ -89,6 +89,14 @@ io.on('connection', function(socket) {
     delete users[socket.id]
     console.log(users)
   })
+
+  socket.on('reverse', function(turns) {
+    // let newTurns = this.state.turn.slice().reverse()
+    console.log('SERVER: inside reverse', turns);
+    // io.emit('reversed', newTurns, newbombCount)
+    io.emit('update turn', turns)
+  })
+
 })
 
 MongoClient.connect(dbURL, (err, database) => {
