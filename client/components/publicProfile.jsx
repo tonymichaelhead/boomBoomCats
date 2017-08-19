@@ -8,6 +8,8 @@ class PublicProfile extends Component {
     super(props);
     this.state = {
       user: window.location.pathname.slice(16),
+      username: window.location.pathname.slice(16),
+      picture: ''
     }
     this.displayUserInfo = this.displayUserInfo.bind(this);
 
@@ -18,6 +20,10 @@ class PublicProfile extends Component {
     axios.get(userProfilePath)
       .then(result => {
         console.log('Profile info: ', result);
+        this.setState({ 
+          username: result.data[0].name,
+          picture: result.data[0].picture
+        })
       })
   }
 
@@ -38,11 +44,11 @@ class PublicProfile extends Component {
     return (
       <div className="profile">
         <div>
-          <h1>Users Profile</h1>
+          <h1>{this.state.username}'s Profile</h1>
         </div>
 
         <div>
-          {/* <img class="profilepicture" src={this.props.picture} alt=""></img> */}
+          <img class="profilepicture" src={this.state.picture} alt=""></img>
         </div>
 
 
