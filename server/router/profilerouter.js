@@ -22,6 +22,16 @@ router.post('/profiles', (req, res) => {
 
 router.get('/publicprofiles/:username', (req, res) => {
   console.log('the GET to public profiles was GOT:', req.params.username);
+  //query the db using the username as a search parameter
+  userprofile.findAll({
+    where: {
+      name: req.params.username
+    }
+  })
+  .then(result => {
+    console.log(result);
+    res.status(200).send(result); 
+  })
 })
 
 router.get('/public', (req, res) => {

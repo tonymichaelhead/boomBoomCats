@@ -14,7 +14,11 @@ class PublicProfile extends Component {
   }
 
   displayUserInfo() {
-    axios.get('/', this.state.user)
+    let userProfilePath = `/api/publicprofiles/${this.state.user}`
+    axios.get(userProfilePath)
+      .then(result => {
+        console.log('Profile info: ', result);
+      })
   }
 
   componentDidMount() {
