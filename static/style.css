@@ -232,4 +232,14 @@ li {
 
 #friends {
   color: white;
+  max-width: 300px;
+  margin: auto;
+}
+
+#friend-items {
+  text-align: left;
+}
+
+#friend-pic {
+  border-radius: 50%;
 }

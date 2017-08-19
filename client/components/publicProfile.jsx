@@ -35,6 +35,7 @@ class PublicProfile extends Component {
     this.displayUserInfo();
   }
 
+  //TODO: Create backlink to User Profile
 
 
   render() {

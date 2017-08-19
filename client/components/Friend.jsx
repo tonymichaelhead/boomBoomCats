@@ -20,7 +20,7 @@ class Friend extends React.Component {
         return (
             <div>
                 <li>
-                <Link to={`/publicprofiles/${this.props.friend.username}`} >{ this.props.friend.profilePicUrl } { this.props.friend.username }</Link>
+                <Link to={`/publicprofiles/${this.props.friend.username}`} ><img id="friend-pic"src={this.props.friend.profilePicUrl} alt="" height="40px" width="40px"/> { this.props.friend.username }</Link>
                 </li>
             </div>
         );

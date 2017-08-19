@@ -9,9 +9,9 @@ class FriendsList extends React.Component {
     render() {
         console.log('FriendsList props: ',this.props)
         return (
-            <div className="friends">
+            <div id="friends">
                 <h3>Friends</h3>
-                <ul>
+                <ul id="friend-items">
                     { this.props.friends.map(friend => <Friend changeFriend={this.props.changeFriend} friend={friend}/>) }
                 </ul>
             </div>
