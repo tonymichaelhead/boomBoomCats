@@ -1,23 +1,36 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import FriendsList from './FriendsList.jsx';
+import axios from 'axios';
 
 class PublicProfile extends Component {
   constructor(props) {
     super(props);
+    this.state = {
+      user: window.location.pathname.slice(16),
+    }
+    this.displayUserInfo = this.displayUserInfo.bind(this);
 
+  }
+
+  displayUserInfo() {
+    axios.get('/', this.state.user)
   }
 
   componentDidMount() {
     console.log('Public Profile mounted!')
-    console.log('Public profile props: ', this.props.user)
+    //console.log('Public profile props: ', this.props.user)
+
+    //Send GET to the server to query DB and pull back user info
+    this.displayUserInfo();
   }
 
 
 
   render() {
     
-    //console.log('PublicProfile props:', this.props)
+    console.log("Page path is " + window.location.pathname.slice(16))
+    console.log(this.state);
     return (
       <div className="profile">
         <div>

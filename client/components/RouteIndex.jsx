@@ -22,7 +22,7 @@ export default class RouteIndex extends React.Component {
           <Route exact path='/' component={Lobby} />
           <Route path='/room' component={Room} />
           <Route path='/profile' component ={Profile} />
-          <Route path='/publicprofiles' component={PublicProfile} />
+          <Route path='/publicprofiles/:username' component={PublicProfile} />
           
         </div>
 

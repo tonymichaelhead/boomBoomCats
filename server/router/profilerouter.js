@@ -20,6 +20,10 @@ router.post('/profiles', (req, res) => {
   })
 })
 
+router.get('/publicprofiles/:username', (req, res) => {
+  console.log('the GET to public profiles was GOT:', req.params.username);
+})
+
 router.get('/public', (req, res) => {
   console.log(req.body);
   res.status(200).send(result);  

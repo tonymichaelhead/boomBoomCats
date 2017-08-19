@@ -64,7 +64,7 @@ export default class App extends React.Component {
           <Route exact path='/' render={() => <Lobby logout={this.handleLogout} auth={this.auth} />} />
           <Route path='/room' render={() => <Room logout={this.handleLogout} user={this.state.user} picture={this.state.picture} />} />
           <Route path='/profile' render={() => <Profile user={this.state.user} picture={this.state.picture} changeFriend={this.changeFriend} />} />
-          <Route path='/publicprofiles' render={() => <PublicProfile currentFriend={this.state.currentFriend}/>} />
+          <Route path='/publicprofiles/:username' render={() => <PublicProfile />} />
         </div>
 
       </Router>
