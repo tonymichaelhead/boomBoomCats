@@ -220,6 +220,7 @@ li {
 .lobbybutton {
   opacity: 65%;
   border-radius: 20px;
+  margin-bottom: 20px;
 }
 
 .login {

@@ -66,7 +66,8 @@ class PublicProfile extends Component {
         </div>
 
         <div >
-          {/* <Link to='/'  ><button class="lobbybutton"> Back to Lobby </button></Link> */}
+          <Link to='/'  ><button className="lobbybutton"> Back to Lobby </button></Link>
+          <Link to='/profile'  ><button className="lobbybutton"> View Your Profile </button></Link>
         </div>
       </div>
     )
