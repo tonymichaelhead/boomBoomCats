@@ -119,13 +119,6 @@ export default class Game extends React.Component {
       })
     }.bind(this))
 
-    this.props.socket.on('reversed', function(newTurns) {
-      console.log('new turns inside client', newTurns);
-      this.setState({
-        turn: newTurns
-      })
-    }.bind(this))
-
   }
 
   handleCardClick(cardName, handIndex) {

@@ -108,14 +108,14 @@ module.exports = {
     this.endTurn()
   },
   reverseTurnOrder: function (cardPosition, cb) {
-    let reverseTurnOrder = this.state.turn.slice().reverse()
-    let lastBecomeFirst = reverseTurnOrder.pop()
-    reverseTurnOrder.unshift(lastBecomeFirst)
+    let reverseOrder = this.state.turn.slice().reverse()
+    let lastBecomeFirst = reverseOrder.pop()
+    reverseOrder.unshift(lastBecomeFirst)
     this.setState({
-      turn: reverseTurnOrder
+      turn: reverseOrder
     }, () => {
       this.discardCard(cardPosition);
-      cb(reverseTurnOrder)
+      cb(reverseOrder)
       this.endTurn();
     })
   },
