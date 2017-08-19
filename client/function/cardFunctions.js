@@ -27,17 +27,24 @@ module.exports = {
 
     if (this.state.deck.length > 3) {
       let nextThreeCards = this.state.deck.slice(this.state.deck.length - 3) //FROM THE END OF THE DECK
+      console.log('deck before = ', this.state.deck);
       while (order === null) {
         order = prompt('Please enter the new order for the first 3 cards e.g. 312 or 231 or etc', '123')
       }
       order = order.split('');
+      console.log('old = ', nextThreeCards);
       let newOrder = []
       for (let i = 0; i < 3; i++) {
-        newOrder.push(nextThreeCards[order.pop()]);
+        console.log('cards = ', nextThreeCards)
+        let index = order[i];
+        console.log('index = ', index);
+        newOrder.push(nextThreeCards[index-1]);
       }
+      console.log('new = ', newOrder);
       this.setState({
         deck: this.state.deck.slice(0, this.state.deck.length - 3).concat(newOrder)
       }, () => {
+        console.log('deck after = ', this.state.deck);
         this.discardCard(cardPosition);
         cb();
         this.endTurn();
@@ -62,6 +69,7 @@ module.exports = {
       this.setState({
         deck: this.state.deck.slice(0, this.state.deck.length - 3).concat(newOrder)
       }, () => {
+        console.log('the deck is : ', this.state.deck)
         this.discardCard(cardPosition);
         cb();
         this.endTurn();

@@ -9,7 +9,7 @@ class FriendsList extends React.Component {
     render() {
         console.log('FriendsList props: ',this.props)
         return (
-            <div id="friends">
+            <div className="friends">
                 <h3>Friends</h3>
                 <ul>
                     { this.props.friends.map(friend => <Friend changeFriend={this.props.changeFriend} friend={friend}/>) }

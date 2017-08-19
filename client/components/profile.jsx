@@ -23,13 +23,13 @@ class Profile extends Component {
           <h1>Your Profile</h1>
         </div>
 
-        <div>
-          <img className="profilepicture" src={this.props.picture} alt=""></img>
+        <div className="profilepicture">
+          <img  src={this.props.picture} alt=""></img>
         </div>
 
 
 
-        <div>
+        <div className="profiledata">
           <h2>{this.props.user}</h2><br/>
           <p>Wins:</p> <p> Losses: </p>
 

@@ -119,13 +119,6 @@ export default class Game extends React.Component {
       })
     }.bind(this))
 
-    this.props.socket.on('reversed', function(newTurns) {
-      console.log('new turns inside client', newTurns);
-      this.setState({
-        turn: newTurns
-      })
-    }.bind(this))
-
   }
 
   handleCardClick(cardName, handIndex) {
@@ -140,7 +133,7 @@ export default class Game extends React.Component {
         this.props.socket.emit('shuffle card', this.state.deck)
       })   
 
-    } else if (cardName === 'change') {
+    } else if (cardName === 'change-the-future') {
       this.changeTheFuture(handIndex, () => {
         this.props.socket.emit('change card', this.state.deck)
       })
