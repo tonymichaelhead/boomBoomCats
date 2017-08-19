@@ -7,7 +7,7 @@
   },
   {
     "name":"change-the-future",
-    "image":"./assets/rearrange.gif",
+    "image":"./assets/change.gif",
     "description":"Rearrange dem cards.",
     "type":"normal"
   },
@@ -25,7 +25,7 @@
   },
   {
     "name":"change-the-future",
-    "image":"./assets/rearrange.gif",
+    "image":"./assets/change2.gif",
     "description":"Rearrange dem cards.",
     "type":"normal"
   },
@@ -48,7 +48,7 @@
     "type":"normal"
   },  {
     "name":"change-the-future",
-    "image":"./assets/rearrange.gif",
+    "image":"./assets/change3.gif",
     "description":"Rearrange dem cards.",
     "type":"normal"
   },
@@ -71,7 +71,7 @@
     "type":"normal"
   },  {
     "name":"change-the-future",
-    "image":"./assets/rearrange.gif",
+    "image":"./assets/change4.gif",
     "description":"Rearrange dem cards.",
     "type":"normal"
   },
