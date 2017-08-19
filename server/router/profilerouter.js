@@ -6,7 +6,9 @@ router.post('/profiles', (req, res) => {
   userprofile.findOrCreate({
     where: {
       name: req.body.nickname,
-      picture: req.body.picture
+      picture: req.body.picture,
+      wins: 4,
+      losses: 1
     }
   })
   .spread((userprofile, created)=>{
