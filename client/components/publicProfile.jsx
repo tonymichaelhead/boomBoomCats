@@ -1,51 +1,75 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import FriendsList from './FriendsList.jsx';
+import axios from 'axios';
 
-class pubProfile extends Component {
+class PublicProfile extends Component {
   constructor(props) {
     super(props);
+    this.state = {
+      user: window.location.pathname.slice(16),
+      username: window.location.pathname.slice(16),
+      picture: ''
+    }
+    this.displayUserInfo = this.displayUserInfo.bind(this);
 
   }
 
+  displayUserInfo() {
+    let userProfilePath = `/api/publicprofiles/${this.state.user}`
+    axios.get(userProfilePath)
+      .then(result => {
+        console.log('Profile info: ', result);
+        this.setState({ 
+          username: result.data[0].name,
+          picture: result.data[0].picture
+        })
+      })
+  }
+
   componentDidMount() {
-    console.log('mounted')
+    console.log('Public Profile mounted!')
+    //console.log('Public profile props: ', this.props.user)
+
+    //Send GET to the server to query DB and pull back user info
+    this.displayUserInfo();
   }
 
 
 
   render() {
-    console.log(this.state)
-    console.log('props:', this.props)
+    
+    console.log("Page path is " + window.location.pathname.slice(16))
+    console.log(this.state);
     return (
-      <div class="profile">
+      <div className="profile">
         <div>
-          <h1>Your Profile</h1>
+          <h1>{this.state.username}'s Profile</h1>
         </div>
 
         <div>
-          <img class="profilepicture" src={this.props.picture} alt=""></img>
+          <img class="profilepicture" src={this.state.picture} alt=""></img>
         </div>
 
 
 
         <div>
-          <h2>{this.props.user}</h2><br/>
+          {/* <h2>{this.props.user}</h2><br/> */}
           <p>Wins:</p> <p> Losses: </p>
 
 
         </div>
 
         <div>
-          <FriendsList friends={[{ username: 'Doyle', profilePicUrl: 'https://someshit.com'}, { username: 'K-Nips', profilePicUrl: 'https://ahhhhyeaah.com'}]}/>
+          {/* <FriendsList friends={[{ username: 'Doyle', profilePicUrl: 'https://someshit.com'}, { username: 'K-Nips', profilePicUrl: 'https://ahhhhyeaah.com'}]}/> */}
         </div>
 
         <div >
-          <Link to='/'  ><button class="lobbybutton"> Back to Lobby </button></Link>
+          {/* <Link to='/'  ><button class="lobbybutton"> Back to Lobby </button></Link> */}
         </div>
       </div>
     )
   }
 }
 
-export default Profile;
+export default PublicProfile;

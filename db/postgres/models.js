@@ -5,6 +5,7 @@ const sequelize = require('sequelize')
 const UserProfile = sqldb.define('Users', {
   name: sequelize.STRING,
   picture: sequelize.STRING,
+  //friendsList: sequelize.ARRAY,
   wins: sequelize.INTEGER,
   losses: sequelize.INTEGER
 })

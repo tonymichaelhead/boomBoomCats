@@ -108,14 +108,14 @@ module.exports = {
     this.endTurn()
   },
   reverseTurnOrder: function (cardPosition, cb) {
-    let reverseOrder = this.state.turn.slice().reverse()
-    let lastBecomeFirst = reverseOrder.pop()
-    reverseOrder.unshift(lastBecomeFirst)
+    let reverseTurnOrder = this.state.turn.slice().reverse()
+    let lastBecomeFirst = reverseTurnOrder.pop()
+    reverseTurnOrder.unshift(lastBecomeFirst)
     this.setState({
-      turn: reverseOrder
+      turn: reverseTurnOrder
     }, () => {
       this.discardCard(cardPosition);
-      cb(reverseOrder)
+      cb(reverseTurnOrder)
       this.endTurn();
     })
   },
@@ -142,33 +142,33 @@ module.exports = {
     })
   },
 
-  attackNextPlayer: function (cardPosition, cb) { //add extra turn on first element
-    let gameTurns = this.state.turn.slice()
-    let myself = gameTurns[0];
-    let attackedPlayerTurnIndex = 1
-    console.log('attack')
-    for (let i = 1; i < gameTurns.length; i++) {
-      if (myself !== gameTurns[i]) {
-        attackedPlayerTurnIndex = i;
-        break;
-      }
+attackNextPlayer: function (cardPosition, cb) { //add extra turn on first element
+  let gameTurns = this.state.turn.slice()
+  let myself = gameTurns[0];
+  let attackedPlayerTurnIndex = 1
+  console.log('attack')
+  for (let i = 1; i < gameTurns.length; i++) {
+    if (myself !== gameTurns[i]) {
+      attackedPlayerTurnIndex = i;
+      break;
     }
-    let attackedPlayer = this.state.turn.slice(attackedPlayerTurnIndex, attackedPlayerTurnIndex + 1)
-    gameTurns.splice(attackedPlayerTurnIndex, 0, attackedPlayer[0])
-    let newTurns = gameTurns.slice()
-    this.setState({
-      turn: newTurns
-    }, () => {
-      this.discardCard(cardPosition);
-      cb();
-      this.endTurn();
-    })
-  },
-
-  skipATurn: function (cardPosition) {
-    console.log('skip')
-    this.discardCard(cardPosition)
-    this.endTurn()
   }
+  let attackedPlayer = this.state.turn.slice(attackedPlayerTurnIndex, attackedPlayerTurnIndex + 1)
+  gameTurns.splice(attackedPlayerTurnIndex, 0, attackedPlayer[0])
+  let newTurns = gameTurns.slice()
+  this.setState({
+    turn: newTurns
+  }, () => {
+    this.discardCard(cardPosition);
+    cb();
+    this.endTurn();
+  })
+},
+
+skipATurn: function (cardPosition) {
+  console.log('skip')
+  this.discardCard(cardPosition)
+  this.endTurn()
+}
 
 }

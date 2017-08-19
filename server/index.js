@@ -22,6 +22,7 @@ app.use(parser.urlencoded({extended: true}))
 app.use(parser.json())
 app.use(express.static(path.join(__dirname, '../static')))
 app.use('/api', profileRouter)
+
 app.get('*', function (request, response){
   response.redirect('/')
 })
